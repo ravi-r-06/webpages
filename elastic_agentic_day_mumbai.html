@@ -10,16 +10,17 @@
   
   .top-nav{background:#111C2C;border-bottom:1px solid rgba(255,255,255,0.08);padding:12px 32px;display:flex;align-items:center;gap:16px;position:sticky;top:0;z-index:100}
   .logo{font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.5px}
-  .logo span{color:#36A2EF}
   .nav-tag{font-size:11px;font-weight:700;letter-spacing:1.5px;color:#36A2EF;text-transform:uppercase;border:1px solid rgba(54,162,239,0.35);border-radius:20px;padding:4px 12px}
   .session-pills{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
   .pill{font-size:11px;padding:4px 10px;border-radius:20px;cursor:pointer;border:1px solid rgba(255,255,255,0.15);color:#A2B1C9;background:transparent;transition:all 0.2s}
   .pill:hover,.pill.active{background:#0B64DD;border-color:#0B64DD;color:#fff}
 
   .slides{padding:0 32px 48px}
-  .slide{display:none;animation:fadeIn 0.4s ease}
-  .slide.active{display:block}
+  .slide{display:none}
+  .slide.active{display:block;animation:fadeIn 0.4s ease}
   @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+  .slide-inner{margin-top:24px}
 
   .hero{background:linear-gradient(135deg,#0B1220 0%,#0B2545 55%,#0B64DD 140%);border-radius:16px;padding:64px 56px;min-height:460px;position:relative;overflow:hidden;border:1px solid rgba(11,100,221,0.2);margin-top:24px}
   .hero::before{content:'';position:absolute;right:-80px;top:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(11,100,221,0.15) 0%,transparent 70%)}
@@ -36,7 +37,7 @@
   .ev-val{font-size:13px;font-weight:600;color:#fff}
 
   .sec-title{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
-  .sec-title.blue{color:#36A2EF}.sec-title.teal{color:#00BFB3}.sec-title.pink{color:#BC1E70}.sec-title.amber{color:#F9B110}.sec-title.green{color:#00BFB3}
+  .sec-title.blue{color:#36A2EF}.sec-title.teal{color:#00BFB3}.sec-title.pink{color:#BC1E70}.sec-title.amber{color:#F9B110}
   .sec-heading{font-size:28px;font-weight:800;line-height:1.25;margin-bottom:28px;color:#fff}
   .sec-sub{font-size:15px;color:#A2B1C9;line-height:1.7;margin-bottom:32px;max-width:720px}
 
@@ -95,7 +96,7 @@
   .divider{display:flex;margin:32px auto;width:80px}
   .divider span{height:3px;flex:1;border-radius:2px}
 
-  .slide-nav{display:flex;gap:10px;margin-top:32px;justify-content:flex-end}
+  .slide-nav{display:flex;gap:10px;margin-top:32px;justify-content:flex-end;padding-bottom:24px}
   .nav-btn{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:#A2B1C9;font-size:13px;padding:8px 18px;border-radius:8px;cursor:pointer;transition:all 0.2s}
   .nav-btn:hover{background:rgba(11,100,221,0.25);border-color:#0B64DD;color:#fff}
   .nav-btn.primary{background:#0B64DD;border-color:#0B64DD;color:#fff}
@@ -106,12 +107,7 @@
   .tag.teal{background:rgba(0,191,179,0.1);border-color:rgba(0,191,179,0.25);color:#00BFB3}
   .tag.pink{background:rgba(188,30,112,0.12);border-color:rgba(188,30,112,0.25);color:#E06EA0}
 
-  .progress{display:flex;gap:6px;align-items:center;margin-bottom:20px}
-  .prog-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.15);cursor:pointer;transition:all 0.2s}
-  .prog-dot.active{background:#0B64DD;width:24px;border-radius:4px}
-  .prog-label{font-size:12px;color:#6B7D99;margin-left:8px}
-
-  /* PROMPT BOX STYLES */
+  /* PROMPT BOX */
   .prompt-box{margin-top:32px;background:linear-gradient(135deg,rgba(11,100,221,0.06) 0%,rgba(188,30,112,0.04) 100%);border:1px solid rgba(11,100,221,0.2);border-radius:14px;overflow:hidden}
   .prompt-header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:rgba(11,100,221,0.08);border-bottom:1px solid rgba(11,100,221,0.15);cursor:pointer;user-select:none}
   .prompt-header:hover{background:rgba(11,100,221,0.12)}
@@ -122,7 +118,7 @@
   .prompt-body{padding:20px;display:none}
   .prompt-body.open{display:block}
   .prompt-text{background:#0B1220;border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:20px;font-family:'JetBrains Mono','Fira Code','SF Mono',monospace;font-size:12px;line-height:1.8;color:#C8D6E5;white-space:pre-wrap;word-wrap:break-word;max-height:600px;overflow-y:auto;position:relative}
-  .prompt-text::before{content:'PROMPT';position:absolute;top:8px;right:12px;font-size:9px;font-weight:700;letter-spacing:1.5px;color:#3D4A5C;font-family:'Inter',Arial,sans-serif}
+  .prompt-text::before{content:'PROMPT → PASTE INTO CLAUDE DESKTOP';position:absolute;top:8px;right:12px;font-size:9px;font-weight:700;letter-spacing:1.5px;color:#3D4A5C;font-family:'Inter',Arial,sans-serif}
   .copy-btn{margin-top:12px;background:#0B64DD;border:none;color:#fff;font-size:12px;font-weight:600;padding:8px 20px;border-radius:8px;cursor:pointer;transition:all 0.2s;font-family:'Inter',Arial,sans-serif}
   .copy-btn:hover{background:#0D4FAA}
   .copy-btn.copied{background:#008B87}
@@ -153,7 +149,7 @@
 
 <div class="slides" id="slidesContainer">
 
-<!-- SLIDE 0: Welcome / Hero -->
+<!-- ==================== SLIDE 0: Welcome ==================== -->
 <div class="slide active" id="slide-0">
   <div class="hero">
     <div class="hero-eyebrow">Elastic Agentic Day &bull; Mumbai &bull; 17 April 2026</div>
@@ -166,906 +162,637 @@
       <div class="ev-item"><div class="ev-label">Venue</div><div class="ev-val">Mumbai</div></div>
     </div>
   </div>
-
-  <!-- PROMPT BOX: Welcome -->
   <div class="prompt-box">
     <div class="prompt-header" onclick="togglePrompt(this)">
-      <h4>🎯 Claude Slide Deck Prompt <span class="badge">1 Title Slide</span></h4>
+      <h4>🎯 PPTX Prompt for Claude Desktop <span class="badge">1 Title Slide</span></h4>
       <div class="prompt-toggle">▼</div>
     </div>
     <div class="prompt-body">
-      <div class="prompt-text">Create a single HTML slide (16:9 aspect ratio, 1280×720px) for the opening title card of "Elastic Agentic Day — Mumbai, 17 April 2026".
+      <div class="prompt-text">Generate a PowerPoint (.pptx) file with 1 slide for the opening title card of "Elastic Agentic Day — Mumbai, 17 April 2026". Use the python-pptx library. Save the file as "00_elastic_welcome.pptx".
 
-BRANDING (strict):
-— Background: dark navy #0B1220 with a subtle radial gradient bloom of Elastic Blue (#0B64DD at 15% opacity) in the top-right corner.
-— Primary accent: Elastic Blue #0B64DD. Secondary accents: Teal #00BFB3, Pink #BC1E70, Amber #F9B110.
-— Typography: Inter (Google Fonts) — headings 900 weight, body 400/600. All text white #FFFFFF or muted #A2B1C9.
-— No Elastic logo image file — render the wordmark "elastic" in Inter Black, lowercase, white, with a blue dot after it.
-— Border-radius on all containers: 12–16px. Cards use 1px borders with accent color at 25% opacity + matching background at 8% opacity.
+SLIDE DIMENSIONS: 16:9 widescreen (13.333 × 7.5 inches).
 
-CONTENT:
-— Eyebrow pill: "ELASTIC AGENTIC DAY · MUMBAI · 17 APRIL 2026" in uppercase 11px, #36A2EF, inside a rounded pill with blue border.
-— Main headline (52px, 900 weight): "Your Agents Should" line 1, then "Search." in blue, "Reason." in teal, "Act." in pink on line 2.
-— Subtitle (18px, #A2B1C9): "Most AI agents guess. The best ones are grounded in your data, armed with the right tools, and governed to act — autonomously, reliably, at enterprise scale."
-— Bottom bar with 3 cells: Date / Time / Venue, each in a bordered card section.
+BRANDING (strict — apply to this and every future deck in this series):
+— Slide background: solid fill, dark navy RGB(11,18,32).
+— Primary accent: Elastic Blue RGB(11,100,221). Light blue for text: RGB(54,162,239). Teal: RGB(0,191,179). Pink: RGB(188,30,112). Amber: RGB(249,177,16). Muted body text: RGB(162,177,201). Subtle muted: RGB(107,125,153). White: RGB(255,255,255).
+— Font: Calibri throughout (closest system match to Inter). Headings: Bold/44pt white. Subheadings: 20pt, RGB(162,177,201). Eyebrow labels: 11pt, Bold, uppercase, RGB(54,162,239).
+— Shapes: use rounded rectangles (corner radius 0.15 inches) for all cards/containers. Card fill = accent color at low opacity (use solid approximation, e.g., RGB(18,30,55) for blue-tinted dark card). Card border = 1pt line in accent color.
+— No external images. Use shapes, text boxes, and colored fills only.
 
-OUTPUT: A Python script using the python-pptx library that generates a .pptx file. Each slide must be 16:9 (13.333" × 7.5"). Use RGBColor for all colors (no external images). Set slide background to dark navy RGB(11,18,32). Use python-pptx shapes, text frames, and table objects for all layout. Apply Inter font family (or fallback to Calibri). The script should save the file as "00_elastic_welcome.pptx" when run.</div>
+SLIDE 1 CONTENT:
+— Top-left: eyebrow text box — "ELASTIC AGENTIC DAY · MUMBAI · 17 APRIL 2026" in 11pt bold uppercase, RGB(54,162,239), inside a rounded rectangle with 1pt blue border and fill RGB(15,26,50).
+— Center: main title — "Your Agents Should" (line 1, white 48pt bold), then "Search. Reason. Act." (line 2) where "Search." is RGB(54,162,239), "Reason." is RGB(0,191,179), "Act." is RGB(188,30,112). All 48pt bold.
+— Below title: subtitle text — "Most AI agents guess. The best ones are grounded in your data, armed with the right tools, and governed to act — autonomously, reliably, at enterprise scale." in 18pt, RGB(162,177,201).
+— Bottom: 3 side-by-side rounded rectangles for Date / Time / Venue. Each has a small label (10pt bold uppercase RGB(54,162,239)) and value (13pt bold white). Fill RGB(15,26,50), border 1pt RGB(11,100,221).</div>
       <button class="copy-btn" onclick="copyPrompt(this)">📋 Copy Prompt</button>
       <div class="prompt-meta">
+        <span class="prompt-meta-tag">Output: .pptx</span>
         <span class="prompt-meta-tag">Slides: 1</span>
-        <span class="prompt-meta-tag">Type: Title Card</span>
+        <span class="prompt-meta-tag">Target: Claude Desktop</span>
       </div>
     </div>
   </div>
-
   <div class="slide-nav"><button class="nav-btn primary" onclick="showSlide(1)">View Agenda →</button></div>
 </div>
 
-<!-- SLIDE 1: Full Agenda -->
+<!-- ==================== SLIDE 1: Agenda ==================== -->
 <div class="slide" id="slide-1">
-  <div style="margin-top:24px">
+  <div class="slide-inner">
     <div class="sec-title amber">Full Day Schedule</div>
     <div class="sec-heading">One day. Three pillars of agentic AI.</div>
     <div class="agenda">
-      <div class="agenda-row"><div class="ag-time">9:00 AM</div><div class="ag-content"><h4>Registration &amp; Networking Breakfast</h4><p>Welcome, coffee, and conversations</p></div></div>
+      <div class="agenda-row"><div class="ag-time">9:00 AM</div><div class="ag-content"><h4>Registration &amp; Networking Breakfast</h4></div></div>
       <div class="agenda-row"><div class="ag-time">9:30 AM</div><div class="ag-content"><h4>Keynote: The Age of Agentic Enterprise <span class="ag-badge keynote">Keynote</span></h4><p>Chris Walker</p></div></div>
-      <div class="agenda-row"><div class="ag-time">10:00 AM</div><div class="ag-content"><h4>Customer Keynote / Fireside Chat <span class="ag-badge panel">Panel</span></h4><p>Industry leaders from BFSI &amp; Digital Native enterprises</p></div></div>
+      <div class="agenda-row"><div class="ag-time">10:00 AM</div><div class="ag-content"><h4>Customer Fireside Chat <span class="ag-badge panel">Panel</span></h4><p>BFSI &amp; Digital Native leaders</p></div></div>
       <div class="agenda-row"><div class="ag-time">10:30 AM</div><div class="ag-content"><h4>Agent Builder Deep Dive <span class="ag-badge demo">Demo</span></h4><p>Ashish Tiwari</p></div></div>
-      <div class="agenda-row"><div class="ag-time">11:15 AM</div><div class="ag-content"><h4>Agentic RAG: Grounding Agents in Enterprise Knowledge</h4><p>Abhinav Chauhan, Aish Gunasekar, Ravindra Ramnani</p></div></div>
-      <div class="agenda-row"><div class="ag-time">11:45 AM</div><div class="ag-content"><h4>MCP &amp; A2A: Connecting Agents to Jira, Slack &amp; Beyond <span class="ag-badge demo">Demo</span></h4><p>Ashish Tiwari</p></div></div>
-      <div class="agenda-row"><div class="ag-time">12:15 PM</div><div class="ag-content"><h4>Agents in Action: Automated RCA &amp; Threat Triage <span class="ag-badge demo">Live Demo</span></h4><p>Ramprasad KM</p></div></div>
+      <div class="agenda-row"><div class="ag-time">11:15 AM</div><div class="ag-content"><h4>Agentic RAG</h4><p>Abhinav Chauhan, Aish Gunasekar, Ravindra Ramnani</p></div></div>
+      <div class="agenda-row"><div class="ag-time">11:45 AM</div><div class="ag-content"><h4>MCP &amp; A2A <span class="ag-badge demo">Demo</span></h4><p>Ashish Tiwari</p></div></div>
+      <div class="agenda-row"><div class="ag-time">12:15 PM</div><div class="ag-content"><h4>Automated RCA &amp; Threat Triage <span class="ag-badge demo">Live Demo</span></h4><p>Ramprasad KM</p></div></div>
       <div class="agenda-row break"><div class="ag-time">1:15 PM</div><div class="ag-content"><h4>Networking Lunch</h4></div></div>
-      <div class="agenda-row"><div class="ag-time">2:00 PM</div><div class="ag-content"><h4>Customer Panel: Operationalizing AI Agents <span class="ag-badge panel">Panel</span></h4><p>Leaders from BFSI &amp; Digital Native enterprises</p></div></div>
-      <div class="agenda-row"><div class="ag-time">2:30 PM</div><div class="ag-content"><h4>Unlocking the Full Potential of Elastic</h4><p>Amit Vyas</p></div></div>
-      <div class="agenda-row"><div class="ag-time">3:00 PM</div><div class="ag-content"><h4>Governing AI Agents: Risk, Trust &amp; Compliance</h4><p>Bhadriraju Prasanth</p></div></div>
-      <div class="agenda-row"><div class="ag-time">3:30 PM</div><div class="ag-content"><h4>The Business Case: Measuring Agentic ROI</h4><p>Abhijeet Bhaskar</p></div></div>
-      <div class="agenda-row"><div class="ag-time">4:00 PM</div><div class="ag-content"><h4>Open Standards, No Lock-in</h4><p>Aashish Mishra</p></div></div>
-      <div class="agenda-row"><div class="ag-time">4:30 PM</div><div class="ag-content"><h4>Closing AMA: Building Your Agentic Roadmap</h4><p>Sanjay Deshmukh, Chris Walker, Ravindra Ramnani</p></div></div>
+      <div class="agenda-row"><div class="ag-time">2:00 PM</div><div class="ag-content"><h4>Customer Panel <span class="ag-badge panel">Panel</span></h4></div></div>
+      <div class="agenda-row"><div class="ag-time">3:00 PM</div><div class="ag-content"><h4>Governing AI Agents</h4><p>Bhadriraju Prasanth</p></div></div>
+      <div class="agenda-row"><div class="ag-time">3:30 PM</div><div class="ag-content"><h4>Measuring Agentic ROI</h4><p>Abhijeet Bhaskar</p></div></div>
+      <div class="agenda-row"><div class="ag-time">4:00 PM</div><div class="ag-content"><h4>Open Standards</h4><p>Aashish Mishra</p></div></div>
+      <div class="agenda-row"><div class="ag-time">4:30 PM</div><div class="ag-content"><h4>Closing AMA</h4><p>Sanjay Deshmukh, Chris Walker, Ravindra Ramnani</p></div></div>
     </div>
   </div>
-
-  <!-- PROMPT BOX: Agenda -->
   <div class="prompt-box">
     <div class="prompt-header" onclick="togglePrompt(this)">
-      <h4>🎯 Claude Slide Deck Prompt <span class="badge">2 Slides</span></h4>
+      <h4>🎯 PPTX Prompt for Claude Desktop <span class="badge">2 Slides</span></h4>
       <div class="prompt-toggle">▼</div>
     </div>
     <div class="prompt-body">
-      <div class="prompt-text">Create a 2-slide HTML deck (each slide 16:9, 1280×720px, navigable with arrow keys and on-screen buttons) for the "Full-Day Agenda" of Elastic Agentic Day, Mumbai, 17 April 2026.
+      <div class="prompt-text">Generate a PowerPoint (.pptx) file with 2 slides for the "Full-Day Agenda" of Elastic Agentic Day, Mumbai, 17 April 2026. Use python-pptx. Save as "01_elastic_agenda.pptx".
 
-BRANDING (apply to every slide):
-— Background: #0B1220. Accent colors: Blue #0B64DD, Teal #00BFB3, Pink #BC1E70, Amber #F9B110.
-— Font: Inter via Google Fonts. Headings: 900 weight white. Body: 400 weight #A2B1C9. Eyebrow labels: 11px, 700 weight, uppercase, tracking 1.5px.
-— Cards/containers: 12px border-radius, 1px border at 25% accent opacity, background at 8% accent opacity.
-— Dark card variant: background rgba(255,255,255,0.04), border rgba(255,255,255,0.1).
-— Session type badges: "Keynote" = blue pill, "Demo" = teal pill, "Panel" = amber pill. 10px bold uppercase inside a rounded pill.
+SLIDE DIMENSIONS: 16:9 (13.333 × 7.5 inches).
+
+BRANDING (same Elastic dark theme for all decks):
+— Background: solid RGB(11,18,32). Accent colors: Blue RGB(11,100,221), text-blue RGB(54,162,239), Teal RGB(0,191,179), Pink RGB(188,30,112), Amber RGB(249,177,16). Body text: RGB(162,177,201). Muted: RGB(107,125,153). White for headings.
+— Font: Calibri. Headings 36pt bold white. Body 14pt RGB(162,177,201). Eyebrows 11pt bold uppercase RGB(54,162,239).
+— Cards: rounded rectangles, fill RGB(18,30,55), border 1pt accent. Badge pills: small rounded rects with accent fill and white text.
 
 SLIDE 1 — "Morning Sessions" (9:00 AM – 1:15 PM):
-— Section eyebrow (amber): "FULL DAY SCHEDULE"
+— Eyebrow: "FULL DAY SCHEDULE" in amber RGB(249,177,16).
 — Heading: "One day. Three pillars of agentic AI."
-— Render a styled agenda table with rows for each session. Each row: time (blue, left-aligned, 80px min-width), session title (white, 14px 600 weight), speaker name (muted #6B7D99, 12px), and a badge pill for Keynote/Demo/Panel sessions.
-— Sessions: 9:00 Registration, 9:30 Keynote (Chris Walker), 10:00 Customer Fireside Chat (Panel), 10:30 Agent Builder Deep Dive (Ashish Tiwari, Demo), 11:15 Agentic RAG (Abhinav Chauhan, Aish Gunasekar, Ravindra Ramnani), 11:45 MCP & A2A (Ashish Tiwari, Demo), 12:15 Automated RCA & Threat Triage (Ramprasad KM, Live Demo), 1:15 Networking Lunch (dimmed row, 50% opacity).
+— Use a python-pptx Table with columns: Time | Session | Speaker | Type. Style: dark fill cells, white/muted text, blue time column. Rows: 9:00 Registration, 9:30 Keynote (Chris Walker) [Keynote badge], 10:00 Customer Fireside [Panel badge], 10:30 Agent Builder (Ashish Tiwari) [Demo badge], 11:15 Agentic RAG (Abhinav Chauhan et al), 11:45 MCP & A2A (Ashish Tiwari) [Demo badge], 12:15 Automated RCA (Ramprasad KM) [Live Demo badge], 1:15 Lunch (dimmed row).
 
 SLIDE 2 — "Afternoon Sessions" (2:00 PM – 4:30 PM):
-— Same table styling.
-— Sessions: 2:00 Customer Panel (Panel), 2:30 Unlocking Full Potential (Amit Vyas), 3:00 Governing AI Agents (Bhadriraju Prasanth), 3:30 Measuring Agentic ROI (Abhijeet Bhaskar), 4:00 Open Standards (Aashish Mishra), 4:30 Closing AMA (Sanjay Deshmukh, Chris Walker, Ravindra Ramnani).
-— Below the table, add a "Three Pillars" row: 3 cards side by side — "Search & RAG" (blue), "Observability & Security" (teal), "Governance & Standards" (pink). Each with a one-line description.
-
-OUTPUT: A Python script using the python-pptx library that generates a .pptx file. Each slide must be 16:9 (13.333" × 7.5"). Use RGBColor for all colors. Set slide backgrounds to dark navy RGB(11,18,32). Use shapes, text frames, and tables for layout. Apply Inter font (fallback Calibri). Save as "01_elastic_agenda.pptx".</div>
+— Same table styling. Rows: 2:00 Customer Panel [Panel], 2:30 Unlocking Elastic (Amit Vyas), 3:00 Governance (Bhadriraju Prasanth), 3:30 ROI (Abhijeet Bhaskar), 4:00 Open Standards (Aashish Mishra), 4:30 Closing AMA (Sanjay Deshmukh, Chris Walker, Ravindra Ramnani).
+— Below table: 3 side-by-side rounded rectangle cards — "Search & RAG" (blue fill), "Observe & Secure" (teal fill), "Govern & Scale" (pink fill). Each with a one-line description in white.</div>
       <button class="copy-btn" onclick="copyPrompt(this)">📋 Copy Prompt</button>
       <div class="prompt-meta">
+        <span class="prompt-meta-tag">Output: .pptx</span>
         <span class="prompt-meta-tag">Slides: 2</span>
-        <span class="prompt-meta-tag">Type: Agenda Overview</span>
+        <span class="prompt-meta-tag">Target: Claude Desktop</span>
       </div>
     </div>
   </div>
-
   <div class="slide-nav"><button class="nav-btn" onclick="showSlide(0)">← Back</button><button class="nav-btn primary" onclick="showSlide(2)">Next: Keynote →</button></div>
 </div>
 
-<!-- SLIDE 2: Keynote -->
+<!-- ==================== SLIDE 2: Keynote ==================== -->
 <div class="slide" id="slide-2">
-  <div style="margin-top:24px">
+  <div class="slide-inner">
     <div class="sec-title blue">Opening Keynote · 9:30 AM · Chris Walker</div>
     <div class="sec-heading">The Age of the Agentic Enterprise</div>
     <div class="sec-sub">AI is no longer a copilot you chat with. It's an operator that plans, reasons, and acts — autonomously, across your entire data estate.</div>
-    <div class="two-col">
-      <div>
-        <div class="sec-title teal" style="margin-bottom:14px">Where we've been</div>
-        <div class="card dark" style="margin-bottom:12px"><h3>NLP &amp; Search (2010s)</h3><p>Understanding language, powering relevance. Elasticsearch at the core.</p></div>
-        <div class="card dark" style="margin-bottom:12px"><h3>Generative AI &amp; RAG (2022–24)</h3><p>LLMs + RAG grounding answers. Human still in the loop.</p></div>
-        <div class="card blue"><h3>Agentic AI (Now)</h3><p>Systems that plan, discover tools, take actions, and revise — with minimal supervision.</p></div>
-      </div>
-      <div>
-        <div class="sec-title pink" style="margin-bottom:14px">What makes an agent</div>
-        <div style="display:flex;flex-direction:column;gap:10px">
-          <div style="display:flex;gap:12px;align-items:flex-start"><div style="min-width:28px;height:28px;border-radius:50%;background:#0B64DD;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700">G</div><div><div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:2px">Goals</div><div style="font-size:12px;color:#A2B1C9">What outcomes should be accomplished</div></div></div>
-          <div style="display:flex;gap:12px;align-items:flex-start"><div style="min-width:28px;height:28px;border-radius:50%;background:#008B87;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700">T</div><div><div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:2px">Tools</div><div style="font-size:12px;color:#A2B1C9">Actions available — search, enrich, create, notify</div></div></div>
-          <div style="display:flex;gap:12px;align-items:flex-start"><div style="min-width:28px;height:28px;border-radius:50%;background:#BC1E70;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700">C</div><div><div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:2px">Context</div><div style="font-size:12px;color:#A2B1C9">When, where, and why to act — grounded in data</div></div></div>
-          <div style="display:flex;gap:12px;align-items:flex-start"><div style="min-width:28px;height:28px;border-radius:50%;background:#C47D00;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700">R</div><div><div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:2px">Resources</div><div style="font-size:12px;color:#A2B1C9">Data assets used to reason and decide</div></div></div>
-        </div>
-      </div>
-    </div>
     <div class="stat-row">
-      <div class="stat-box"><div class="stat-num">84.3%</div><div class="stat-label">Recall@10 with hybrid retrieval</div></div>
-      <div class="stat-box"><div class="stat-num">100%</div><div class="stat-label">Task success with ES|QL structured retrieval</div></div>
-      <div class="stat-box"><div class="stat-num">40%</div><div class="stat-label">Context reduction via semantic chunking</div></div>
+      <div class="stat-box"><div class="stat-num">84.3%</div><div class="stat-label">Recall@10 hybrid retrieval</div></div>
+      <div class="stat-box"><div class="stat-num">100%</div><div class="stat-label">Task success with ES|QL</div></div>
+      <div class="stat-box"><div class="stat-num">40%</div><div class="stat-label">Context reduction</div></div>
     </div>
   </div>
-
-  <!-- PROMPT BOX: Keynote -->
   <div class="prompt-box">
     <div class="prompt-header" onclick="togglePrompt(this)">
-      <h4>🎯 Claude Slide Deck Prompt <span class="badge">8 Slides · ~30 min Keynote</span></h4>
+      <h4>🎯 PPTX Prompt for Claude Desktop <span class="badge">8 Slides · ~30 min Keynote</span></h4>
       <div class="prompt-toggle">▼</div>
     </div>
     <div class="prompt-body">
-      <div class="prompt-text">Create an 8-slide HTML presentation deck (16:9, 1280×720px per slide, keyboard + button navigation) for the opening keynote "The Age of the Agentic Enterprise" by Chris Walker at Elastic Agentic Day, Mumbai, 17 April 2026. This is a 30-minute keynote.
+      <div class="prompt-text">Generate a PowerPoint (.pptx) file with 8 slides for the opening keynote "The Age of the Agentic Enterprise" by Chris Walker at Elastic Agentic Day, Mumbai, 17 April 2026. This is a 30-minute keynote. Use python-pptx. Save as "02_elastic_keynote.pptx".
 
-BRANDING (apply globally):
-— Background: #0B1220 (dark navy). Subtle radial gradient accents using Elastic Blue #0B64DD at 10–15% opacity.
-— Colors: Primary Blue #0B64DD / #36A2EF (text). Teal #00BFB3. Pink #BC1E70. Amber #F9B110. Muted text #A2B1C9. Muted subtle #6B7D99. White #FFFFFF for headings.
-— Font: Inter (Google Fonts). Headings: 36–48px, weight 900. Subheadings: 20–24px, weight 700. Body: 14–16px, weight 400. Eyebrow labels: 11px, 700, uppercase, letter-spacing 1.5px.
-— Cards: border-radius 12px, 1px solid border at 25% accent opacity, background at 8% accent opacity. Dark cards: bg rgba(255,255,255,0.04), border rgba(255,255,255,0.1).
-— Stat boxes: centered, large number (32–40px, 900 weight, accent color), label below (12px, #A2B1C9). Wrapped in cards with blue tint.
-— Quote blocks: left blue border 3px #0B64DD, bg rgba(11,100,221,0.08), italic white text.
-— Slide counter bottom-right. Subtle fade-in animation on slide change.
+SLIDE DIMENSIONS: 16:9 (13.333 × 7.5 inches).
 
-SLIDE 1 — Title Slide:
+BRANDING (apply to every slide):
+— Background: solid RGB(11,18,32) on every slide.
+— Colors: Blue RGB(11,100,221), text-blue RGB(54,162,239), Teal RGB(0,191,179), Pink RGB(188,30,112), Amber RGB(249,177,16). Body text RGB(162,177,201). Muted RGB(107,125,153). White RGB(255,255,255).
+— Font: Calibri throughout. Headings: 36–44pt Bold white. Subheadings: 20pt, RGB(162,177,201). Eyebrows: 11pt Bold uppercase RGB(54,162,239). Body: 14pt RGB(162,177,201).
+— Cards: rounded rectangles (0.15" radius), fill RGB(18,30,55) for dark cards or accent-tinted fills for colored cards (e.g., RGB(15,28,60) for blue). Border 1pt in accent color.
+— Stat boxes: rounded rect, fill RGB(15,28,60), border 1pt blue. Large number 36pt Bold accent color centered, label 12pt muted below.
+— Quote blocks: rounded rect, fill RGB(15,28,60), left edge use a thin tall rectangle in blue as a faux left-border. Italic white text 18pt.
+
+SLIDE 1 — Title:
 — Eyebrow: "OPENING KEYNOTE · 9:30 AM"
-— Headline: "The Age of the Agentic Enterprise"
-— Speaker: "Chris Walker"
-— Subtitle: "AI is no longer a copilot you chat with. It's an operator that plans, reasons, and acts — autonomously, across your entire data estate."
+— Headline: "The Age of the Agentic Enterprise" (44pt Bold white)
+— Speaker: "Chris Walker" (18pt white)
+— Subtitle: "AI is no longer a copilot you chat with. It's an operator that plans, reasons, and acts — autonomously, across your entire data estate." (16pt muted)
 
 SLIDE 2 — "The AI Evolution" (Timeline):
-— 3 stacked cards in a vertical timeline with connector lines:
-  1. "NLP & Search (2010s)" — Elasticsearch powering relevance at scale. (dark card)
-  2. "Generative AI & RAG (2022–24)" — LLMs responding to prompts, RAG grounding answers in documents, human in the loop. (dark card)
-  3. "Agentic AI (2025+)" — Systems that plan, discover tools, take actions, and revise with minimal supervision. The loop is closed. (blue accent card, highlighted)
+— 3 stacked rounded rectangles as a vertical timeline:
+  1. "NLP & Search (2010s)" — dark card. "Elasticsearch powering relevance at scale."
+  2. "Generative AI & RAG (2022–24)" — dark card. "LLMs + RAG. Human still in the loop."
+  3. "Agentic AI (2025+)" — blue accent card (highlighted). "Systems that plan, discover tools, act, revise. The loop is closed."
+— Connect with small arrow shapes between cards.
 
-SLIDE 3 — "What Makes an Agent" (G-T-C-R Framework):
-— 4 items arranged as a 2×2 grid, each with a colored circle icon (G=blue, T=teal, C=pink, R=amber):
-  • Goals — What outcomes should be accomplished
-  • Tools — What actions are available: search, enrich, create, notify
-  • Context — When, where, and why to act, grounded in your data
-  • Resources — The data assets used to reason and decide
-— Bottom quote block: "The agent will keep going until its goals are achieved — grounded in facts, not fiction."
+SLIDE 3 — "What Makes an Agent" (G-T-C-R):
+— 2×2 grid of 4 cards, each with a colored circle shape (oval, 0.4" diameter) containing a letter:
+  G (blue circle) = "Goals — What outcomes should be accomplished"
+  T (teal circle) = "Tools — Search, enrich, create, notify"
+  C (pink circle) = "Context — When, where, why to act, grounded in data"
+  R (amber circle) = "Resources — Data assets for reasoning"
+— Bottom: quote block — "The agent will keep going until its goals are achieved — grounded in facts, not fiction."
 
 SLIDE 4 — "Why Context is Everything":
-— Left side: A "context rot" warning — "At 32K tokens, 11 models drop below 50% of their short-length baselines (NOLIMA, 2025)"
-— Right side: "The answer isn't more data — it's better retrieval." Introduce Elastic as the context engine.
+— Left half: warning callout card (pink border) — "At 32K tokens, 11 models drop below 50% of short-length baselines (NOLIMA, 2025)"
+— Right half: solution card (blue border) — "The answer isn't more data — it's better retrieval. Elastic is the context engine."
 
-SLIDE 5 — "Elastic Hybrid Retrieval — The Benchmark Leader":
+SLIDE 5 — "Benchmark Results":
 — 3 stat boxes in a row:
-  • 84.3% — "Recall@10 with Elastic hybrid retrieval — highest across all methods"
-  • 100% — "Task success rate for structured retrieval with ES|QL in agentic workflows"
-  • 40% — "Context reduction with semantic chunking — fewer tokens, lower cost"
-— Below: brief explanation that hybrid = BM25 + dense vectors + ELSER sparse retrieval combined.
+  • "84.3%" (blue) — "Recall@10 with Elastic hybrid retrieval"
+  • "100%" (teal) — "Task success rate with ES|QL structured retrieval"
+  • "40%" (amber) — "Context reduction with semantic chunking"
+— Text below: "Hybrid = BM25 + dense vectors + ELSER sparse retrieval combined."
 
 SLIDE 6 — "From Copilot to Operator":
-— Two-column comparison. Left column "Copilot Era" (faded/dim styling): human asks question → model responds → human acts. Right column "Agentic Era" (vibrant blue highlight): goal is set → agent plans → agent retrieves context → agent calls tools → agent acts → agent verifies outcome.
-— Each step as a compact numbered item.
+— Two columns. Left "Copilot Era" (muted/dim text): Human asks → Model responds → Human acts. Right "Agentic Era" (blue accent text, bold): Goal set → Agent plans → Agent retrieves → Agent calls tools → Agent acts → Agent verifies. Use numbered text items.
 
 SLIDE 7 — "The Elastic Advantage":
-— 4 horizontal cards:
-  1. "Unified data platform" — logs, metrics, traces, security events, documents in one place.
-  2. "Search that actually works" — hybrid retrieval outperforms every alternative.
-  3. "Tools agents can call" — ES|QL custom tools, workflows, MCP endpoints.
-  4. "Governed by design" — RBAC, DLS/FLS, audit trails, human-in-the-loop.
+— 4 horizontal card shapes:
+  1. "Unified data platform" (blue border) — logs, metrics, traces, security, docs in one place.
+  2. "Search that works" (teal border) — hybrid retrieval outperforms every alternative.
+  3. "Tools agents can call" (pink border) — ES|QL, workflows, MCP endpoints.
+  4. "Governed by design" (amber border) — RBAC, DLS/FLS, audit, human-in-the-loop.
 
-SLIDE 8 — "What You'll See Today" (Closing/Transition):
-— Heading: "Today's Sessions — Deep Dives Into Each Pillar"
-— 3 highlight cards: "Search & RAG" (blue), "Observe & Secure" (teal), "Govern & Scale" (pink). Each with a one-sentence teaser.
-— Bottom: "Let's begin. →"
-
-OUTPUT: A Python script using the python-pptx library that generates a .pptx file. Each slide must be 16:9 (13.333" × 7.5"). Use RGBColor for all colors (no external images). Set slide backgrounds to dark navy RGB(11,18,32). Use shapes, text frames, tables, and grouped shapes for all layout including the timeline, stat boxes, quote blocks, and the G-T-C-R grid. Apply Inter font (fallback Calibri). Accent colored shapes should use solid fills with the Elastic palette. Save as "02_elastic_keynote.pptx".</div>
+SLIDE 8 — "What You'll See Today":
+— Heading: "Today's Sessions"
+— 3 cards: "Search & RAG" (blue fill), "Observe & Secure" (teal fill), "Govern & Scale" (pink fill). Each with one-sentence teaser.
+— Bottom text: "Let's begin. →"</div>
       <button class="copy-btn" onclick="copyPrompt(this)">📋 Copy Prompt</button>
       <div class="prompt-meta">
+        <span class="prompt-meta-tag">Output: .pptx</span>
         <span class="prompt-meta-tag">Slides: 8</span>
         <span class="prompt-meta-tag">Duration: ~30 min</span>
-        <span class="prompt-meta-tag">Type: Opening Keynote</span>
       </div>
     </div>
   </div>
-
   <div class="slide-nav"><button class="nav-btn" onclick="showSlide(1)">← Agenda</button><button class="nav-btn primary" onclick="showSlide(3)">Next: Agent Builder →</button></div>
 </div>
 
-<!-- SLIDE 3: Agent Builder Deep Dive -->
+<!-- ==================== SLIDE 3: Agent Builder ==================== -->
 <div class="slide" id="slide-3">
-  <div style="margin-top:24px">
+  <div class="slide-inner">
     <div class="sec-title blue">Session · 10:30 AM · Ashish Tiwari</div>
     <div class="sec-heading">Agent Builder Deep Dive: Agents, Tools &amp; Workflows</div>
-    <div class="sec-sub">Build custom AI agents in minutes. Ground them in your enterprise data. Give them the tools to take real action — all natively inside Elasticsearch.</div>
-    <div class="arch" style="margin-bottom:28px">
-      <div class="arch-layer"><div class="arch-label">AI Native Experiences</div><div class="arch-boxes"><div class="arch-box gray">Custom Apps</div><div class="arch-box gray">Claude / Copilot</div><div class="arch-box gray">Salesforce</div><div class="arch-box gray">LangChain</div></div></div>
-      <div class="arch-connector">↑ MCP &nbsp;&nbsp;&nbsp; A2A ↑</div>
-      <div class="arch-layer"><div class="arch-label">Powered by Tools &amp; Agents</div><div class="arch-boxes"><div class="arch-box amber">Agent Builder</div><div class="arch-box blue">Custom Tools (ES|QL)</div><div class="arch-box teal">Workflows</div><div class="arch-box pink">MCP / A2A Endpoints</div></div></div>
-      <div class="arch-connector">↑ Elasticsearch Platform ↑</div>
-      <div class="arch-layer"><div class="arch-label">Built on Enterprise Data</div><div class="arch-boxes"><div class="arch-box gray">Google Drive</div><div class="arch-box gray">GitHub</div><div class="arch-box gray">Salesforce</div><div class="arch-box gray">Confluence</div><div class="arch-box gray">Slack</div><div class="arch-box gray">Any API</div></div></div>
-    </div>
     <div class="card-grid">
-      <div class="card blue"><div class="card-icon blue">S</div><h3>Hybrid Search as context engine</h3><p>BM25 + dense + sparse retrieval. Less noise, higher accuracy, lower token cost.</p></div>
-      <div class="card teal"><div class="card-icon teal">T</div><h3>Custom tools with ES|QL</h3><p>Agents call structured queries autonomously. 100% task success, zero hallucination.</p></div>
-      <div class="card pink"><div class="card-icon pink">W</div><h3>Workflows as actions</h3><p>YAML-defined workflows: create Jira tickets, send PagerDuty alerts, enrich cases.</p></div>
-      <div class="card amber"><div class="card-icon amber">M</div><h3>MCP &amp; A2A interfaces</h3><p>Expose agents as MCP endpoints. Any external AI ecosystem can call them natively.</p></div>
-    </div>
-    <div class="tags">
-      <div class="tag blue">Agent Builder (Tech Preview)</div>
-      <div class="tag teal">ES|QL Tools</div>
-      <div class="tag pink">Elastic Workflows</div>
-      <div class="tag blue">MCP Server</div>
+      <div class="card blue"><div class="card-icon blue">S</div><h3>Hybrid Search</h3><p>BM25 + dense + sparse. 84.3% Recall@10.</p></div>
+      <div class="card teal"><div class="card-icon teal">T</div><h3>ES|QL Tools</h3><p>100% task success, zero hallucination.</p></div>
+      <div class="card pink"><div class="card-icon pink">W</div><h3>Workflows</h3><p>YAML-defined: Jira, PagerDuty, Slack.</p></div>
+      <div class="card amber"><div class="card-icon amber">M</div><h3>MCP &amp; A2A</h3><p>Expose agents as MCP endpoints.</p></div>
     </div>
   </div>
-
-  <!-- PROMPT BOX: Agent Builder -->
   <div class="prompt-box">
     <div class="prompt-header" onclick="togglePrompt(this)">
-      <h4>🎯 Claude Slide Deck Prompt <span class="badge">10 Slides · ~30 min Deep Dive + Demo</span></h4>
+      <h4>🎯 PPTX Prompt for Claude Desktop <span class="badge">10 Slides · ~30 min</span></h4>
       <div class="prompt-toggle">▼</div>
     </div>
     <div class="prompt-body">
-      <div class="prompt-text">Create a 10-slide HTML presentation (16:9, 1280×720px, keyboard + button nav) for "Agent Builder Deep Dive: Agents, Tools & Workflows" by Ashish Tiwari at Elastic Agentic Day, Mumbai, 17 April 2026. This is a 30-minute session including a live demo segment.
+      <div class="prompt-text">Generate a PowerPoint (.pptx) file with 10 slides for "Agent Builder Deep Dive: Agents, Tools & Workflows" by Ashish Tiwari at Elastic Agentic Day, Mumbai, 17 April 2026. 30-min session with live demo. Use python-pptx. Save as "03_elastic_agent_builder.pptx".
 
-BRANDING (apply globally — same rules for all slides in this event):
-— Background: #0B1220. Accent: Blue #0B64DD, Teal #00BFB3, Pink #BC1E70, Amber #F9B110.
-— Font: Inter (Google Fonts). Headings 900/36–44px white. Body 400/14px #A2B1C9.
-— Cards: 12px radius, 1px border at 25% accent opacity, bg at 8% opacity. Dark cards: bg rgba(255,255,255,0.04).
-— Architecture diagrams: use layered boxes with labels, connected by "↑" text connectors. Each layer has its own accent color.
-— Tags/pills: 11px, 600 weight, rounded 20px, colored per feature area.
+SLIDE DIMENSIONS: 16:9 (13.333 × 7.5 inches).
+BRANDING: Same Elastic dark theme — RGB(11,18,32) background, Blue/Teal/Pink/Amber accents, Calibri font, rounded rect cards with dark fills and accent borders. (See keynote prompt for full color specs.)
 
 SLIDE 1 — Session Title:
 — Eyebrow: "SESSION · 10:30 AM · ASHISH TIWARI"
 — Headline: "Agent Builder Deep Dive: Agents, Tools & Workflows"
-— Subtitle: "Build custom AI agents in minutes. Ground them in your enterprise data. Give them tools to take real action — all natively inside Elasticsearch."
-— Tags at bottom: "Agent Builder (Tech Preview)", "ES|QL Tools", "Elastic Workflows", "MCP Server"
+— Subtitle: "Build custom AI agents in minutes. Ground them in enterprise data. Give them tools to act — all natively inside Elasticsearch."
+— Tag pills at bottom: "Agent Builder (Tech Preview)", "ES|QL Tools", "Elastic Workflows", "MCP Server"
 
-SLIDE 2 — "The Agent Builder Architecture" (3-layer diagram):
-— Top layer "AI NATIVE EXPERIENCES" (gray boxes): Custom Apps, Claude / Copilot, Salesforce, LangChain
-— Middle connector: "↑ MCP    A2A ↑"
-— Middle layer "POWERED BY TOOLS & AGENTS" (accent boxes): Agent Builder (amber), Custom Tools / ES|QL (blue), Workflows (teal), MCP / A2A Endpoints (pink)
-— Bottom connector: "↑ Elasticsearch Platform ↑"
-— Bottom layer "BUILT ON ENTERPRISE DATA" (gray boxes): Google Drive, GitHub, Salesforce, Confluence, Slack, Any API
+SLIDE 2 — "Architecture" (3-layer diagram):
+— Build with 3 rows of rounded rectangles and arrow shapes between them:
+  Top row (gray fills): Custom Apps, Claude/Copilot, Salesforce, LangChain → label "AI NATIVE EXPERIENCES"
+  Arrow shapes pointing up labeled "MCP" and "A2A"
+  Middle row (accent fills): Agent Builder (amber), Custom Tools/ES|QL (blue), Workflows (teal), MCP/A2A Endpoints (pink) → label "POWERED BY TOOLS & AGENTS"
+  Arrow shapes labeled "Elasticsearch Platform"
+  Bottom row (gray fills): Google Drive, GitHub, Salesforce, Confluence, Slack, Any API → label "BUILT ON ENTERPRISE DATA"
 
 SLIDE 3 — "What Is an Elastic Agent?":
-— Definition card: An Elastic Agent is an AI-powered assistant created in Kibana that combines an LLM with enterprise-specific tools, knowledge sources, and workflow actions. It reasons over your data and acts on your behalf.
-— 3 small highlight cards: "Retrieval tools (hybrid search)", "Structured tools (ES|QL queries)", "Action tools (workflows)"
+— Definition card (large rounded rect): "An AI-powered assistant created in Kibana that combines an LLM with enterprise-specific tools, knowledge sources, and workflow actions."
+— 3 small cards below: "Retrieval tools (hybrid search)", "Structured tools (ES|QL)", "Action tools (workflows)"
 
-SLIDE 4 — "Hybrid Search as the Context Engine":
-— Icon: "S" in blue circle
-— Key message: BM25 + dense vectors + ELSER sparse retrieval combined delivers 84.3% Recall@10.
-— Comparison: show 3 mini stat cards — "BM25 only: ~65%", "Dense only: ~72%", "Hybrid: 84.3%" — to illustrate why hybrid wins.
-— Bottom note: "Agents retrieve the most relevant snippets — not entire documents. Less noise, higher accuracy, lower token cost."
+SLIDE 4 — "Hybrid Search as Context Engine":
+— Blue circle icon with "S"
+— 3 mini stat cards in a row: "BM25 only: ~65%" (dim), "Dense only: ~72%" (dim), "Hybrid: 84.3%" (blue highlight)
+— Bottom text: "Agents retrieve the most relevant snippets — not entire documents."
 
 SLIDE 5 — "Custom Tools with ES|QL":
-— Icon: "T" in teal circle
-— Key message: Define fine-grained data tools that agents call autonomously. Structured queries = 100% task success and zero hallucination on your own data.
-— Show a mock ES|QL query example in a code-style card (monospace font, dark bg, blue syntax highlighting): e.g., FROM logs-* | WHERE service.name == "checkout" | STATS avg(duration) BY host.name | SORT avg(duration) DESC | LIMIT 5
-— Callout: "Unlike free-text RAG, structured retrieval returns exactly what the agent needs — nothing extraneous."
+— Teal circle icon with "T"
+— Code block: Use a dark-filled rounded rect with Courier New 11pt text showing: FROM logs-* | WHERE service.name == "checkout" | STATS avg(duration) BY host.name | SORT avg(duration) DESC | LIMIT 5
+— Callout: "100% task success. Structured queries = zero hallucination on your own data."
 
 SLIDE 6 — "Workflows as Actions":
-— Icon: "W" in pink circle
-— Key message: Agents trigger YAML-defined workflows to create Jira tickets, send PagerDuty alerts, enrich security cases — reliable, repeatable, auditable.
-— Show a simple workflow diagram as a horizontal flow: Alert Triggered → Agent Investigates → Workflow Executes → Jira Ticket Created → Slack Notification Sent
-— Each step as a connected rounded box with arrow connectors.
+— Pink circle icon with "W"
+— Horizontal flow: 5 rounded rects connected by arrow shapes: Alert Triggered → Agent Investigates → Workflow Executes → Jira Ticket Created → Slack Notification Sent
 
-SLIDE 7 — "MCP & A2A: Be the Tool, Use the Tools":
-— Icon: "M" in amber circle
-— Two-column layout:
-  Left "Elastic as MCP Server": Generate an MCP key in Kibana → external AI (Claude, Copilot, Cursor) calls your agent as a tool. Setup in under 5 minutes.
-  Right "Elastic as A2A Peer": Orchestration frameworks (LangChain, AutoGen) delegate tasks to Elastic agents via A2A protocol. Multi-agent pipelines, no lock-in.
+SLIDE 7 — "MCP & A2A":
+— Two-column: Left card (blue) "Elastic as MCP Server" — generate key in Kibana, external AI calls your agent. Right card (teal) "Elastic as A2A Peer" — orchestration frameworks delegate tasks.
 
-SLIDE 8 — "Demo: Building an Agent Live" (Demo title card):
-— Large centered heading: "🛠 Live Demo"
-— Subtitle: "Building a service health agent from scratch in Kibana"
-— 4 demo steps previewed as numbered cards: 1) Create agent + select LLM, 2) Add hybrid search tool over logs index, 3) Add ES|QL tool for structured metric queries, 4) Attach workflow: auto-create Jira ticket on anomaly detection.
+SLIDE 8 — "Live Demo" (title card):
+— Large centered: "🛠 Live Demo" (36pt)
+— "Building a service health agent from scratch in Kibana"
+— 4 numbered step cards: 1) Create agent, 2) Add search tool, 3) Add ES|QL tool, 4) Attach Jira workflow.
 
-SLIDE 9 — "What We Just Built" (Demo recap):
-— Architecture mini-diagram showing the agent connected to: logs index (search tool), metrics index (ES|QL tool), Jira (workflow action), Slack (notification action).
-— Key stats: "Time to build: ~5 minutes", "Tools connected: 4", "Human config: zero code"
+SLIDE 9 — "What We Built" (recap):
+— Mini architecture diagram: agent in center connected to 4 shapes: logs index, metrics index, Jira, Slack.
+— Stats: "Time: ~5 min", "Tools: 4", "Code: zero"
 
 SLIDE 10 — "Get Started":
-— 3 action cards:
-  1. "Try Agent Builder" — Available in Tech Preview. Create your first agent in Kibana today.
-  2. "Browse Agent Skills" — 30+ open-source skills at github.com/elastic/agent-skills.
-  3. "Connect via MCP" — Generate your MCP key and let Claude, Copilot, or Cursor call your agents.
-— Bottom: "Questions? → Closing AMA at 4:30 PM"
-
-OUTPUT: A Python script using the python-pptx library that generates a .pptx file. Each slide must be 16:9 (13.333" × 7.5"). Use RGBColor for all colors. Set slide backgrounds to dark navy RGB(11,18,32). Use shapes, text frames, and tables for layout. For the architecture diagram, use layered rectangular shapes with connector arrows. For code examples (ES|QL), use a monospace font (Courier New) inside a dark-filled rounded rectangle. Apply Inter font (fallback Calibri). Save as "03_elastic_agent_builder.pptx".</div>
+— 3 cards: "Try Agent Builder", "Browse Agent Skills (github.com/elastic/agent-skills)", "Connect via MCP"
+— Bottom: "Questions? → Closing AMA at 4:30 PM"</div>
       <button class="copy-btn" onclick="copyPrompt(this)">📋 Copy Prompt</button>
       <div class="prompt-meta">
+        <span class="prompt-meta-tag">Output: .pptx</span>
         <span class="prompt-meta-tag">Slides: 10</span>
         <span class="prompt-meta-tag">Duration: ~30 min</span>
-        <span class="prompt-meta-tag">Type: Deep Dive + Live Demo</span>
       </div>
     </div>
   </div>
-
   <div class="slide-nav"><button class="nav-btn" onclick="showSlide(2)">← Keynote</button><button class="nav-btn primary" onclick="showSlide(4)">Next: Agentic RAG →</button></div>
 </div>
 
-<!-- SLIDE 4: Agentic RAG -->
+<!-- ==================== SLIDE 4: Agentic RAG ==================== -->
 <div class="slide" id="slide-4">
-  <div style="margin-top:24px">
-    <div class="sec-title teal">Session · 11:15 AM · Abhinav Chauhan, Aish Gunasekar, Ravindra Ramnani</div>
+  <div class="slide-inner">
+    <div class="sec-title teal">Session · 11:15 AM</div>
     <div class="sec-heading">Agentic RAG: Grounding Agents in Enterprise Knowledge</div>
-    <div class="sec-sub">Context rot is real. More text makes LLMs slower, less accurate, and more expensive. The answer isn't more data — it's <em>better retrieval</em>.</div>
     <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
-      <div class="card blue"><div class="card-icon blue">H</div><h3>Hybrid retrieval</h3><p>BM25 + dense + ELSER. 84.3% Recall@10.</p></div>
-      <div class="card teal"><div class="card-icon teal">C</div><h3>Semantic chunking</h3><p>93.3% hit rate. 40% context reduction.</p></div>
-      <div class="card pink"><div class="card-icon pink">Q</div><h3>Structured retrieval</h3><p>100% success with ES|QL.</p></div>
-      <div class="card amber"><div class="card-icon amber">K</div><h3>Knowledge tools</h3><p>Runbooks, docs, specs as searchable tools.</p></div>
+      <div class="card blue"><div class="card-icon blue">H</div><h3>Hybrid retrieval</h3><p>84.3% Recall@10</p></div>
+      <div class="card teal"><div class="card-icon teal">C</div><h3>Semantic chunking</h3><p>93.3% hit rate, 40% reduction</p></div>
+      <div class="card pink"><div class="card-icon pink">Q</div><h3>Structured retrieval</h3><p>100% success with ES|QL</p></div>
+      <div class="card amber"><div class="card-icon amber">K</div><h3>Knowledge tools</h3><p>Runbooks, docs, specs</p></div>
     </div>
   </div>
-
-  <!-- PROMPT BOX: Agentic RAG -->
   <div class="prompt-box">
     <div class="prompt-header" onclick="togglePrompt(this)">
-      <h4>🎯 Claude Slide Deck Prompt <span class="badge">8 Slides · ~25 min Session</span></h4>
+      <h4>🎯 PPTX Prompt for Claude Desktop <span class="badge">8 Slides · ~25 min</span></h4>
       <div class="prompt-toggle">▼</div>
     </div>
     <div class="prompt-body">
-      <div class="prompt-text">Create an 8-slide HTML presentation (16:9, 1280×720px, keyboard + button nav) for "Agentic RAG: Grounding Agents in Enterprise Knowledge" by Abhinav Chauhan, Aish Gunasekar, and Ravindra Ramnani at Elastic Agentic Day, Mumbai, 17 April 2026. Duration: ~25 minutes.
+      <div class="prompt-text">Generate a PowerPoint (.pptx) file with 8 slides for "Agentic RAG: Grounding Agents in Enterprise Knowledge" by Abhinav Chauhan, Aish Gunasekar, and Ravindra Ramnani at Elastic Agentic Day, Mumbai, 17 April 2026. 25-min session. Use python-pptx. Save as "04_elastic_agentic_rag.pptx".
 
-BRANDING: Same Elastic dark theme as other decks.
-— Background: #0B1220. Colors: Blue #0B64DD, Teal #00BFB3, Pink #BC1E70, Amber #F9B110. Text: white headings, #A2B1C9 body, #6B7D99 muted.
-— Font: Inter (Google Fonts). Same card, stat-box, quote-block, and tag styling as the event brand system.
+SLIDE DIMENSIONS: 16:9 (13.333 × 7.5 inches).
+BRANDING: Same Elastic dark theme. RGB(11,18,32) bg, Calibri font, accent cards. (See keynote prompt for full specs.)
 
-SLIDE 1 — Session Title:
-— Eyebrow: "SESSION · 11:15 AM · ABHINAV CHAUHAN, AISH GUNASEKAR, RAVINDRA RAMNANI"
-— Headline: "Agentic RAG: Grounding Agents in Enterprise Knowledge"
-— Subtitle: "Context rot is real. Giving an LLM more text makes it slower, less accurate, and more expensive. The answer isn't more data — it's better retrieval."
+SLIDE 1 — Title: Eyebrow "SESSION · 11:15 AM", Headline "Agentic RAG: Grounding Agents in Enterprise Knowledge", Subtitle about context rot.
 
 SLIDE 2 — "The Context Rot Problem":
 — Quote block: "More text is NOT the path to better AI. Accurate search is."
-— Key data point: "At 32K tokens, 11 models drop below 50% of their short-length baselines (NOLIMA, 2025)."
-— Visual: a simple bar chart (CSS-only, no JS library) showing LLM accuracy degrading as context length increases: 4K tokens = 95%, 16K = 78%, 32K = 48%, 64K = 31%. Use blue bars that fade to pink as accuracy drops.
-— Takeaway: "Stuffing more text into the prompt is the wrong strategy. Precision retrieval is the right one."
+— Bar chart using 4 horizontal rounded rects of decreasing width: 4K tokens=95% (blue), 16K=78% (lighter blue), 32K=48% (pink-ish), 64K=31% (pink). Labels beside each bar.
+— Takeaway text below.
 
 SLIDE 3 — "Context Engineering — The Full Picture":
-— A component map showing 6 elements that make up an agent's context window, each as a colored pill/chip:
-  • System prompt (blue), Retrieved content / RAG (teal), Long-term memory (pink), Available tools (amber), User prompt (gray), Chat history (gray)
-— Bottom callout: "Elastic is a complete, differentiated platform for Context Engineering — every component, natively."
+— 6 colored pill shapes (small rounded rects): System prompt (blue), Retrieved/RAG (teal), Long-term memory (pink), Available tools (amber), User prompt (gray), Chat history (gray).
+— Callout: "Elastic is a complete platform for Context Engineering."
 
 SLIDE 4 — "Hybrid Retrieval: Why It Wins":
-— 3 stat comparison cards side by side:
-  • BM25 only → ~65% Recall@10 (dark card, muted)
-  • Dense vector only → ~72% Recall@10 (dark card, muted)
-  • Elastic Hybrid (BM25 + dense + ELSER) → 84.3% Recall@10 (blue accent card, highlighted)
-— Explanation: "Hybrid combines lexical precision, semantic understanding, and learned sparse representations. Each method covers the blind spots of the others."
+— 3 stat comparison cards: BM25 ~65% (dim), Dense ~72% (dim), Elastic Hybrid 84.3% (blue highlighted).
+— Explanation text about combining methods.
 
 SLIDE 5 — "Semantic Chunking":
-— Key stats: "93.3% hit rate" and "40% context window reduction"
-— Two-column comparison:
-  Left "Naive chunking" (dim/faded): fixed 512-token windows, splits mid-sentence, irrelevant overlap, wastes tokens.
-  Right "Semantic chunking" (teal accent): sentence-boundary-aware splits, topically coherent passages, agents reason faster and cheaper.
-— Bottom: "Fewer tokens in → lower LLM cost per agent task."
+— Stats: "93.3% hit rate", "40% context reduction"
+— Two-column: Left "Naive chunking" (dim card) — fixed windows, splits mid-sentence. Right "Semantic chunking" (teal card) — sentence-aware, topically coherent.
 
 SLIDE 6 — "Structured Retrieval with ES|QL":
-— Stat highlight: "100% task success rate on agentic tasks"
-— Show an example ES|QL query in a code card: FROM metrics-* | WHERE service.name == "payments" AND @timestamp > NOW() - 1h | STATS avg(cpu.usage), max(memory.used) BY host.name
-— Explanation: "Structured queries return exactly what the agent needs — nothing extraneous. Zero hallucination on your own data."
+— Stat: "100% task success"
+— Code block (Courier New in dark rect): FROM metrics-* | WHERE service.name == "payments" AND @timestamp > NOW() - 1h | STATS avg(cpu.usage), max(memory.used) BY host.name
 
-SLIDE 7 — "Knowledge Tools: Searchable Enterprise Assets":
-— 4 cards in a grid:
-  • Runbooks — operational playbooks agents consult during incidents
-  • Incident history — past resolutions that inform current decisions
-  • Compliance docs — regulatory references for audit and governance
-  • Product specs — technical documentation agents search at runtime
-— Key message: "Package your enterprise knowledge as callable tools, not static prompts."
+SLIDE 7 — "Knowledge Tools":
+— 4-card grid: Runbooks, Incident history, Compliance docs, Product specs. Each with description.
 
-SLIDE 8 — "Why Elasticsearch Wins for Agentic RAG" (Summary):
-— 4 horizontal highlight items:
-  1. Hybrid retrieval outperforms pure-vector and BM25 in every benchmark
-  2. ELSER sparse model trained on real enterprise language patterns
-  3. Relevance tuning with Learning to Rank — continuously improving
-  4. DLS/FLS ensures agents only see data they're authorized to access
-— Closing line: "Better retrieval → better agents. It starts with search."
-
-OUTPUT: A Python script using the python-pptx library that generates a .pptx file. Each slide must be 16:9 (13.333" × 7.5"). Use RGBColor for all colors. Set slide backgrounds to dark navy RGB(11,18,32). For the CSS-only bar chart on Slide 2, render as rectangular shapes with varying widths and accent color fills. For code examples, use Courier New in a dark-filled rectangle. Use shapes, text frames, and tables for all layout. Apply Inter font (fallback Calibri). Save as "04_elastic_agentic_rag.pptx".</div>
+SLIDE 8 — "Why Elasticsearch Wins" (summary):
+— 4 horizontal items with arrow bullet shapes: Hybrid outperforms all, ELSER trained on enterprise language, Learning to Rank, DLS/FLS authorization.
+— Closing: "Better retrieval → better agents."</div>
       <button class="copy-btn" onclick="copyPrompt(this)">📋 Copy Prompt</button>
       <div class="prompt-meta">
+        <span class="prompt-meta-tag">Output: .pptx</span>
         <span class="prompt-meta-tag">Slides: 8</span>
         <span class="prompt-meta-tag">Duration: ~25 min</span>
-        <span class="prompt-meta-tag">Type: Technical Session</span>
       </div>
     </div>
   </div>
-
   <div class="slide-nav"><button class="nav-btn" onclick="showSlide(3)">← Agent Builder</button><button class="nav-btn primary" onclick="showSlide(5)">Next: MCP &amp; A2A →</button></div>
 </div>
 
-<!-- SLIDE 5: MCP & A2A -->
+<!-- ==================== SLIDE 5: MCP & A2A ==================== -->
 <div class="slide" id="slide-5">
-  <div style="margin-top:24px">
+  <div class="slide-inner">
     <div class="sec-title teal">Session · 11:45 AM · Ashish Tiwari</div>
     <div class="sec-heading">MCP &amp; A2A: Connecting Agents to Jira, Slack &amp; Beyond</div>
-    <div class="sec-sub">Open standards let your Elastic agents plug into — and be called by — any AI ecosystem.</div>
     <div class="two-col">
-      <div class="card blue"><div class="card-icon blue" style="font-size:12px">MCP</div><h3>Model Context Protocol</h3><p>AI models call your Elastic agent as a tool. Connect in under 5 minutes.</p></div>
-      <div class="card teal"><div class="card-icon teal" style="font-size:12px">A2A</div><h3>Agent-to-Agent</h3><p>Orchestration frameworks delegate tasks directly. Multi-agent pipelines, no lock-in.</p></div>
-    </div>
-    <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
-      <div class="card dark"><div class="card-icon gray" style="font-size:14px">Ji</div><h3>Jira</h3><p>Create, update, comment on tickets.</p></div>
-      <div class="card dark"><div class="card-icon gray" style="font-size:14px">Sl</div><h3>Slack</h3><p>Post incident summaries to channels.</p></div>
-      <div class="card dark"><div class="card-icon gray" style="font-size:14px">PD</div><h3>PagerDuty</h3><p>Trigger & resolve incidents autonomously.</p></div>
-      <div class="card dark"><div class="card-icon gray" style="font-size:14px">SF</div><h3>Salesforce</h3><p>Surface case context, update records.</p></div>
-      <div class="card dark"><div class="card-icon gray" style="font-size:14px">CR</div><h3>CrowdStrike</h3><p>Enrich & respond across endpoints.</p></div>
-      <div class="card dark"><div class="card-icon gray" style="font-size:14px">API</div><h3>Any REST API</h3><p>HTTP actions with auth & retry.</p></div>
+      <div class="card blue"><div class="card-icon blue" style="font-size:12px">MCP</div><h3>Model Context Protocol</h3><p>AI models call your agent as a tool. 5-min setup.</p></div>
+      <div class="card teal"><div class="card-icon teal" style="font-size:12px">A2A</div><h3>Agent-to-Agent</h3><p>Multi-agent pipelines, no lock-in.</p></div>
     </div>
   </div>
-
-  <!-- PROMPT BOX: MCP & A2A -->
   <div class="prompt-box">
     <div class="prompt-header" onclick="togglePrompt(this)">
-      <h4>🎯 Claude Slide Deck Prompt <span class="badge">8 Slides · ~25 min Demo Session</span></h4>
+      <h4>🎯 PPTX Prompt for Claude Desktop <span class="badge">8 Slides · ~25 min</span></h4>
       <div class="prompt-toggle">▼</div>
     </div>
     <div class="prompt-body">
-      <div class="prompt-text">Create an 8-slide HTML presentation (16:9, 1280×720px, keyboard + button nav) for "MCP & A2A: Connecting Agents to Jira, Slack & Beyond" by Ashish Tiwari at Elastic Agentic Day, Mumbai, 17 April 2026. Duration: ~25 minutes including demo.
+      <div class="prompt-text">Generate a PowerPoint (.pptx) file with 8 slides for "MCP & A2A: Connecting Agents to Jira, Slack & Beyond" by Ashish Tiwari at Elastic Agentic Day, Mumbai, 17 April 2026. 25-min session with demo. Use python-pptx. Save as "05_elastic_mcp_a2a.pptx".
 
-BRANDING: Elastic dark theme — #0B1220 bg, Blue #0B64DD, Teal #00BFB3, Pink #BC1E70, Amber #F9B110. Inter font. Standard card/stat/quote styling.
+SLIDE DIMENSIONS: 16:9 (13.333 × 7.5 inches).
+BRANDING: Same Elastic dark theme. (See keynote prompt for full specs.)
 
-SLIDE 1 — Session Title:
-— Eyebrow: "SESSION · 11:45 AM · ASHISH TIWARI"
-— Headline: "MCP & A2A: Connecting Agents to Jira, Slack & Beyond"
-— Subtitle: "Agents are only as powerful as the tools they can reach. Open standards let your Elastic agents plug into — and be called by — any AI ecosystem."
+SLIDE 1 — Title: Eyebrow, Headline "MCP & A2A: Connecting Agents to Jira, Slack & Beyond", Subtitle.
 
 SLIDE 2 — "Two Protocols, One Open Philosophy":
-— Two large side-by-side cards:
-  Left (blue accent) "MCP — Model Context Protocol": An open standard that lets AI models (Claude, Copilot, Cursor, Gemini CLI) call your Elastic agent as a tool. Think of it as USB-C for AI tool-calling.
-  Right (teal accent) "A2A — Agent-to-Agent": Google's open protocol for multi-agent orchestration. Elastic agents become callable peers in LangChain, AutoGen, or any A2A-compliant pipeline.
+— Two large side-by-side cards: MCP (blue) — "USB-C for AI tool-calling", A2A (teal) — "Multi-agent orchestration without vendor lock-in."
 
-SLIDE 3 — "Elastic as an MCP Server":
-— Step-by-step flow (3 steps as connected horizontal boxes):
-  1. "Create agent in Kibana" → 2. "Generate MCP key (one click)" → 3. "External AI calls your agent"
-— Below: logos/text labels of MCP clients: Claude Desktop, GitHub Copilot, Cursor, Gemini CLI
-— Callout: "Setup time: under 5 minutes. No manual configuration. No code."
+SLIDE 3 — "Elastic as MCP Server":
+— 3 connected horizontal rounded rects with arrows: Create agent → Generate MCP key → External AI calls agent.
+— Below: text labels of MCP clients (Claude Desktop, Copilot, Cursor, Gemini CLI).
 
-SLIDE 4 — "Elastic as an A2A Peer":
-— Diagram: Central "Orchestrator" node (e.g., LangChain) with arrows pointing to 3 agent boxes: "Elastic Search Agent", "Elastic Security Agent", "Third-party Agent". Each agent box has a colored border matching its domain.
-— Key point: "Composable multi-agent pipelines. Each agent is a specialist. The orchestrator delegates. No vendor lock-in."
+SLIDE 4 — "Elastic as A2A Peer":
+— Central "Orchestrator" rounded rect with arrow shapes pointing to 3 agent cards: Elastic Search Agent, Elastic Security Agent, Third-party Agent.
 
-SLIDE 5 — "What Agents Can Do Once Connected" (Integration grid):
-— 6 integration cards in a 3×2 grid (dark card style, gray icon):
-  • Jira — Create, update, and comment on tickets triggered by alerts or workflow steps.
-  • Slack — Post structured incident summaries, root cause findings, and remediation steps.
-  • PagerDuty — Trigger, acknowledge, and resolve incidents autonomously.
-  • CrowdStrike / Defender — Enrich, isolate, and respond across endpoint security tools.
-  • Salesforce — Surface case context, update records, trigger escalation paths.
-  • Any REST API — HTTP action steps with full auth and retry logic.
+SLIDE 5 — "Integration Grid":
+— 6 cards (3×2 grid): Jira, Slack, PagerDuty, CrowdStrike/Defender, Salesforce, Any REST API. Each with short description.
 
-SLIDE 6 — "Demo: Connecting an Elastic Agent via MCP" (Demo title card):
-— Centered heading: "🔌 Live Demo"
-— Subtitle: "Connecting an Elastic agent to Claude Desktop via MCP"
-— Demo steps preview: 1) Open Agent Builder in Kibana, 2) Generate MCP endpoint key, 3) Add to Claude Desktop config, 4) Ask Claude to query your Elastic data.
+SLIDE 6 — "Live Demo" title card:
+— "🔌 Live Demo: Connecting an Elastic Agent via MCP to Claude Desktop"
+— 4 step cards.
 
-SLIDE 7 — "The Integration Landscape" (Visual map):
-— Central hub: "Elastic Agent Builder" (blue border box)
-— Spokes radiating outward to categories:
-  Top: "AI Assistants" → Claude, Copilot, Cursor
-  Left: "Orchestration" → LangChain, AutoGen, CrewAI
-  Right: "Enterprise SaaS" → Jira, Slack, PagerDuty, Salesforce
-  Bottom: "Security" → CrowdStrike, Defender, VirusTotal
-— Use CSS-only layout (flexbox positioning, no SVG required).
+SLIDE 7 — "Integration Landscape" (hub-spoke):
+— Central "Elastic Agent Builder" rect with lines to 4 surrounding groups: AI Assistants (Claude, Copilot, Cursor), Orchestration (LangChain, AutoGen), Enterprise SaaS (Jira, Slack, PagerDuty), Security (CrowdStrike, Defender).
 
 SLIDE 8 — "Key Takeaways":
-— 3 summary cards:
-  1. "MCP makes your agents callable by any AI" — instant interoperability, zero friction.
-  2. "A2A makes your agents composable" — multi-agent pipelines across vendors.
-  3. "Open standards = no lock-in" — your automation investments survive the next model generation.
-— Bottom quote: "Chatbots talk. Agents act. Come see the difference."
-
-OUTPUT: A Python script using the python-pptx library that generates a .pptx file. Each slide must be 16:9 (13.333" × 7.5"). Use RGBColor for all colors. Set slide backgrounds to dark navy RGB(11,18,32). For diagrams (hub-and-spoke on Slide 7, flow steps on Slide 3), use rectangular/oval shapes with connector lines. Use shapes, text frames, and tables for all layout. Apply Inter font (fallback Calibri). Save as "05_elastic_mcp_a2a.pptx".</div>
+— 3 cards: "MCP = callable by any AI", "A2A = composable pipelines", "Open standards = no lock-in."
+— Quote: "Chatbots talk. Agents act."</div>
+      <button class="copy-btn" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+      <div class="prompt-meta">
+        <span class="prompt-meta-tag">Output: .pptx</span>
+        <span class="prompt-meta-tag">Slides: 8</span>
+        <span class="prompt-meta-tag">Duration: ~25 min</span>
       </div>
     </div>
   </div>
-
   <div class="slide-nav"><button class="nav-btn" onclick="showSlide(4)">← Agentic RAG</button><button class="nav-btn primary" onclick="showSlide(6)">Next: Automated RCA →</button></div>
 </div>
 
-<!-- SLIDE 6: Automated RCA & Threat Triage -->
+<!-- ==================== SLIDE 6: Automated RCA ==================== -->
 <div class="slide" id="slide-6">
-  <div style="margin-top:24px">
-    <div class="sec-title pink">Session · 12:15 PM · Ramprasad KM — Live Cross-Domain Demo</div>
+  <div class="slide-inner">
+    <div class="sec-title pink">Live Demo · 12:15 PM · Ramprasad KM</div>
     <div class="sec-heading">Agents in Action: Automated RCA &amp; Threat Triage</div>
-    <div class="sec-sub">Data volumes grow exponentially, alerts multiply daily, and human capacity is linear. Agents close that gap.</div>
     <div class="two-col">
-      <div>
-        <div class="sec-title teal" style="margin-bottom:12px">Observability: Automated Root Cause</div>
-        <div style="font-size:13px;color:#A2B1C9;line-height:2.2">01 → Latency spike detected in APM<br/>02 → Agent correlates logs, metrics, traces<br/>03 → Root cause: DB connection pool exhausted<br/>04 → PagerDuty alerted with summary</div>
-      </div>
-      <div>
-        <div class="sec-title pink" style="margin-bottom:12px">Security: Agentic SOC Triage</div>
-        <div style="font-size:13px;color:#A2B1C9;line-height:2.2">01 → Attack Discovery surfaces alert cluster<br/>02 → Agent gathers context &amp; risk scores<br/>03 → MCP enrichment from CrowdStrike<br/>04 → Case created. Alert to action in minutes.</div>
-      </div>
+      <div><div class="sec-title teal" style="margin-bottom:12px">Observability: Automated RCA</div><div style="font-size:13px;color:#A2B1C9;line-height:2.2">01 → Latency spike in APM<br/>02 → Agent correlates logs, metrics, traces<br/>03 → Root cause: DB pool exhausted<br/>04 → PagerDuty alerted</div></div>
+      <div><div class="sec-title pink" style="margin-bottom:12px">Security: SOC Triage</div><div style="font-size:13px;color:#A2B1C9;line-height:2.2">01 → Alert cluster surfaced<br/>02 → Agent gathers context<br/>03 → MCP enrichment from CrowdStrike<br/>04 → Case created in minutes</div></div>
     </div>
   </div>
-
-  <!-- PROMPT BOX: Automated RCA -->
   <div class="prompt-box">
     <div class="prompt-header" onclick="togglePrompt(this)">
-      <h4>🎯 Claude Slide Deck Prompt <span class="badge">10 Slides · ~30 min Live Demo</span></h4>
+      <h4>🎯 PPTX Prompt for Claude Desktop <span class="badge">10 Slides · ~30 min</span></h4>
       <div class="prompt-toggle">▼</div>
     </div>
     <div class="prompt-body">
-      <div class="prompt-text">Create a 10-slide HTML presentation (16:9, 1280×720px, keyboard + button nav) for "Agents in Action: Automated RCA & Threat Triage" by Ramprasad KM at Elastic Agentic Day, Mumbai, 17 April 2026. Duration: ~30 minutes. This is a live cross-domain demo spanning both observability and security.
+      <div class="prompt-text">Generate a PowerPoint (.pptx) file with 10 slides for "Agents in Action: Automated RCA & Threat Triage" by Ramprasad KM at Elastic Agentic Day, Mumbai, 17 April 2026. 30-min live cross-domain demo. Use python-pptx. Save as "06_elastic_automated_rca.pptx".
 
-BRANDING: Elastic dark theme — #0B1220 bg. Blue #0B64DD, Teal #00BFB3, Pink #BC1E70, Amber #F9B110. Inter font. Standard card/stat/quote styling.
+SLIDE DIMENSIONS: 16:9 (13.333 × 7.5 inches).
+BRANDING: Same Elastic dark theme. (See keynote prompt for full specs.)
 
-SLIDE 1 — Session Title:
-— Eyebrow: "LIVE CROSS-DOMAIN DEMO · 12:15 PM · RAMPRASAD KM"
-— Headline: "Agents in Action: Automated RCA & Threat Triage"
-— Subtitle: "Every operational team faces the same breaking point: data volumes grow exponentially, alerts multiply daily, human capacity is linear. Agents close that gap."
+SLIDE 1 — Title: Eyebrow "LIVE CROSS-DOMAIN DEMO · 12:15 PM", Headline, Subtitle about alert overload.
 
 SLIDE 2 — "The Problem: Alert Overload":
-— Two-column layout:
-  Left "Observability teams": Thousands of metrics, logs, traces. Latency spikes buried in noise. Manual correlation across dashboards takes hours.
-  Right "Security teams": Hundreds of alerts daily. SOC analysts spend 80% of time on Tier-1 triage. Critical threats buried under false positives.
-— Bottom stat: "Human capacity is linear. Data growth is exponential. This gap only widens."
+— Two-column: Left "Observability" (teal border card) — latency spikes buried in noise, manual correlation. Right "Security" (pink border card) — 80% time on Tier-1, critical threats buried. Bottom text about exponential gap.
 
-SLIDE 3 — "The Solution: Cross-Domain Agentic Workflows":
-— Central concept: one unified data platform (Elasticsearch) powering agents that work across observability AND security.
-— Diagram: "Elastic Platform" at center, with two branches — left "Observability Agent" (teal), right "Security Agent" (pink). Both connect down to "Shared Data: logs, metrics, traces, events" and up to "Actions: Jira, Slack, PagerDuty".
+SLIDE 3 — "Cross-Domain Agentic Workflows":
+— Central "Elastic Platform" rect with two branches: left "Observability Agent" (teal), right "Security Agent" (pink). Both connect down to "Shared Data" and up to "Actions: Jira, Slack, PagerDuty".
 
-SLIDE 4 — "Demo Scenario 1: Observability — Automated Root Cause Analysis":
-— Centered heading: "🔍 Live Demo: Automated RCA"
-— 4 numbered steps as connected cards:
-  1. "Service latency spike detected in APM metrics" (teal accent)
-  2. "Agent correlates logs, metrics, and traces autonomously"
-  3. "Root cause identified — upstream DB connection pool exhausted"
-  4. "PagerDuty alerted with summary before SRE responds"
+SLIDE 4 — "Demo 1: Automated RCA" title card:
+— "🔍 Live Demo: Automated RCA"
+— 4 numbered step cards (teal accent): detect → correlate → identify root cause → alert PagerDuty.
 
-SLIDE 5 — "How the RCA Agent Works" (Technical detail):
-— Flow diagram: APM Alert → Agent receives goal ("diagnose latency spike") → Tool calls: [Search logs for errors], [Query metrics via ES|QL], [Correlate trace spans] → Reasoning: "DB pool exhausted causing upstream timeouts" → Action: PagerDuty incident + Slack summary
-— Key point: "The agent correlates across data types that would take a human 30+ minutes to cross-reference manually."
+SLIDE 5 — "How the RCA Agent Works":
+— Flow diagram with rounded rects and arrows: APM Alert → Agent goal → Tool calls [Search logs, Query metrics, Correlate traces] → Reasoning → PagerDuty + Slack.
 
-SLIDE 6 — "Demo Scenario 2: Security — Agentic SOC Triage":
-— Centered heading: "🛡 Live Demo: Agentic SOC Triage"
-— 4 numbered steps (pink accent):
-  1. "Attack Discovery surfaces high-fidelity alert cluster"
-  2. "Agent gathers context: entity risk scores, related events, threat intel"
-  3. "MCP enrichment from CrowdStrike, Defender, VirusTotal"
-  4. "Case created with findings. Alert to action in minutes, not hours."
+SLIDE 6 — "Demo 2: SOC Triage" title card:
+— "🛡 Live Demo: Agentic SOC Triage"
+— 4 numbered step cards (pink accent): alert cluster → gather context → MCP enrichment → case created.
 
-SLIDE 7 — "How the SOC Triage Agent Works" (Technical detail):
-— Flow diagram: Security Alert Cluster → Agent goal: "triage and enrich" → Tool calls: [Search SIEM events], [ES|QL: entity risk score], [MCP: CrowdStrike endpoint data], [MCP: VirusTotal hash lookup] → Reasoning: "Confirmed lateral movement from compromised endpoint" → Action: Security case created + analyst notified
-— Note: "Human-in-the-loop: high-severity actions (isolation, blocking) require analyst approval."
+SLIDE 7 — "How the SOC Agent Works":
+— Flow: Security Alerts → Agent goal → Tools [SIEM search, ES|QL risk score, MCP CrowdStrike, MCP VirusTotal] → Reasoning → Case + notification. Note about human-in-the-loop for high-severity.
 
 SLIDE 8 — "Unified Data Foundation":
-— 3 cards:
-  1. "Unified data" (teal) — Logs, metrics, traces, and security events in one platform. Agents correlate across all of it.
-  2. "Workflows as hands" (pink) — Cross-system orchestration. From insight to ticket to resolution without human toil.
-  3. "SLOs & ML anomalies" (blue) — Agents assess APM service health, surface SLO breaches, trigger remediation before users notice.
+— 3 cards: "Unified data" (teal), "Workflows as hands" (pink), "SLOs & ML anomalies" (blue).
 
-SLIDE 9 — "Impact: Before vs After Agents":
-— Two-column comparison table:
-  "Before" column (dim): MTTR 45 min, Tier-1 triage manual, Cross-domain correlation: manual dashboard hopping, Alert-to-ticket: copy-paste-repeat.
-  "After" column (vibrant): MTTR < 5 min, Tier-1 triage automated, Cross-domain: agent correlates in seconds, Alert-to-ticket: autonomous workflow.
+SLIDE 9 — "Before vs After":
+— python-pptx Table, two columns: "Before Agents" (dim) vs "After Agents" (bright). Rows: MTTR, Tier-1 triage, Correlation method, Alert-to-ticket process.
 
-SLIDE 10 — "Key Takeaways":
-— 3 cards:
-  1. "Agents work across domains" — same platform, same data, observability and security together.
-  2. "Correlation in seconds, not hours" — agents cross-reference logs, metrics, traces, and events automatically.
-  3. "Actions, not dashboards" — the goal is resolution, not more screens to stare at.
-— Bottom: "Next: Networking Lunch 🍽 — then afternoon sessions at 2:00 PM"
-
-OUTPUT: A Python script using the python-pptx library that generates a .pptx file. Each slide must be 16:9 (13.333" × 7.5"). Use RGBColor for all colors. Set slide backgrounds to dark navy RGB(11,18,32). For flow diagrams (RCA steps, SOC triage steps), use rectangular shapes connected by arrow shapes. For the before/after comparison table on Slide 9, use a python-pptx Table object with styled cells. Apply Inter font (fallback Calibri). Save as "06_elastic_automated_rca.pptx".</div>
+SLIDE 10 — "Takeaways":
+— 3 cards: Cross-domain agents, Correlation in seconds, Actions not dashboards.
+— "Next: Lunch 🍽 then afternoon at 2:00 PM"</div>
+      <button class="copy-btn" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+      <div class="prompt-meta">
+        <span class="prompt-meta-tag">Output: .pptx</span>
+        <span class="prompt-meta-tag">Slides: 10</span>
+        <span class="prompt-meta-tag">Duration: ~30 min</span>
       </div>
     </div>
   </div>
-
   <div class="slide-nav"><button class="nav-btn" onclick="showSlide(5)">← MCP &amp; A2A</button><button class="nav-btn primary" onclick="showSlide(7)">Next: Customer Panel →</button></div>
 </div>
 
-<!-- SLIDE 7: Customer Panel -->
+<!-- ==================== SLIDE 7: Customer Panel ==================== -->
 <div class="slide" id="slide-7">
-  <div style="margin-top:24px">
+  <div class="slide-inner">
     <div class="sec-title amber">Customer Panel · 2:00 PM</div>
     <div class="sec-heading">Operationalizing AI Agents: Lessons from the Field</div>
-    <div class="sec-sub">Practitioners from BFSI and Digital Native enterprises share what it takes to move from prototype to production.</div>
     <div class="card-grid">
-      <div class="card blue"><div class="card-icon blue" style="font-size:14px">FS</div><h3>Financial Services</h3><p>Fraud correlation, AML triage, customer 360 agents.</p></div>
+      <div class="card blue"><div class="card-icon blue" style="font-size:14px">FS</div><h3>Financial Services</h3><p>Fraud correlation, AML triage, customer 360.</p></div>
       <div class="card teal"><div class="card-icon teal" style="font-size:14px">DN</div><h3>Digital Native</h3><p>Platform reliability, dev copilots, support automation.</p></div>
     </div>
   </div>
-
-  <!-- PROMPT BOX: Customer Panel -->
   <div class="prompt-box">
     <div class="prompt-header" onclick="togglePrompt(this)">
-      <h4>🎯 Claude Slide Deck Prompt <span class="badge">6 Slides · ~25 min Panel</span></h4>
+      <h4>🎯 PPTX Prompt for Claude Desktop <span class="badge">6 Slides · ~25 min</span></h4>
       <div class="prompt-toggle">▼</div>
     </div>
     <div class="prompt-body">
-      <div class="prompt-text">Create a 6-slide HTML presentation (16:9, 1280×720px, keyboard + button nav) for "Customer Panel: Operationalizing AI Agents — Lessons from the Field" at Elastic Agentic Day, Mumbai, 17 April 2026. Duration: ~25 minutes. This is a moderated panel discussion with BFSI and Digital Native enterprise leaders.
+      <div class="prompt-text">Generate a PowerPoint (.pptx) file with 6 slides for "Customer Panel: Operationalizing AI Agents" at Elastic Agentic Day, Mumbai, 17 April 2026. 25-min moderated panel. Use python-pptx. Save as "07_elastic_customer_panel.pptx".
 
-BRANDING: Elastic dark theme — #0B1220 bg. Blue #0B64DD, Teal #00BFB3, Pink #BC1E70, Amber #F9B110. Inter font. Standard styling.
+SLIDE DIMENSIONS: 16:9 (13.333 × 7.5 inches).
+BRANDING: Same Elastic dark theme. (See keynote prompt for full specs.)
 
-SLIDE 1 — Panel Title:
-— Eyebrow: "CUSTOMER PANEL · 2:00 PM"
-— Headline: "Operationalizing AI Agents: Lessons from the Field"
-— Subtitle: "Practitioners from BFSI and Digital Native enterprises share what it actually takes to move from prototype to production-grade agentic AI."
-— Two industry cards: "Financial Services & Banking" (blue) and "Digital Native Enterprises" (teal), each with a one-line description of their use cases.
+SLIDE 1 — Title: Eyebrow "CUSTOMER PANEL · 2:00 PM", Headline, Subtitle. Two industry cards: "Financial Services" (blue), "Digital Native" (teal).
 
-SLIDE 2 — "Panelist Profiles" (Placeholder):
-— 3–4 panelist placeholder cards in a row. Each card: avatar circle with initials, name placeholder "Speaker Name", title placeholder "Title, Company", and a one-line focus area. Use blue, teal, pink, amber accent borders to differentiate.
-— Note at bottom: "Panelists from leading BFSI & Digital Native enterprises in India"
+SLIDE 2 — "Panelist Profiles": 3–4 placeholder cards in a row. Each: circle shape with initials, "Speaker Name", "Title, Company", one-line focus. Different accent borders.
 
-SLIDE 3 — "Discussion Topics":
-— 4 topic cards (dark card style):
-  1. "Governance" — How do you govern what agents are allowed to do? Guardrails, approval workflows, human-in-the-loop at enterprise scale.
-  2. "Day-Two Operations" — Monitoring agent behaviour, detecting drift, continuously improving retrieval quality.
-  3. "Business Case" — Metrics, benchmarks, and the ROI conversation with stakeholders.
-  4. "Lessons Learned" — What would you do differently? Honest lessons from teams who've shipped agentic systems.
+SLIDE 3 — "Discussion Topics": 4 dark cards: Governance, Day-Two Operations, Business Case, Lessons Learned. Each with description.
 
-SLIDE 4 — "BFSI Use Cases in Focus":
-— 3 cards:
-  • "Fraud signal correlation" — real-time cross-referencing of transaction anomalies, device fingerprints, and behavioral patterns.
-  • "AML alert triage" — automated enrichment and risk scoring of anti-money-laundering alerts.
-  • "Customer 360 agents" — unified customer context from transactional, behavioral, and interaction data.
+SLIDE 4 — "BFSI Use Cases": 3 cards — Fraud correlation, AML triage, Customer 360 agents.
 
-SLIDE 5 — "Digital Native Use Cases in Focus":
-— 3 cards:
-  • "Platform reliability agents" — SLO monitoring, automated RCA, self-healing infrastructure.
-  • "Developer productivity copilots" — code search, documentation Q&A, incident runbook assistance.
-  • "Customer support automation" — ticket classification, knowledge retrieval, resolution suggestion.
+SLIDE 5 — "Digital Native Use Cases": 3 cards — Platform reliability, Dev copilots, Support automation.
 
-SLIDE 6 — "Audience Q&A" (Interactive slide):
-— Large centered text: "Your Questions"
-— Subtitle: "What challenges are you facing in operationalizing AI agents?"
-— 3 suggested question themes as muted cards: "Getting started", "Scaling & governance", "Measuring success"
-— Bottom: "Submit questions via the event app or raise your hand."
-
-OUTPUT: A Python script using the python-pptx library that generates a .pptx file. Each slide must be 16:9 (13.333" × 7.5"). Use RGBColor for all colors. Set slide backgrounds to dark navy RGB(11,18,32). For panelist placeholder cards, use rounded rectangles with circle shapes for avatar initials. Use shapes, text frames, and tables for all layout. Apply Inter font (fallback Calibri). Save as "07_elastic_customer_panel.pptx".</div>
+SLIDE 6 — "Audience Q&A": Large centered "Your Questions", 3 muted theme cards, bottom note about submitting questions.</div>
+      <button class="copy-btn" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+      <div class="prompt-meta">
+        <span class="prompt-meta-tag">Output: .pptx</span>
+        <span class="prompt-meta-tag">Slides: 6</span>
+        <span class="prompt-meta-tag">Duration: ~25 min</span>
       </div>
     </div>
   </div>
-
-  <div class="slide-nav"><button class="nav-btn" onclick="showSlide(6)">← Automated RCA</button><button class="nav-btn primary" onclick="showSlide(8)">Next: Measuring ROI →</button></div>
+  <div class="slide-nav"><button class="nav-btn" onclick="showSlide(6)">← Automated RCA</button><button class="nav-btn primary" onclick="showSlide(8)">Next: Agentic ROI →</button></div>
 </div>
 
-<!-- SLIDE 8: Agentic ROI -->
+<!-- ==================== SLIDE 8: Agentic ROI ==================== -->
 <div class="slide" id="slide-8">
-  <div style="margin-top:24px">
+  <div class="slide-inner">
     <div class="sec-title amber">Session · 3:30 PM · Abhijeet Bhaskar</div>
     <div class="sec-heading">The Business Case: Measuring Agentic ROI</div>
-    <div class="sec-sub">You can't hire your way out of exponential data growth. Agents are the force multiplier.</div>
-    <div class="stat-row" style="margin-top:8px">
-      <div class="stat-box"><div class="stat-num" style="color:#00BFB3">~70%</div><div class="stat-label">Tier-1 triage time reduction</div></div>
-      <div class="stat-box"><div class="stat-num" style="color:#F9B110">5x</div><div class="stat-label">Analyst throughput increase</div></div>
-      <div class="stat-box"><div class="stat-num" style="color:#36A2EF">40%</div><div class="stat-label">Lower LLM cost with semantic chunking</div></div>
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-num" style="color:#00BFB3">~70%</div><div class="stat-label">Tier-1 triage reduction</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:#F9B110">5x</div><div class="stat-label">Analyst throughput</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:#36A2EF">40%</div><div class="stat-label">Lower LLM cost</div></div>
     </div>
   </div>
-
-  <!-- PROMPT BOX: Agentic ROI -->
   <div class="prompt-box">
     <div class="prompt-header" onclick="togglePrompt(this)">
-      <h4>🎯 Claude Slide Deck Prompt <span class="badge">7 Slides · ~25 min Session</span></h4>
+      <h4>🎯 PPTX Prompt for Claude Desktop <span class="badge">7 Slides · ~25 min</span></h4>
       <div class="prompt-toggle">▼</div>
     </div>
     <div class="prompt-body">
-      <div class="prompt-text">Create a 7-slide HTML presentation (16:9, 1280×720px, keyboard + button nav) for "The Business Case: Measuring Agentic ROI" by Abhijeet Bhaskar at Elastic Agentic Day, Mumbai, 17 April 2026. Duration: ~25 minutes.
+      <div class="prompt-text">Generate a PowerPoint (.pptx) file with 7 slides for "The Business Case: Measuring Agentic ROI" by Abhijeet Bhaskar at Elastic Agentic Day, Mumbai, 17 April 2026. 25-min session. Use python-pptx. Save as "08_elastic_agentic_roi.pptx".
 
-BRANDING: Elastic dark theme — #0B1220 bg. Blue #0B64DD, Teal #00BFB3, Pink #BC1E70, Amber #F9B110. Inter font. Standard styling.
+SLIDE DIMENSIONS: 16:9 (13.333 × 7.5 inches).
+BRANDING: Same Elastic dark theme. (See keynote prompt for full specs.)
 
-SLIDE 1 — Session Title:
-— Eyebrow: "SESSION · 3:30 PM · ABHIJEET BHASKAR"
-— Headline: "The Business Case: Measuring Agentic ROI"
-— Subtitle: "Data volumes grow exponentially. Human capacity grows linearly. You can't hire your way out of this problem. Agents are the force multiplier."
+SLIDE 1 — Title: Eyebrow "SESSION · 3:30 PM · ABHIJEET BHASKAR", Headline, Subtitle about exponential data vs linear capacity.
 
-SLIDE 2 — "The Exponential Gap":
-— Visual concept: two lines diverging — "Data volume" curving steeply upward (blue), "Human capacity" staying flat (pink/faded). Render as a simple CSS-only chart or use angled divs to suggest diverging curves.
-— Text below: "Every alert not triaged is a risk. Every manual investigation repeated is a cost. The gap between data growth and team capacity only widens."
+SLIDE 2 — "The Exponential Gap": Two angled polygon shapes (freeform) suggesting diverging curves — "Data volume" (blue, steep) and "Human capacity" (pink, flat). Text below about widening gap.
 
-SLIDE 3 — "The Cost of the Status Quo":
-— 3 problem cards (pink/danger accent):
-  1. "Alert fatigue" — Thousands of alerts daily. Critical threats buried in noise. Response times degrading.
-  2. "Manual toil" — Hours wasted on copy-paste-enrich-ticket-repeat. Same investigation run thousands of times.
-  3. "Missed signals" — The real danger is what you don't catch. By the time you find it, it's too late.
+SLIDE 3 — "Cost of Status Quo": 3 pink-accented cards: Alert fatigue, Manual toil, Missed signals. Each with description.
 
-SLIDE 4 — "Value Levers with Elastic Agents":
-— 3 value cards (blue/teal accent):
-  1. "MTTR reduction" — Agents correlate and diagnose in seconds. SREs get root cause, not raw logs.
-  2. "Analyst throughput" — Tier-1 triage automated. Analysts focus on high-judgment work. Burnout decreases.
-  3. "Token cost efficiency" — Hybrid retrieval + semantic chunking reduces LLM token spend by up to 40%.
+SLIDE 4 — "Value Levers": 3 blue/teal cards: MTTR reduction, Analyst throughput, Token cost efficiency.
 
-SLIDE 5 — "The Numbers" (Impact stats):
-— 3 large stat boxes in a row:
-  • ~70% (teal) — "Typical reduction in Tier-1 alert triage time reported by early Elastic security customers"
-  • 5x (amber) — "Analyst throughput increase when routine investigations are automated end-to-end"
-  • 40% (blue) — "Lower LLM cost per agent task with semantic chunking vs naive full-document retrieval"
+SLIDE 5 — "The Numbers": 3 large stat boxes: ~70% teal, 5x amber, 40% blue. With descriptions.
 
-SLIDE 6 — "Building Your ROI Model":
-— A framework card with 4 measurement dimensions:
-  1. "Time saved" — Hours reclaimed from manual triage, correlation, and ticket creation per week.
-  2. "Risk reduced" — Fewer missed alerts, faster MTTR, reduced breach exposure window.
-  3. "Cost avoided" — Lower LLM token costs, reduced headcount pressure, fewer tool licenses.
-  4. "Quality improved" — More consistent investigations, better documentation, institutional knowledge captured.
-— Bottom note: "Start measuring from day one. The ROI compounds."
+SLIDE 6 — "Building Your ROI Model": 4-item framework card: Time saved, Risk reduced, Cost avoided, Quality improved. Bottom note.
 
-SLIDE 7 — "Key Takeaways":
-— 3 summary points:
-  1. "The status quo is unsustainable" — linear teams can't keep up with exponential data.
-  2. "Agents are a force multiplier, not a replacement" — they handle the repetitive; humans handle the judgment.
-  3. "Measure what matters" — MTTR, throughput, cost per investigation, missed signal rate.
-— Closing: "The question isn't whether you can afford agents. It's whether you can afford not to have them."
-
-OUTPUT: A Python script using the python-pptx library that generates a .pptx file. Each slide must be 16:9 (13.333" × 7.5"). Use RGBColor for all colors. Set slide backgrounds to dark navy RGB(11,18,32). For the diverging lines chart on Slide 2, use angled polygon shapes or freeform shapes to suggest two diverging curves. For stat boxes, use large bold numbers inside rounded rectangles. Apply Inter font (fallback Calibri). Save as "08_elastic_agentic_roi.pptx".</div>
+SLIDE 7 — "Takeaways": 3 summary points. Closing: "Can you afford NOT to have agents?"</div>
+      <button class="copy-btn" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+      <div class="prompt-meta">
+        <span class="prompt-meta-tag">Output: .pptx</span>
+        <span class="prompt-meta-tag">Slides: 7</span>
+        <span class="prompt-meta-tag">Duration: ~25 min</span>
       </div>
     </div>
   </div>
-
   <div class="slide-nav"><button class="nav-btn" onclick="showSlide(7)">← Customer Panel</button><button class="nav-btn primary" onclick="showSlide(9)">Next: Governance →</button></div>
 </div>
 
-<!-- SLIDE 9: Governance -->
+<!-- ==================== SLIDE 9: Governance ==================== -->
 <div class="slide" id="slide-9">
-  <div style="margin-top:24px">
+  <div class="slide-inner">
     <div class="sec-title pink">Session · 3:00 PM · Bhadriraju Prasanth</div>
     <div class="sec-heading">Governing AI Agents: Risk, Trust &amp; Compliance</div>
-    <div class="sec-sub">Governance is what separates a prototype from a production system your CISO will approve.</div>
     <div class="card-grid">
-      <div class="card blue"><div class="card-icon blue" style="font-size:13px">AC</div><h3>Access control &amp; RBAC</h3><p>DLS/FLS ensures agents only see authorized data.</p></div>
-      <div class="card teal"><div class="card-icon teal" style="font-size:13px">AU</div><h3>Full audit trail</h3><p>Every retrieval and tool call logged. Immutable and queryable.</p></div>
-      <div class="card pink"><div class="card-icon pink" style="font-size:13px">HL</div><h3>Human-in-the-loop</h3><p>Configurable approval steps for high-risk actions.</p></div>
-      <div class="card amber"><div class="card-icon amber" style="font-size:13px">GR</div><h3>Guardrails</h3><p>Least-privilege by design. No open-ended autonomy.</p></div>
+      <div class="card blue"><div class="card-icon blue" style="font-size:13px">AC</div><h3>Access Control</h3><p>DLS/FLS + RBAC.</p></div>
+      <div class="card teal"><div class="card-icon teal" style="font-size:13px">AU</div><h3>Audit Trail</h3><p>Every action logged.</p></div>
+      <div class="card pink"><div class="card-icon pink" style="font-size:13px">HL</div><h3>Human-in-the-Loop</h3><p>Approval gates for high-risk.</p></div>
+      <div class="card amber"><div class="card-icon amber" style="font-size:13px">GR</div><h3>Guardrails</h3><p>Least-privilege by design.</p></div>
     </div>
   </div>
-
-  <!-- PROMPT BOX: Governance -->
   <div class="prompt-box">
     <div class="prompt-header" onclick="togglePrompt(this)">
-      <h4>🎯 Claude Slide Deck Prompt <span class="badge">7 Slides · ~25 min Session</span></h4>
+      <h4>🎯 PPTX Prompt for Claude Desktop <span class="badge">7 Slides · ~25 min</span></h4>
       <div class="prompt-toggle">▼</div>
     </div>
     <div class="prompt-body">
-      <div class="prompt-text">Create a 7-slide HTML presentation (16:9, 1280×720px, keyboard + button nav) for "Governing AI Agents: Risk, Trust & Compliance" by Bhadriraju Prasanth at Elastic Agentic Day, Mumbai, 17 April 2026. Duration: ~25 minutes.
+      <div class="prompt-text">Generate a PowerPoint (.pptx) file with 7 slides for "Governing AI Agents: Risk, Trust & Compliance" by Bhadriraju Prasanth at Elastic Agentic Day, Mumbai, 17 April 2026. 25-min session. Use python-pptx. Save as "09_elastic_governance.pptx".
 
-BRANDING: Elastic dark theme — #0B1220 bg. Blue #0B64DD, Teal #00BFB3, Pink #BC1E70, Amber #F9B110. Inter font. Standard styling.
+SLIDE DIMENSIONS: 16:9 (13.333 × 7.5 inches).
+BRANDING: Same Elastic dark theme. (See keynote prompt for full specs.)
 
-SLIDE 1 — Session Title:
-— Eyebrow: "SESSION · 3:00 PM · BHADRIRAJU PRASANTH"
-— Headline: "Governing AI Agents: Risk, Trust & Compliance"
-— Subtitle: "Autonomous agents acting at enterprise scale require more than good intentions. Governance is what separates a prototype from a production system your CISO will approve."
+SLIDE 1 — Title: Eyebrow, Headline, Subtitle about governance separating prototypes from production.
 
-SLIDE 2 — "The Governance Imperative":
-— Key question in large text: "What happens when an autonomous agent makes a mistake at 3 AM?"
-— 3 risk cards:
-  1. "Data leakage" — agent retrieves information it shouldn't have access to.
-  2. "Uncontrolled actions" — agent triggers workflows with unintended consequences.
-  3. "Audit gaps" — no record of what the agent did, why, or with what data.
-— Takeaway: "Trust is built incrementally — not assumed from day one."
+SLIDE 2 — "The Governance Imperative": Large text "What happens when an autonomous agent makes a mistake at 3 AM?" 3 risk cards: Data leakage, Uncontrolled actions, Audit gaps.
 
-SLIDE 3 — "Pillar 1: Access Control & RBAC":
-— Icon: "AC" in blue circle
-— Key features:
-  • Document-level security (DLS): agents only retrieve documents matching their role permissions.
-  • Field-level security (FLS): sensitive fields (PII, financial data) masked even within accessible documents.
-  • Role-based tool access: each agent can only use the specific tools assigned to its role.
-— Principle: "Least-privilege by design. The agent sees and does only what it's authorized to."
+SLIDE 3 — "Access Control & RBAC": Blue icon "AC". Features: DLS (document-level), FLS (field-level), role-based tool access. Principle text.
 
-SLIDE 4 — "Pillar 2: Full Audit Trail":
-— Icon: "AU" in teal circle
-— Every agent action logged to Elasticsearch: retrievals, tool calls, workflow executions, reasoning steps.
-— Properties: immutable, queryable, available for compliance reporting.
-— Use case card: "Compliance teams can query: show me every action Agent-X took on PCI-scoped data in the last 30 days."
+SLIDE 4 — "Full Audit Trail": Teal icon "AU". Every action logged to Elasticsearch. Properties: immutable, queryable, compliant. Use case card.
 
-SLIDE 5 — "Pillar 3: Human-in-the-Loop":
-— Icon: "HL" in pink circle
-— Concept: configurable approval gates in Elastic Workflows. High-risk actions (endpoint isolation, customer data changes, financial transactions) pause for human review.
-— Flow diagram: Agent Recommends Action → Approval Gate → Human Reviews → Approved/Rejected → Workflow Continues or Halts
-— Key point: "Start with tight approval gates. Loosen them as trust is earned through proven agent reliability."
+SLIDE 5 — "Human-in-the-Loop": Pink icon "HL". Flow diagram with rounded rects and arrows: Agent Recommends → Approval Gate → Human Reviews → Approved/Rejected → Continue/Halt.
 
-SLIDE 6 — "Pillar 4: Guardrails & Compliance":
-— Icon: "GR" in amber circle
-— Agent Builder constraints: define exactly which tools, data sources, and actions each agent can access. No open-ended autonomy.
-— Two use case cards:
-  1. "PCI DSS 4.0.1 compliance" — agent skills run automated compliance checks, surface gaps, generate evidence, reduce audit prep time.
-  2. "Data residency" — Elastic Cloud on AWS, Azure, GCP across 50+ regions. Data and agents stay where policies require.
+SLIDE 6 — "Guardrails & Compliance": Amber icon "GR". Constraints explanation. Two cards: PCI DSS 4.0.1 compliance, Data residency (50+ regions).
 
-SLIDE 7 — "Governance Maturity Model":
-— A 3-stage progression shown as connected phases:
-  Stage 1 "Foundation" (current): RBAC + DLS/FLS, full audit logging, manual approval gates.
-  Stage 2 "Calibrated Trust": risk-based approval thresholds, anomaly detection on agent behavior, automated compliance checks.
-  Stage 3 "Autonomous Governance": self-monitoring agents, continuous policy enforcement, real-time drift detection.
-— Bottom: "Start at Stage 1. Progress as trust is earned. Governance is a journey, not a checkbox."
-
-OUTPUT: A Python script using the python-pptx library that generates a .pptx file. Each slide must be 16:9 (13.333" × 7.5"). Use RGBColor for all colors. Set slide backgrounds to dark navy RGB(11,18,32). For the approval gate flow diagram on Slide 5, use rectangular shapes connected by arrow connectors. For the maturity model on Slide 7, use 3 connected horizontal stage boxes with progressive accent colors. Apply Inter font (fallback Calibri). Save as "09_elastic_governance.pptx".</div>
+SLIDE 7 — "Governance Maturity Model": 3 connected horizontal stage rectangles with arrows: Stage 1 "Foundation" (blue) → Stage 2 "Calibrated Trust" (teal) → Stage 3 "Autonomous Governance" (pink). Description under each. Bottom: "Governance is a journey, not a checkbox."</div>
+      <button class="copy-btn" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+      <div class="prompt-meta">
+        <span class="prompt-meta-tag">Output: .pptx</span>
+        <span class="prompt-meta-tag">Slides: 7</span>
+        <span class="prompt-meta-tag">Duration: ~25 min</span>
       </div>
     </div>
   </div>
-
   <div class="slide-nav"><button class="nav-btn" onclick="showSlide(8)">← Agentic ROI</button><button class="nav-btn primary" onclick="showSlide(10)">Next: Open Standards →</button></div>
 </div>
 
-<!-- SLIDE 10: Open Standards -->
+<!-- ==================== SLIDE 10: Open Standards ==================== -->
 <div class="slide" id="slide-10">
-  <div style="margin-top:24px">
+  <div class="slide-inner">
     <div class="sec-title teal">Session · 4:00 PM · Aashish Mishra</div>
     <div class="sec-heading">Open Standards, No Lock-in: MCP, A2A &amp; OpenTelemetry</div>
-    <div class="sec-sub">Elastic bets on open standards — so your investments are portable, composable, and future-proof.</div>
     <div class="card-grid">
-      <div class="card blue"><div class="card-icon blue" style="font-size:12px">MCP</div><h3>Model Context Protocol</h3><p>Any MCP-compatible model can call your Elastic agents.</p></div>
-      <div class="card teal"><div class="card-icon teal" style="font-size:12px">A2A</div><h3>Agent-to-Agent</h3><p>Multi-agent orchestration without vendor lock-in.</p></div>
-      <div class="card pink"><div class="card-icon pink" style="font-size:12px">OTel</div><h3>OpenTelemetry</h3><p>Traces, metrics, logs via open standards. No proprietary agents.</p></div>
+      <div class="card blue"><div class="card-icon blue" style="font-size:12px">MCP</div><h3>Model Context Protocol</h3><p>Universal tool-calling.</p></div>
+      <div class="card teal"><div class="card-icon teal" style="font-size:12px">A2A</div><h3>Agent-to-Agent</h3><p>Multi-agent orchestration.</p></div>
+      <div class="card pink"><div class="card-icon pink" style="font-size:12px">OTel</div><h3>OpenTelemetry</h3><p>Vendor-neutral observability.</p></div>
     </div>
   </div>
-
-  <!-- PROMPT BOX: Open Standards -->
   <div class="prompt-box">
     <div class="prompt-header" onclick="togglePrompt(this)">
-      <h4>🎯 Claude Slide Deck Prompt <span class="badge">7 Slides · ~25 min Session</span></h4>
+      <h4>🎯 PPTX Prompt for Claude Desktop <span class="badge">7 Slides · ~25 min</span></h4>
       <div class="prompt-toggle">▼</div>
     </div>
     <div class="prompt-body">
-      <div class="prompt-text">Create a 7-slide HTML presentation (16:9, 1280×720px, keyboard + button nav) for "Open Standards, No Lock-in: MCP, A2A & OpenTelemetry" by Aashish Mishra at Elastic Agentic Day, Mumbai, 17 April 2026. Duration: ~25 minutes.
+      <div class="prompt-text">Generate a PowerPoint (.pptx) file with 7 slides for "Open Standards, No Lock-in: MCP, A2A & OpenTelemetry" by Aashish Mishra at Elastic Agentic Day, Mumbai, 17 April 2026. 25-min session. Use python-pptx. Save as "10_elastic_open_standards.pptx".
 
-BRANDING: Elastic dark theme — #0B1220 bg. Blue #0B64DD, Teal #00BFB3, Pink #BC1E70, Amber #F9B110. Inter font. Standard styling.
+SLIDE DIMENSIONS: 16:9 (13.333 × 7.5 inches).
+BRANDING: Same Elastic dark theme. (See keynote prompt for full specs.)
 
-SLIDE 1 — Session Title:
-— Eyebrow: "SESSION · 4:00 PM · AASHISH MISHRA"
-— Headline: "Open Standards, No Lock-in: MCP, A2A & OpenTelemetry"
-— Subtitle: "The agentic ecosystem is maturing fast. Elastic bets on open standards — so your investments in automation, observability, and AI are portable, composable, and future-proof."
+SLIDE 1 — Title: Eyebrow, Headline, Subtitle about open standards being future-proof.
 
-SLIDE 2 — "Why Open Standards Matter Now":
-— Key argument: The AI landscape changes every 6 months. Models, frameworks, and orchestration tools evolve constantly. The only durable investment is in open interfaces.
-— 3 risk cards (dim/faded):
-  1. "Vendor lock-in" — proprietary tool-calling formats that only work with one model.
-  2. "Integration tax" — custom adapters for every new AI tool or framework.
-  3. "Stranded automation" — workflows that break when you switch models or platforms.
-— Counter: "Open standards eliminate all three."
+SLIDE 2 — "Why Open Standards Matter Now": 3 risk cards (dim): Vendor lock-in, Integration tax, Stranded automation. Counter text: "Open standards eliminate all three."
 
-SLIDE 3 — "MCP: The Universal Tool Interface":
-— Deep dive on Model Context Protocol.
-— What it is: an open standard for tool-calling that any AI model can implement.
-— Who supports it: Claude, Copilot, Cursor, Gemini CLI, and growing.
-— How Elastic uses it: generate an MCP key in Kibana → your agent becomes a callable tool for any MCP client.
-— Analogy: "MCP is USB-C for AI. One standard, universal compatibility."
+SLIDE 3 — "MCP Deep Dive": What it is, who supports it (Claude, Copilot, Cursor, Gemini CLI), how Elastic uses it. Analogy: "USB-C for AI."
 
-SLIDE 4 — "A2A: Multi-Agent Orchestration":
-— Deep dive on Agent-to-Agent protocol (Google).
-— What it is: a protocol that lets agents from different vendors collaborate in orchestrated pipelines.
-— How it works: each agent publishes an "agent card" describing its capabilities. Orchestrators (LangChain, AutoGen, CrewAI) read these cards and delegate tasks.
-— Elastic's role: Elastic agents expose A2A-compatible interfaces. They're callable peers in any pipeline.
+SLIDE 4 — "A2A Deep Dive": Protocol explanation, agent cards concept, Elastic as a callable peer. Orchestrators: LangChain, AutoGen, CrewAI.
 
-SLIDE 5 — "OpenTelemetry: The Observability Standard":
-— Elastic as a founding contributor to OTel.
-— Key message: your traces, metrics, and logs flow into Elasticsearch via open standards — no proprietary agents, collectors, or SDKs required.
-— Benefits: instrument once, observe everywhere. Switch backends without re-instrumenting. Community-driven, vendor-neutral.
-— Stat or callout: "OTel is the second-most active CNCF project after Kubernetes."
+SLIDE 5 — "OpenTelemetry": Elastic as founding contributor. Instrument once, observe everywhere. "Second most active CNCF project after Kubernetes."
 
-SLIDE 6 — "Elastic Agent Skills: Open-Source & Portable":
-— Heading: "30+ curated skills, open-source, installable anywhere"
-— Code-style card: npx skills add github.com/elastic/agent-skills
-— Skill categories shown as colored pills: elasticsearch-esql (blue), elasticsearch-ingest (blue), kibana-dashboards (teal), kibana-alerting-rules (teal), security-alert-triage (pink), security-threat-hunting (pink), cloud-create-project (amber), observability-service-health (gray).
-— Key point: "Skills are portable. They work in any agent runtime that supports MCP or A2A."
+SLIDE 6 — "Agent Skills Catalog": Code block (Courier New): "npx skills add github.com/elastic/agent-skills". Skill pills in accent colors: elasticsearch-esql, kibana-dashboards, security-alert-triage, cloud-create-project, etc.
 
-SLIDE 7 — "The Open Standards Promise" (Summary):
-— 3 summary cards:
-  1. "No lock-in" — switch models, frameworks, and orchestration tools without rewriting your agents.
-  2. "Composability" — mix Elastic agents with third-party agents in multi-vendor pipelines.
-  3. "Future-proof" — open standards survive model generations. Your investment compounds.
-— Closing quote block: "Chatbots talk. Agents act. Come see the difference — built on the search platform you already trust."
-
-OUTPUT: A Python script using the python-pptx library that generates a .pptx file. Each slide must be 16:9 (13.333" × 7.5"). Use RGBColor for all colors. Set slide backgrounds to dark navy RGB(11,18,32). For the skills catalog on Slide 6, use a code-style text box (Courier New, dark fill) for the install command, and colored pill shapes for skill categories. Apply Inter font (fallback Calibri). Save as "10_elastic_open_standards.pptx".</div>
+SLIDE 7 — "The Open Standards Promise": 3 cards: No lock-in, Composability, Future-proof. Quote block: "Chatbots talk. Agents act."</div>
+      <button class="copy-btn" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+      <div class="prompt-meta">
+        <span class="prompt-meta-tag">Output: .pptx</span>
+        <span class="prompt-meta-tag">Slides: 7</span>
+        <span class="prompt-meta-tag">Duration: ~25 min</span>
       </div>
     </div>
   </div>
-
   <div class="slide-nav"><button class="nav-btn" onclick="showSlide(9)">← Governance</button><button class="nav-btn primary" onclick="showSlide(11)">Next: Closing AMA →</button></div>
 </div>
 
-<!-- SLIDE 11: Closing AMA -->
+<!-- ==================== SLIDE 11: Closing AMA ==================== -->
 <div class="slide" id="slide-11">
-  <div style="margin-top:24px">
-    <div class="sec-title blue">Closing · 4:30 PM · Sanjay Deshmukh, Chris Walker, Ravindra Ramnani</div>
-    <div class="sec-heading">Closing AMA: Building Your Agentic Roadmap</div>
-    <div class="sec-sub">One day of sessions, three pillars of agentic AI, and now the most important question: what does your journey look like from here?</div>
+  <div class="slide-inner">
+    <div class="sec-title blue">Closing · 4:30 PM</div>
+    <div class="sec-heading">Building Your Agentic Roadmap</div>
     <div class="card-grid">
-      <div class="card blue"><div class="card-icon blue" style="font-size:14px">1</div><h3>Start with context engineering</h3><p>Nail your retrieval first. Hybrid search + semantic chunking is the foundation.</p></div>
-      <div class="card teal"><div class="card-icon teal" style="font-size:14px">2</div><h3>Pick one high-value workflow</h3><p>Alert triage, RCA, or knowledge copilot. Clear ROI and success metric.</p></div>
-      <div class="card pink"><div class="card-icon pink" style="font-size:14px">3</div><h3>Govern from day one</h3><p>RBAC, audit logging, human-in-the-loop — not as afterthoughts.</p></div>
-      <div class="card amber"><div class="card-icon amber" style="font-size:14px">4</div><h3>Bet on open standards</h3><p>MCP, A2A, OpenTelemetry. Survive the next model generation.</p></div>
+      <div class="card blue"><div class="card-icon blue" style="font-size:14px">1</div><h3>Context engineering</h3><p>Nail retrieval first.</p></div>
+      <div class="card teal"><div class="card-icon teal" style="font-size:14px">2</div><h3>One high-value workflow</h3><p>Clear ROI, defined metric.</p></div>
+      <div class="card pink"><div class="card-icon pink" style="font-size:14px">3</div><h3>Govern from day one</h3><p>RBAC, audit, HITL.</p></div>
+      <div class="card amber"><div class="card-icon amber" style="font-size:14px">4</div><h3>Open standards</h3><p>MCP, A2A, OTel.</p></div>
     </div>
     <div class="cta-area">
       <div class="divider"><span style="background:#0B64DD"></span><span style="background:#00BFB3"></span><span style="background:#BC1E70"></span></div>
@@ -1073,102 +800,69 @@ OUTPUT: A Python script using the python-pptx library that generates a .pptx fil
       <div class="cta-note">Limited seats. By invitation only.</div>
     </div>
   </div>
-
-  <!-- PROMPT BOX: Closing AMA -->
   <div class="prompt-box">
     <div class="prompt-header" onclick="togglePrompt(this)">
-      <h4>🎯 Claude Slide Deck Prompt <span class="badge">6 Slides · ~25 min Closing</span></h4>
+      <h4>🎯 PPTX Prompt for Claude Desktop <span class="badge">6 Slides · ~25 min</span></h4>
       <div class="prompt-toggle">▼</div>
     </div>
     <div class="prompt-body">
-      <div class="prompt-text">Create a 6-slide HTML presentation (16:9, 1280×720px, keyboard + button nav) for "Closing AMA: Building Your Agentic Roadmap" by Sanjay Deshmukh, Chris Walker, and Ravindra Ramnani at Elastic Agentic Day, Mumbai, 17 April 2026. Duration: ~25 minutes.
+      <div class="prompt-text">Generate a PowerPoint (.pptx) file with 6 slides for "Closing AMA: Building Your Agentic Roadmap" by Sanjay Deshmukh, Chris Walker, and Ravindra Ramnani at Elastic Agentic Day, Mumbai, 17 April 2026. 25-min closing. Use python-pptx. Save as "11_elastic_closing_ama.pptx".
 
-BRANDING: Elastic dark theme — #0B1220 bg. Blue #0B64DD, Teal #00BFB3, Pink #BC1E70, Amber #F9B110. Inter font. Standard styling.
+SLIDE DIMENSIONS: 16:9 (13.333 × 7.5 inches).
+BRANDING: Same Elastic dark theme. (See keynote prompt for full specs.)
 
-SLIDE 1 — Session Title:
-— Eyebrow: "CLOSING · 4:30 PM · SANJAY DESHMUKH, CHRIS WALKER, RAVINDRA RAMNANI"
-— Headline: "Building Your Agentic Roadmap"
-— Subtitle: "One day of sessions, three pillars of agentic AI, and now the most important question: what does your journey look like from here?"
+SLIDE 1 — Title: Eyebrow "CLOSING · 4:30 PM · SANJAY DESHMUKH, CHRIS WALKER, RAVINDRA RAMNANI", Headline "Building Your Agentic Roadmap", Subtitle.
 
-SLIDE 2 — "What We Covered Today" (Day recap):
-— 3 pillar summary cards:
-  1. "Search & RAG" (blue) — Hybrid retrieval, semantic chunking, ES|QL tools, Agent Builder. The context engine that makes agents accurate.
-  2. "Observe & Secure" (teal) — Automated RCA, SOC triage, cross-domain correlation. Agents that act on operational and security data.
-  3. "Govern & Scale" (pink) — RBAC, audit trails, human-in-the-loop, open standards. Enterprise-grade trust and compliance.
-— Bottom: "All built on one unified platform: Elasticsearch."
+SLIDE 2 — "What We Covered Today": 3 pillar cards: "Search & RAG" (blue), "Observe & Secure" (teal), "Govern & Scale" (pink). Bottom: "All on one platform: Elasticsearch."
 
-SLIDE 3 — "Your 4-Step Agentic Roadmap":
-— 4 large numbered cards arranged in a 2×2 grid:
-  1. (blue) "Start with context engineering" — Before you build agents, nail your retrieval. Hybrid search + semantic chunking is the foundation everything else stands on.
-  2. (teal) "Pick one high-value workflow" — Alert triage, RCA, or knowledge copilot. Pick the workflow with the clearest ROI and a defined success metric.
-  3. (pink) "Govern from day one" — Build RBAC, audit logging, and human-in-the-loop into your agent design — not as an afterthought.
-  4. (amber) "Bet on open standards" — MCP, A2A, OpenTelemetry. Your automation investments should survive the next model generation.
+SLIDE 3 — "4-Step Roadmap": 2×2 grid of large numbered cards:
+  1 (blue) Context engineering — nail retrieval first.
+  2 (teal) One high-value workflow — clear ROI.
+  3 (pink) Govern from day one — RBAC, audit, HITL.
+  4 (amber) Open standards — MCP, A2A, OTel.
 
-SLIDE 4 — "Who Should Be Leading This" (Target roles):
-— Two-column layout:
-  Left column: CIOs / CTOs / CISOs, VP / Director of Engineering, Platform & Infrastructure Leads
-  Right column: SRE & Observability Teams, SOC & Security Operations, AI / ML Engineering Leaders
-— Key message: "Agentic AI is not a side project. It needs executive sponsorship, platform team ownership, and cross-functional alignment."
+SLIDE 4 — "Target Roles": Two-column text: Left: CIOs/CTOs/CISOs, VP Engineering, Platform Leads. Right: SRE, SOC, AI/ML Leaders. Message about executive sponsorship.
 
-SLIDE 5 — "Ask Me Anything" (AMA slide):
-— Large centered heading: "AMA"
-— Subtitle: "Sanjay Deshmukh · Chris Walker · Ravindra Ramnani"
-— 4 suggested topic cards (muted):
-  1. "Getting started with Agent Builder"
-  2. "Retrieval quality & benchmarks"
-  3. "Governance & compliance concerns"
-  4. "Integration & open standards roadmap"
-— Bottom: "Raise your hand or submit via the event app."
+SLIDE 5 — "AMA": Large centered "AMA" (48pt), speaker names, 4 suggested topic cards.
 
-SLIDE 6 — "Thank You & Next Steps" (Closing card):
-— Headline: "Thank You for Joining Elastic Agentic Day"
-— 3 next-step cards:
-  1. "Try Agent Builder" — Start building in Kibana today. Tech Preview available now.
-  2. "Explore Agent Skills" — github.com/elastic/agent-skills — 30+ open-source skills.
-  3. "Talk to Us" — Meet the Elastic team at the networking reception.
-— Elastic branded divider (blue, teal, pink bars).
-— CTA: "elastic.co/agentic" (or placeholder URL)
-— Event details: "Mumbai · 17 April 2026"
-
-OUTPUT: A Python script using the python-pptx library that generates a .pptx file. Each slide must be 16:9 (13.333" × 7.5"). Use RGBColor for all colors. Set slide backgrounds to dark navy RGB(11,18,32). For the 4-step roadmap on Slide 3, use a 2×2 grid of large numbered card shapes. For the closing slide, include an Elastic-branded divider (3 thin colored rectangles: blue, teal, pink). Apply Inter font (fallback Calibri). Save as "11_elastic_closing_ama.pptx".</div>
+SLIDE 6 — "Thank You": Headline "Thank You for Joining Elastic Agentic Day". 3 next-step cards: Try Agent Builder, Explore Skills, Talk to Us. Elastic divider (3 thin colored rectangles: blue, teal, pink). Event sign-off: "Mumbai · 17 April 2026".</div>
+      <button class="copy-btn" onclick="copyPrompt(this)">📋 Copy Prompt</button>
+      <div class="prompt-meta">
+        <span class="prompt-meta-tag">Output: .pptx</span>
+        <span class="prompt-meta-tag">Slides: 6</span>
+        <span class="prompt-meta-tag">Duration: ~25 min</span>
       </div>
     </div>
   </div>
-
   <div class="slide-nav"><button class="nav-btn" onclick="showSlide(10)">← Open Standards</button><button class="nav-btn primary" onclick="showSlide(0)">Back to Start →</button></div>
 </div>
 
-</div>
+</div><!-- /slides -->
 
 <script>
 var currentSlide=0;
-var totalSlides=12;
 function showSlide(n){
-  document.getElementById('slide-'+currentSlide).classList.remove('active');
+  var allSlides=document.querySelectorAll('.slide');
   var pills=document.querySelectorAll('.pill');
-  pills[currentSlide].classList.remove('active');
+  allSlides.forEach(function(s){s.classList.remove('active')});
+  pills.forEach(function(p){p.classList.remove('active')});
   currentSlide=n;
-  document.getElementById('slide-'+currentSlide).classList.add('active');
-  pills[currentSlide].classList.add('active');
+  document.getElementById('slide-'+n).classList.add('active');
+  pills[n].classList.add('active');
   window.scrollTo(0,0);
 }
-
 function togglePrompt(header){
   var body=header.nextElementSibling;
   var toggle=header.querySelector('.prompt-toggle');
   body.classList.toggle('open');
   toggle.classList.toggle('open');
 }
-
 function copyPrompt(btn){
-  var promptText=btn.previousElementSibling.textContent;
-  navigator.clipboard.writeText(promptText).then(function(){
+  var text=btn.previousElementSibling.textContent;
+  navigator.clipboard.writeText(text).then(function(){
     btn.textContent='✅ Copied!';
     btn.classList.add('copied');
-    setTimeout(function(){
-      btn.textContent='📋 Copy Prompt';
-      btn.classList.remove('copied');
-    },2000);
+    setTimeout(function(){btn.textContent='📋 Copy Prompt';btn.classList.remove('copied')},2000);
   });
 }
 </script>
