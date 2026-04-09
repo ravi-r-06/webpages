@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Elastic Agentic Day – Mumbai</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',Arial,sans-serif;background:#0B1220;color:#fff;min-height:100vh}
+  
+  /* Nav */
+  .top-nav{background:#111C2C;border-bottom:1px solid rgba(255,255,255,0.08);padding:12px 32px;display:flex;align-items:center;gap:16px;position:sticky;top:0;z-index:100}
+  .logo{font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.5px}
+  .logo span{color:#36A2EF}
+  .nav-tag{font-size:11px;font-weight:700;letter-spacing:1.5px;color:#36A2EF;text-transform:uppercase;border:1px solid rgba(54,162,239,0.35);border-radius:20px;padding:4px 12px}
+  .session-pills{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+  .pill{font-size:11px;padding:4px 10px;border-radius:20px;cursor:pointer;border:1px solid rgba(255,255,255,0.15);color:#A2B1C9;background:transparent;transition:all 0.2s}
+  .pill:hover,.pill.active{background:#0B64DD;border-color:#0B64DD;color:#fff}
+
+  /* Slide wrapper */
+  .slides{padding:0 32px 48px}
+  .slide{display:none;animation:fadeIn 0.4s ease}
+  .slide.active{display:block}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+  /* Hero slide */
+  .hero{background:linear-gradient(135deg,#0B1220 0%,#0B2545 55%,#0B64DD 140%);border-radius:16px;padding:64px 56px;min-height:460px;position:relative;overflow:hidden;border:1px solid rgba(11,100,221,0.2);margin-top:24px}
+  .hero::before{content:'';position:absolute;right:-80px;top:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(11,100,221,0.15) 0%,transparent 70%)}
+  .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(11,100,221,0.15);border:1px solid rgba(11,100,221,0.35);border-radius:20px;padding:6px 16px;font-size:11px;font-weight:700;letter-spacing:1.5px;color:#36A2EF;text-transform:uppercase;margin-bottom:28px}
+  .hero h1{font-size:52px;font-weight:900;line-height:1.1;letter-spacing:-1px;margin-bottom:24px}
+  .hero h1 .s{color:#36A2EF}.hero h1 .r{color:#00BFB3}.hero h1 .a{color:#BC1E70}
+  .hero-sub{font-size:18px;line-height:1.7;color:#A2B1C9;max-width:580px;margin-bottom:20px}
+  .hero-meta{font-size:14px;color:#6B7D99;max-width:560px;line-height:1.7}
+  .hero-meta strong{color:#fff}
+  .event-bar{display:flex;margin-top:36px;background:rgba(11,100,221,0.1);border:1px solid rgba(11,100,221,0.2);border-radius:12px;overflow:hidden;max-width:520px}
+  .ev-item{flex:1;padding:16px 20px;text-align:center;border-right:1px solid rgba(11,100,221,0.2)}
+  .ev-item:last-child{border-right:none}
+  .ev-label{font-size:10px;font-weight:700;letter-spacing:1px;color:#36A2EF;text-transform:uppercase;margin-bottom:6px}
+  .ev-val{font-size:13px;font-weight:600;color:#fff}
+
+  /* Section headers */
+  .sec-title{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+  .sec-title.blue{color:#36A2EF}.sec-title.teal{color:#00BFB3}.sec-title.pink{color:#BC1E70}.sec-title.amber{color:#F9B110}.sec-title.green{color:#00BFB3}
+  .sec-heading{font-size:28px;font-weight:800;line-height:1.25;margin-bottom:28px;color:#fff}
+  .sec-sub{font-size:15px;color:#A2B1C9;line-height:1.7;margin-bottom:32px;max-width:720px}
+
+  /* Card grid */
+  .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:32px}
+  .card{border-radius:12px;padding:24px;border:1px solid}
+  .card.blue{background:rgba(11,100,221,0.08);border-color:rgba(11,100,221,0.25)}
+  .card.teal{background:rgba(0,191,179,0.07);border-color:rgba(0,191,179,0.25)}
+  .card.pink{background:rgba(188,30,112,0.07);border-color:rgba(188,30,112,0.25)}
+  .card.amber{background:rgba(249,177,16,0.07);border-color:rgba(249,177,16,0.25)}
+  .card.dark{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.1)}
+  .card-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;margin-bottom:14px}
+  .card-icon.blue{background:#0B64DD}.card-icon.teal{background:#008B87}.card-icon.pink{background:#BC1E70}.card-icon.amber{background:#C47D00}.card-icon.gray{background:#3D4A5C}
+  .card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:6px}
+  .card p{font-size:13px;color:#A2B1C9;line-height:1.6}
+
+  /* Agenda table */
+  .agenda{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden}
+  .agenda-row{display:flex;align-items:flex-start;padding:14px 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+  .agenda-row:last-child{border-bottom:none}
+  .agenda-row.break{opacity:0.5}
+  .ag-time{font-size:12px;font-weight:600;color:#36A2EF;min-width:80px;padding-top:2px}
+  .ag-content h4{font-size:14px;font-weight:600;color:#fff;margin-bottom:3px}
+  .ag-content p{font-size:12px;color:#6B7D99}
+  .ag-badge{font-size:10px;font-weight:700;padding:3px 8px;border-radius:10px;margin-left:8px;vertical-align:middle}
+  .ag-badge.keynote{background:rgba(11,100,221,0.2);color:#36A2EF;border:1px solid rgba(11,100,221,0.3)}
+  .ag-badge.demo{background:rgba(0,191,179,0.15);color:#00BFB3;border:1px solid rgba(0,191,179,0.25)}
+  .ag-badge.panel{background:rgba(249,177,16,0.12);color:#F9B110;border:1px solid rgba(249,177,16,0.25)}
+
+  /* Stat row */
+  .stat-row{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:32px}
+  .stat-box{flex:1;min-width:140px;background:rgba(11,100,221,0.08);border:1px solid rgba(11,100,221,0.2);border-radius:12px;padding:20px 18px;text-align:center}
+  .stat-num{font-size:32px;font-weight:900;color:#36A2EF;margin-bottom:4px}
+  .stat-label{font-size:12px;color:#A2B1C9;line-height:1.4}
+
+  /* Two col */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:28px}
+  @media(max-width:640px){.two-col{grid-template-columns:1fr}.hero h1{font-size:34px}}
+
+  /* Architecture diagram */
+  .arch{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:24px}
+  .arch-layer{margin-bottom:12px}
+  .arch-label{font-size:10px;font-weight:700;letter-spacing:1px;color:#6B7D99;text-transform:uppercase;margin-bottom:8px}
+  .arch-boxes{display:flex;gap:8px;flex-wrap:wrap}
+  .arch-box{padding:8px 14px;border-radius:8px;font-size:12px;font-weight:600;border:1px solid}
+  .arch-box.blue{background:rgba(11,100,221,0.15);border-color:rgba(11,100,221,0.3);color:#7DC5FF}
+  .arch-box.teal{background:rgba(0,191,179,0.1);border-color:rgba(0,191,179,0.25);color:#00BFB3}
+  .arch-box.pink{background:rgba(188,30,112,0.1);border-color:rgba(188,30,112,0.25);color:#E06EA0}
+  .arch-box.amber{background:rgba(249,177,16,0.1);border-color:rgba(249,177,16,0.25);color:#F9B110}
+  .arch-box.gray{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);color:#A2B1C9}
+  .arch-connector{text-align:center;font-size:18px;color:#6B7D99;margin:4px 0}
+
+  /* Quote block */
+  .quote-block{background:rgba(11,100,221,0.08);border-left:3px solid #0B64DD;border-radius:0 12px 12px 0;padding:20px 24px;margin-bottom:28px}
+  .quote-block p{font-size:16px;color:#fff;font-style:italic;line-height:1.7;margin-bottom:8px}
+  .quote-block span{font-size:12px;color:#6B7D99}
+
+  /* CTA */
+  .cta-area{text-align:center;padding:40px 0 16px}
+  .cta-btn{display:inline-block;background:#0B64DD;color:#fff;font-size:15px;font-weight:700;padding:14px 40px;border-radius:8px;text-decoration:none;letter-spacing:0.3px}
+  .cta-note{font-size:12px;color:#6B7D99;margin-top:10px}
+
+  /* Divider */
+  .divider{display:flex;margin:32px auto;width:80px}
+  .divider span{height:3px;flex:1;border-radius:2px}
+
+  /* Slide nav buttons */
+  .slide-nav{display:flex;gap:10px;margin-top:32px;justify-content:flex-end}
+  .nav-btn{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:#A2B1C9;font-size:13px;padding:8px 18px;border-radius:8px;cursor:pointer;transition:all 0.2s}
+  .nav-btn:hover{background:rgba(11,100,221,0.25);border-color:#0B64DD;color:#fff}
+  .nav-btn.primary{background:#0B64DD;border-color:#0B64DD;color:#fff}
+
+  /* Tags */
+  .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+  .tag{font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;border:1px solid}
+  .tag.blue{background:rgba(11,100,221,0.12);border-color:rgba(11,100,221,0.3);color:#7DC5FF}
+  .tag.teal{background:rgba(0,191,179,0.1);border-color:rgba(0,191,179,0.25);color:#00BFB3}
+  .tag.pink{background:rgba(188,30,112,0.12);border-color:rgba(188,30,112,0.25);color:#E06EA0}
+
+  /* Progress indicator */
+  .progress{display:flex;gap:6px;align-items:center;margin-bottom:20px}
+  .prog-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.15);cursor:pointer;transition:all 0.2s}
+  .prog-dot.active{background:#0B64DD;width:24px;border-radius:4px}
+  .prog-label{font-size:12px;color:#6B7D99;margin-left:8px}
+</style>
+</head>
+<body>
+
+<div class="top-nav">
+  <div class="logo">elastic</div>
+  <div class="nav-tag">Agentic Day &bull; Mumbai</div>
+  <div class="session-pills">
+    <button class="pill active" onclick="showSlide(0)">Welcome</button>
+    <button class="pill" onclick="showSlide(1)">Agenda</button>
+    <button class="pill" onclick="showSlide(2)">Keynote</button>
+    <button class="pill" onclick="showSlide(3)">Agent Builder</button>
+    <button class="pill" onclick="showSlide(4)">Agentic RAG</button>
+    <button class="pill" onclick="showSlide(5)">MCP &amp; A2A</button>
+    <button class="pill" onclick="showSlide(6)">Automated RCA</button>
+    <button class="pill" onclick="showSlide(7)">Customer Panel</button>
+    <button class="pill" onclick="showSlide(8)">Agentic ROI</button>
+    <button class="pill" onclick="showSlide(9)">Governance</button>
+    <button class="pill" onclick="showSlide(10)">Open Standards</button>
+    <button class="pill" onclick="showSlide(11)">Closing AMA</button>
+  </div>
+</div>
+
+<div class="slides" id="slidesContainer">
+
+<!-- SLIDE 0: Welcome / Hero -->
+<div class="slide active" id="slide-0">
+  <div class="hero">
+    <div class="hero-eyebrow">Elastic Agentic Day &bull; Mumbai &bull; 17 April 2026</div>
+    <h1>Your Agents Should<br/><span class="s">Search.</span> <span class="r">Reason.</span> <span class="a">Act.</span></h1>
+    <p class="hero-sub">Most AI agents guess. The best ones are grounded in your data, armed with the right tools, and governed to act — autonomously, reliably, at enterprise scale.</p>
+    <p class="hero-meta">Join us for <strong>Elastic Agentic Day</strong> — a full-day experience where search, observability, and security leaders see how Elastic Agent Builder turns Elasticsearch into the context engine that makes agentic AI actually work.</p>
+    <div class="event-bar">
+      <div class="ev-item"><div class="ev-label">Date</div><div class="ev-val">17 April 2026</div></div>
+      <div class="ev-item"><div class="ev-label">Time</div><div class="ev-val">9:00 AM – 5:00 PM</div></div>
+      <div class="ev-item"><div class="ev-label">Venue</div><div class="ev-val">Mumbai</div></div>
+    </div>
+  </div>
+  <div class="slide-nav"><button class="nav-btn primary" onclick="showSlide(1)">View Agenda →</button></div>
+</div>
+
+<!-- SLIDE 1: Full Agenda -->
+<div class="slide" id="slide-1">
+  <div style="margin-top:24px">
+    <div class="sec-title amber">Full Day Schedule</div>
+    <div class="sec-heading">One day. Three pillars of agentic AI.</div>
+    <div class="agenda">
+      <div class="agenda-row"><div class="ag-time">9:00 AM</div><div class="ag-content"><h4>Registration &amp; Networking Breakfast</h4><p>Welcome, coffee, and conversations</p></div></div>
+      <div class="agenda-row"><div class="ag-time">9:30 AM</div><div class="ag-content"><h4>Keynote: The Age of Agentic Enterprise <span class="ag-badge keynote">Keynote</span></h4><p>Chris Walker</p></div></div>
+      <div class="agenda-row"><div class="ag-time">10:00 AM</div><div class="ag-content"><h4>Customer Keynote / Fireside Chat <span class="ag-badge panel">Panel</span></h4><p>Industry leaders from BFSI &amp; Digital Native enterprises</p></div></div>
+      <div class="agenda-row"><div class="ag-time">10:30 AM</div><div class="ag-content"><h4>Agent Builder Deep Dive: Agents, Tools &amp; Workflows <span class="ag-badge demo">Demo</span></h4><p>Ashish Tiwari</p></div></div>
+      <div class="agenda-row"><div class="ag-time">11:15 AM</div><div class="ag-content"><h4>Agentic RAG: Grounding Agents in Enterprise Knowledge</h4><p>Abhinav Chauhan, Aish Gunasekar, Ravindra Ramnani</p></div></div>
+      <div class="agenda-row"><div class="ag-time">11:45 AM</div><div class="ag-content"><h4>MCP &amp; A2A: Connecting Agents to Jira, Slack &amp; Beyond <span class="ag-badge demo">Demo</span></h4><p>Ashish Tiwari</p></div></div>
+      <div class="agenda-row"><div class="ag-time">12:15 PM</div><div class="ag-content"><h4>Agents in Action: Automated RCA &amp; Threat Triage <span class="ag-badge demo">Live Demo</span></h4><p>Ramprasad KM — Cross-domain demo</p></div></div>
+      <div class="agenda-row break"><div class="ag-time">1:15 PM</div><div class="ag-content"><h4>Networking Lunch</h4></div></div>
+      <div class="agenda-row"><div class="ag-time">2:00 PM</div><div class="ag-content"><h4>Customer Panel: Operationalizing AI Agents <span class="ag-badge panel">Panel</span></h4><p>Leaders from BFSI &amp; Digital Native enterprises</p></div></div>
+      <div class="agenda-row"><div class="ag-time">2:30 PM</div><div class="ag-content"><h4>Unlocking the Full Potential of Elastic</h4><p>Amit Vyas</p></div></div>
+      <div class="agenda-row"><div class="ag-time">3:00 PM</div><div class="ag-content"><h4>Governing AI Agents: Risk, Trust &amp; Compliance</h4><p>Bhadriraju Prasanth</p></div></div>
+      <div class="agenda-row"><div class="ag-time">3:30 PM</div><div class="ag-content"><h4>The Business Case: Measuring Agentic ROI</h4><p>Abhijeet Bhaskar</p></div></div>
+      <div class="agenda-row"><div class="ag-time">4:00 PM</div><div class="ag-content"><h4>Open Standards, No Lock-in: MCP, A2A &amp; OpenTelemetry</h4><p>Aashish Mishra</p></div></div>
+      <div class="agenda-row"><div class="ag-time">4:30 PM</div><div class="ag-content"><h4>Closing AMA: Building Your Agentic Roadmap</h4><p>Sanjay Deshmukh, Chris Walker, Ravindra Ramnani</p></div></div>
+    </div>
+  </div>
+  <div class="slide-nav"><button class="nav-btn" onclick="showSlide(0)">← Back</button><button class="nav-btn primary" onclick="showSlide(2)">Next: Keynote →</button></div>
+</div>
+
+<!-- SLIDE 2: Keynote - Age of Agentic Enterprise -->
+<div class="slide" id="slide-2">
+  <div style="margin-top:24px">
+    <div class="sec-title blue">Opening Keynote · 9:30 AM · Chris Walker</div>
+    <div class="sec-heading">The Age of the Agentic Enterprise</div>
+    <div class="sec-sub">AI is no longer a copilot you chat with. It's an operator that plans, reasons, and acts — autonomously, across your entire data estate.</div>
+
+    <div class="two-col">
+      <div>
+        <div class="sec-title teal" style="margin-bottom:14px">Where we've been</div>
+        <div class="card dark" style="margin-bottom:12px"><h3>NLP &amp; Search (2010s)</h3><p>Understanding language, powering relevance. Elasticsearch at the core of every search experience.</p></div>
+        <div class="card dark" style="margin-bottom:12px"><h3>Generative AI &amp; RAG (2022–24)</h3><p>LLMs responding to prompts. RAG grounding answers in your documents. Human still in the loop.</p></div>
+        <div class="card blue"><h3>Agentic AI (Now)</h3><p>Systems that plan, discover tools, take actions, and revise — with minimal supervision. The loop is closed.</p></div>
+      </div>
+      <div>
+        <div class="sec-title pink" style="margin-bottom:14px">What makes an agent</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;gap:12px;align-items:flex-start"><div style="min-width:28px;height:28px;border-radius:50%;background:#0B64DD;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700">G</div><div><div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:2px">Goals</div><div style="font-size:12px;color:#A2B1C9">What outcomes should be accomplished</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><div style="min-width:28px;height:28px;border-radius:50%;background:#008B87;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700">T</div><div><div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:2px">Tools</div><div style="font-size:12px;color:#A2B1C9">What actions are available — search, enrich, create, notify</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><div style="min-width:28px;height:28px;border-radius:50%;background:#BC1E70;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700">C</div><div><div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:2px">Context</div><div style="font-size:12px;color:#A2B1C9">When, where, and why to act — grounded in your data</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><div style="min-width:28px;height:28px;border-radius:50%;background:#C47D00;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700">R</div><div><div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:2px">Resources</div><div style="font-size:12px;color:#A2B1C9">The data assets used to reason and decide</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-block">
+      <p>"The agent will keep going until its goals are achieved — grounded in facts, not fiction."</p>
+      <span>Elastic Agentic AI principle</span>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-num">84.3%</div><div class="stat-label">Recall@10 with Elastic hybrid retrieval — highest across all methods</div></div>
+      <div class="stat-box"><div class="stat-num">100%</div><div class="stat-label">Task success rate for structured retrieval with ES|QL in agentic workflows</div></div>
+      <div class="stat-box"><div class="stat-num">40%</div><div class="stat-label">Context reduction with semantic chunking — fewer tokens, lower cost</div></div>
+    </div>
+  </div>
+  <div class="slide-nav"><button class="nav-btn" onclick="showSlide(1)">← Agenda</button><button class="nav-btn primary" onclick="showSlide(3)">Next: Agent Builder →</button></div>
+</div>
+
+<!-- SLIDE 3: Agent Builder Deep Dive -->
+<div class="slide" id="slide-3">
+  <div style="margin-top:24px">
+    <div class="sec-title blue">Session · 10:30 AM · Ashish Tiwari</div>
+    <div class="sec-heading">Agent Builder Deep Dive: Agents, Tools &amp; Workflows</div>
+    <div class="sec-sub">Build custom AI agents in minutes. Ground them in your enterprise data. Give them the tools to take real action — all natively inside Elasticsearch.</div>
+
+    <div class="arch" style="margin-bottom:28px">
+      <div class="arch-layer"><div class="arch-label">AI Native Experiences</div><div class="arch-boxes"><div class="arch-box gray">Custom Apps</div><div class="arch-box gray">Claude / Copilot</div><div class="arch-box gray">Salesforce</div><div class="arch-box gray">LangChain</div></div></div>
+      <div class="arch-connector">↑ MCP &nbsp;&nbsp;&nbsp; A2A ↑</div>
+      <div class="arch-layer"><div class="arch-label">Powered by Tools &amp; Agents</div><div class="arch-boxes"><div class="arch-box amber">Agent Builder</div><div class="arch-box blue">Custom Tools (ES|QL)</div><div class="arch-box teal">Workflows</div><div class="arch-box pink">MCP / A2A Endpoints</div></div></div>
+      <div class="arch-connector">↑ Elasticsearch Platform ↑</div>
+      <div class="arch-layer"><div class="arch-label">Built on Enterprise Data</div><div class="arch-boxes"><div class="arch-box gray">Google Drive</div><div class="arch-box gray">GitHub</div><div class="arch-box gray">Salesforce</div><div class="arch-box gray">Confluence</div><div class="arch-box gray">Slack</div><div class="arch-box gray">Any API</div></div></div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card blue">
+        <div class="card-icon blue">S</div>
+        <h3>Hybrid Search as context engine</h3>
+        <p>Agents retrieve the most relevant snippets — not entire documents — via BM25 + dense + sparse retrieval. Less noise, higher accuracy, lower token cost.</p>
+      </div>
+      <div class="card teal">
+        <div class="card-icon teal">T</div>
+        <h3>Custom tools with ES|QL</h3>
+        <p>Define fine-grained data tools that agents call autonomously. Structured queries mean 100% task success and zero hallucination on your own data.</p>
+      </div>
+      <div class="card pink">
+        <div class="card-icon pink">W</div>
+        <h3>Workflows as actions</h3>
+        <p>Agents trigger YAML-defined workflows to create Jira tickets, send PagerDuty alerts, enrich cases — reliable, repeatable, auditable.</p>
+      </div>
+      <div class="card amber">
+        <div class="card-icon amber">M</div>
+        <h3>MCP &amp; A2A interfaces</h3>
+        <p>Expose your Elastic agents as MCP-compatible endpoints so any external AI ecosystem — Cursor, Claude, Copilot — can call them natively.</p>
+      </div>
+    </div>
+
+    <div class="tags">
+      <div class="tag blue">Agent Builder (Tech Preview)</div>
+      <div class="tag teal">ES|QL Tools</div>
+      <div class="tag pink">Elastic Workflows</div>
+      <div class="tag blue">MCP Server</div>
+    </div>
+  </div>
+  <div class="slide-nav"><button class="nav-btn" onclick="showSlide(2)">← Keynote</button><button class="nav-btn primary" onclick="showSlide(4)">Next: Agentic RAG →</button></div>
+</div>
+
+<!-- SLIDE 4: Agentic RAG -->
+<div class="slide" id="slide-4">
+  <div style="margin-top:24px">
+    <div class="sec-title teal">Session · 11:15 AM · Abhinav Chauhan, Aish Gunasekar, Ravindra Ramnani</div>
+    <div class="sec-heading">Agentic RAG: Grounding Agents in Enterprise Knowledge</div>
+    <div class="sec-sub">Context rot is real. Giving an LLM more text makes it slower, less accurate, and more expensive. The answer isn't more data — it's <em>better retrieval</em>.</div>
+
+    <div class="quote-block">
+      <p>"More text is NOT the path to better AI. Accurate search is."</p>
+      <span>At 32K tokens, 11 models drop below 50% of their short-length baselines (NOLIMA, 2025)</span>
+    </div>
+
+    <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+      <div class="card blue">
+        <div class="card-icon blue">H</div>
+        <h3>Hybrid retrieval</h3>
+        <p>BM25 + dense + ELSER sparse retrieval combined. Recall@10 of 84.3% — best of any single method.</p>
+      </div>
+      <div class="card teal">
+        <div class="card-icon teal">C</div>
+        <h3>Semantic chunking</h3>
+        <p>93.3% hit rate. Reduces context window usage by 40%. Agents reason faster, cheaper, more accurately.</p>
+      </div>
+      <div class="card pink">
+        <div class="card-icon pink">Q</div>
+        <h3>Structured retrieval (ES|QL)</h3>
+        <p>100% success rate on agentic tasks. Structured queries return exactly what the agent needs — nothing extraneous.</p>
+      </div>
+      <div class="card amber">
+        <div class="card-icon amber">K</div>
+        <h3>Knowledge tools</h3>
+        <p>Runbooks, incident history, compliance docs, product specs — packaged as searchable tools agents call at runtime.</p>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <div class="sec-title blue" style="margin-bottom:10px">Components of context engineering</div>
+        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:16px">
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <div style="background:rgba(11,100,221,0.15);border:1px solid rgba(11,100,221,0.25);border-radius:8px;padding:8px 12px;font-size:12px;color:#7DC5FF">System prompt</div>
+            <div style="background:rgba(0,191,179,0.1);border:1px solid rgba(0,191,179,0.2);border-radius:8px;padding:8px 12px;font-size:12px;color:#00BFB3">Retrieved (RAG)</div>
+            <div style="background:rgba(188,30,112,0.1);border:1px solid rgba(188,30,112,0.2);border-radius:8px;padding:8px 12px;font-size:12px;color:#E06EA0">Long-term memory</div>
+            <div style="background:rgba(249,177,16,0.1);border:1px solid rgba(249,177,16,0.2);border-radius:8px;padding:8px 12px;font-size:12px;color:#F9B110">Available tools</div>
+            <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:8px 12px;font-size:12px;color:#A2B1C9">User prompt</div>
+            <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:8px 12px;font-size:12px;color:#A2B1C9">Chat history</div>
+          </div>
+          <p style="font-size:12px;color:#6B7D99;margin-top:12px">Elastic is a complete, differentiated platform for Context Engineering — every component, natively.</p>
+        </div>
+      </div>
+      <div>
+        <div class="sec-title pink" style="margin-bottom:10px">Why Elasticsearch wins</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:10px"><div style="font-size:16px">→</div><div style="font-size:13px;color:#A2B1C9">Hybrid retrieval outperforms pure-vector and BM25 in every benchmark</div></div>
+          <div style="display:flex;align-items:center;gap:10px"><div style="font-size:16px">→</div><div style="font-size:13px;color:#A2B1C9">ELSER sparse model trained on real enterprise language patterns</div></div>
+          <div style="display:flex;align-items:center;gap:10px"><div style="font-size:16px">→</div><div style="font-size:13px;color:#A2B1C9">Relevance tuning with Learning to Rank — continuously improving</div></div>
+          <div style="display:flex;align-items:center;gap:10px"><div style="font-size:16px">→</div><div style="font-size:13px;color:#A2B1C9">DLS/FLS ensures agents only see data they're authorized to access</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-nav"><button class="nav-btn" onclick="showSlide(3)">← Agent Builder</button><button class="nav-btn primary" onclick="showSlide(5)">Next: MCP &amp; A2A →</button></div>
+</div>
+
+<!-- SLIDE 5: MCP & A2A -->
+<div class="slide" id="slide-5">
+  <div style="margin-top:24px">
+    <div class="sec-title teal">Session · 11:45 AM · Ashish Tiwari</div>
+    <div class="sec-heading">MCP &amp; A2A: Connecting Agents to Jira, Slack &amp; Beyond</div>
+    <div class="sec-sub">Agents are only as powerful as the tools they can reach. Open standards like MCP and A2A let your Elastic agents plug into — and be called by — any AI ecosystem.</div>
+
+    <div class="two-col">
+      <div class="card blue">
+        <div class="card-icon blue" style="font-size:12px">MCP</div>
+        <h3>Model Context Protocol</h3>
+        <p>An open standard that lets AI models (Claude, Copilot, Cursor) call your Elastic agent as a tool. Generate an MCP key in Kibana — agents connect in under 5 minutes, no manual config.</p>
+      </div>
+      <div class="card teal">
+        <div class="card-icon teal" style="font-size:12px">A2A</div>
+        <h3>Agent-to-Agent</h3>
+        <p>Elastic agents expose A2A-compatible interfaces so orchestration frameworks like LangChain and AutoGen can delegate tasks directly — composing multi-agent pipelines with no lock-in.</p>
+      </div>
+    </div>
+
+    <div class="sec-title amber" style="margin-bottom:12px">What agents can do once connected</div>
+    <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+      <div class="card dark"><div class="card-icon gray" style="font-size:14px">Ji</div><h3>Jira</h3><p>Create, update, and comment on tickets triggered by alerts or workflow steps.</p></div>
+      <div class="card dark"><div class="card-icon gray" style="font-size:14px">Sl</div><h3>Slack</h3><p>Post structured incident summaries, root cause findings, and remediation steps to channels.</p></div>
+      <div class="card dark"><div class="card-icon gray" style="font-size:14px">PD</div><h3>PagerDuty</h3><p>Trigger, acknowledge, and resolve incidents autonomously before your SRE finishes their coffee.</p></div>
+      <div class="card dark"><div class="card-icon gray" style="font-size:14px">CR</div><h3>CrowdStrike / Defender</h3><p>Enrich, isolate, and respond across endpoint security tools from a single agentic workflow.</p></div>
+      <div class="card dark"><div class="card-icon gray" style="font-size:14px">SF</div><h3>Salesforce</h3><p>Surface case context, update records, and trigger escalation paths grounded in your data.</p></div>
+      <div class="card dark"><div class="card-icon gray" style="font-size:14px">API</div><h3>Any REST API</h3><p>HTTP action steps let agents call any internal or external API with full auth and retry logic.</p></div>
+    </div>
+  </div>
+  <div class="slide-nav"><button class="nav-btn" onclick="showSlide(4)">← Agentic RAG</button><button class="nav-btn primary" onclick="showSlide(6)">Next: RCA &amp; Threat Triage →</button></div>
+</div>
+
+<!-- SLIDE 6: Automated RCA & Threat Triage -->
+<div class="slide" id="slide-6">
+  <div style="margin-top:24px">
+    <div class="sec-title pink">Session · 12:15 PM · Ramprasad KM — Live Cross-Domain Demo</div>
+    <div class="sec-heading">Agents in Action: Automated RCA &amp; Threat Triage</div>
+    <div class="sec-sub">Every operational team faces the same breaking point: data volumes grow exponentially, alerts multiply daily, and human capacity is linear at best. Agents close that gap.</div>
+
+    <div class="two-col">
+      <div>
+        <div class="sec-title teal" style="margin-bottom:12px">Observability: Automated Root Cause</div>
+        <div style="display:flex;flex-direction:column;gap:0">
+          <div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06)"><div style="min-width:24px;font-size:11px;font-weight:700;color:#00BFB3;padding-top:1px">01</div><div style="font-size:13px;color:#A2B1C9">Service latency spike detected in APM metrics</div></div>
+          <div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06)"><div style="min-width:24px;font-size:11px;font-weight:700;color:#00BFB3;padding-top:1px">02</div><div style="font-size:13px;color:#A2B1C9">Agent correlates logs, metrics, and traces autonomously</div></div>
+          <div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06)"><div style="min-width:24px;font-size:11px;font-weight:700;color:#00BFB3;padding-top:1px">03</div><div style="font-size:13px;color:#A2B1C9">Root cause identified — upstream DB connection pool exhausted</div></div>
+          <div style="display:flex;gap:12px;padding:12px 0"><div style="min-width:24px;font-size:11px;font-weight:700;color:#00BFB3;padding-top:1px">04</div><div style="font-size:13px;color:#A2B1C9">PagerDuty alerted with summary before SRE responds</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="sec-title pink" style="margin-bottom:12px">Security: Agentic SOC Triage</div>
+        <div style="display:flex;flex-direction:column;gap:0">
+          <div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06)"><div style="min-width:24px;font-size:11px;font-weight:700;color:#BC1E70;padding-top:1px">01</div><div style="font-size:13px;color:#A2B1C9">Attack Discovery surfaces high-fidelity alert cluster</div></div>
+          <div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06)"><div style="min-width:24px;font-size:11px;font-weight:700;color:#BC1E70;padding-top:1px">02</div><div style="font-size:13px;color:#A2B1C9">Agent gathers context: entity risk scores, related events, threat intel</div></div>
+          <div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06)"><div style="min-width:24px;font-size:11px;font-weight:700;color:#BC1E70;padding-top:1px">03</div><div style="font-size:13px;color:#A2B1C9">MCP enrichment from CrowdStrike, Defender, VirusTotal</div></div>
+          <div style="display:flex;gap:12px;padding:12px 0"><div style="min-width:24px;font-size:11px;font-weight:700;color:#BC1E70;padding-top:1px">04</div><div style="font-size:13px;color:#A2B1C9">Case created with findings. Alert to action in minutes, not hours.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:8px">
+      <div class="card teal"><h3>Unified data foundation</h3><p>Logs, metrics, traces, and security events in one platform. Agents correlate across all of it.</p></div>
+      <div class="card pink"><h3>Workflows as the hands</h3><p>Automated outcomes. Cross-system orchestration. From insight to ticket to resolution without human toil.</p></div>
+      <div class="card blue"><h3>SLOs &amp; ML anomalies</h3><p>Agents assess APM service health, surface SLO breaches, and trigger remediation before users notice.</p></div>
+    </div>
+  </div>
+  <div class="slide-nav"><button class="nav-btn" onclick="showSlide(5)">← MCP &amp; A2A</button><button class="nav-btn primary" onclick="showSlide(7)">Next: Customer Panel →</button></div>
+</div>
+
+<!-- SLIDE 7: Customer Panel -->
+<div class="slide" id="slide-7">
+  <div style="margin-top:24px">
+    <div class="sec-title amber">Customer Panel · 2:00 PM</div>
+    <div class="sec-heading">Operationalizing AI Agents: Lessons from the Field</div>
+    <div class="sec-sub">Practitioners from BFSI and Digital Native enterprises share what it actually takes to move from prototype to production-grade agentic AI.</div>
+
+    <div class="card-grid">
+      <div class="card blue">
+        <div class="card-icon blue" style="font-size:14px">FS</div>
+        <h3>Financial Services &amp; Banking</h3>
+        <p>Fraud signal correlation, AML alert triage, and customer 360 agents grounded in transactional and behavioural data at scale.</p>
+      </div>
+      <div class="card teal">
+        <div class="card-icon teal" style="font-size:14px">DN</div>
+        <h3>Digital Native Enterprises</h3>
+        <p>Platform reliability agents, developer productivity copilots, and customer support automation — all built on Elasticsearch context.</p>
+      </div>
+    </div>
+
+    <div class="sec-title pink" style="margin-bottom:16px">Questions the panel will address</div>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:28px">
+      <div class="card dark" style="padding:14px 18px"><p style="font-size:13px;color:#A2B1C9"><strong style="color:#fff">How do you govern what agents are allowed to do?</strong> Guardrails, approval workflows, and human-in-the-loop patterns at enterprise scale.</p></div>
+      <div class="card dark" style="padding:14px 18px"><p style="font-size:13px;color:#A2B1C9"><strong style="color:#fff">What does day-two operations look like?</strong> Monitoring agent behaviour, detecting drift, and continuously improving retrieval quality.</p></div>
+      <div class="card dark" style="padding:14px 18px"><p style="font-size:13px;color:#A2B1C9"><strong style="color:#fff">How did you build the business case?</strong> Metrics, benchmarks, and the ROI conversation with stakeholders.</p></div>
+      <div class="card dark" style="padding:14px 18px"><p style="font-size:13px;color:#A2B1C9"><strong style="color:#fff">What would you do differently?</strong> Honest lessons from teams who've shipped agentic systems into production.</p></div>
+    </div>
+  </div>
+  <div class="slide-nav"><button class="nav-btn" onclick="showSlide(6)">← Automated RCA</button><button class="nav-btn primary" onclick="showSlide(8)">Next: Measuring ROI →</button></div>
+</div>
+
+<!-- SLIDE 8: Agentic ROI -->
+<div class="slide" id="slide-8">
+  <div style="margin-top:24px">
+    <div class="sec-title amber">Session · 3:30 PM · Abhijeet Bhaskar</div>
+    <div class="sec-heading">The Business Case: Measuring Agentic ROI</div>
+    <div class="sec-sub">Data volumes grow exponentially. Human capacity grows linearly. You can't hire your way out of this problem. Agents are the force multiplier.</div>
+
+    <div class="two-col">
+      <div>
+        <div class="sec-title teal" style="margin-bottom:14px">The cost of the status quo</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div class="card dark" style="padding:14px 18px"><h3 style="color:#E06EA0;font-size:13px;margin-bottom:4px">Alert fatigue</h3><p style="font-size:12px">Thousands of alerts daily. Critical threats buried in noise. Response times degrading.</p></div>
+          <div class="card dark" style="padding:14px 18px"><h3 style="color:#E06EA0;font-size:13px;margin-bottom:4px">Manual toil</h3><p style="font-size:12px">Hours wasted on copy-paste-enrich-ticket-repeat. Same investigation run thousands of times.</p></div>
+          <div class="card dark" style="padding:14px 18px"><h3 style="color:#E06EA0;font-size:13px;margin-bottom:4px">Missed signals</h3><p style="font-size:12px">The real danger is what you don't catch. By the time you find it, it's too late.</p></div>
+        </div>
+      </div>
+      <div>
+        <div class="sec-title blue" style="margin-bottom:14px">Value levers with Elastic Agents</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div class="card blue" style="padding:14px 18px"><h3 style="font-size:13px;margin-bottom:4px">MTTR reduction</h3><p style="font-size:12px">Agents correlate and diagnose in seconds. SREs get root cause, not raw logs.</p></div>
+          <div class="card teal" style="padding:14px 18px"><h3 style="font-size:13px;margin-bottom:4px">Analyst throughput</h3><p style="font-size:12px">Tier-1 triage automated. Analysts focus on high-judgement work. Burnout decreases.</p></div>
+          <div class="card blue" style="padding:14px 18px"><h3 style="font-size:13px;margin-bottom:4px">Token cost efficiency</h3><p style="font-size:12px">Hybrid retrieval + semantic chunking reduces LLM token spend by up to 40%. ROI compounds.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-row" style="margin-top:8px">
+      <div class="stat-box"><div class="stat-num" style="color:#00BFB3">~70%</div><div class="stat-label">Typical reduction in Tier-1 alert triage time reported by early Elastic security customers</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:#F9B110">5x</div><div class="stat-label">Analyst throughput increase when routine investigations are automated end-to-end</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:#36A2EF">40%</div><div class="stat-label">Lower LLM cost per agent task with semantic chunking vs naive full-document retrieval</div></div>
+    </div>
+  </div>
+  <div class="slide-nav"><button class="nav-btn" onclick="showSlide(7)">← Customer Panel</button><button class="nav-btn primary" onclick="showSlide(9)">Next: Governance →</button></div>
+</div>
+
+<!-- SLIDE 9: Governance -->
+<div class="slide" id="slide-9">
+  <div style="margin-top:24px">
+    <div class="sec-title pink">Session · 3:00 PM · Bhadriraju Prasanth</div>
+    <div class="sec-heading">Governing AI Agents: Risk, Trust &amp; Compliance</div>
+    <div class="sec-sub">Autonomous agents acting at enterprise scale require more than good intentions. Governance is what separates a prototype from a production system your CISO will approve.</div>
+
+    <div class="card-grid">
+      <div class="card blue">
+        <div class="card-icon blue" style="font-size:13px">AC</div>
+        <h3>Access control &amp; RBAC</h3>
+        <p>Elasticsearch's document- and field-level security ensures agents only retrieve data they're authorised to see. Role-based tool access limits what agents can act on.</p>
+      </div>
+      <div class="card teal">
+        <div class="card-icon teal" style="font-size:13px">AU</div>
+        <h3>Full audit trail</h3>
+        <p>Every retrieval, every tool call, every workflow execution logged to Elasticsearch. Immutable, queryable, and available for compliance reporting.</p>
+      </div>
+      <div class="card pink">
+        <div class="card-icon pink" style="font-size:13px">HL</div>
+        <h3>Human-in-the-loop</h3>
+        <p>Configurable approval steps in Elastic Workflows pause agent execution for high-risk actions. Trust is built incrementally — not assumed from day one.</p>
+      </div>
+      <div class="card amber">
+        <div class="card-icon amber" style="font-size:13px">GR</div>
+        <h3>Guardrails &amp; constraints</h3>
+        <p>Agent Builder lets you define the exact tools, data sources, and actions each agent can use. Least-privilege by design — no open-ended autonomy.</p>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-top:8px">
+      <div class="card dark">
+        <h3>PCI DSS 4.0.1 compliance assessments</h3>
+        <p style="font-size:13px;margin-top:8px;color:#A2B1C9">Agent skills can run automated PCI compliance checks against your Elastic Security data — surfacing gaps, generating evidence, reducing audit prep time.</p>
+      </div>
+      <div class="card dark">
+        <h3>Data residency &amp; multi-cloud</h3>
+        <p style="font-size:13px;margin-top:8px;color:#A2B1C9">Elastic Cloud runs on AWS, Azure, and GCP across 50+ regions. Your data — and your agents — stay where your policies require.</p>
+      </div>
+    </div>
+  </div>
+  <div class="slide-nav"><button class="nav-btn" onclick="showSlide(8)">← Agentic ROI</button><button class="nav-btn primary" onclick="showSlide(10)">Next: Open Standards →</button></div>
+</div>
+
+<!-- SLIDE 10: Open Standards -->
+<div class="slide" id="slide-10">
+  <div style="margin-top:24px">
+    <div class="sec-title teal">Session · 4:00 PM · Aashish Mishra</div>
+    <div class="sec-heading">Open Standards, No Lock-in: MCP, A2A &amp; OpenTelemetry</div>
+    <div class="sec-sub">The agentic ecosystem is maturing fast. Elastic bets on open standards — so your investments in automation, observability, and AI are portable, composable, and future-proof.</div>
+
+    <div class="card-grid">
+      <div class="card blue">
+        <div class="card-icon blue" style="font-size:12px">MCP</div>
+        <h3>Model Context Protocol</h3>
+        <p>The emerging open standard for tool-calling. Any MCP-compatible model (Claude, Copilot, Gemini CLI) can call your Elastic agents as first-class tools.</p>
+      </div>
+      <div class="card teal">
+        <div class="card-icon teal" style="font-size:12px">A2A</div>
+        <h3>Agent-to-Agent</h3>
+        <p>Google's A2A protocol enables multi-agent orchestration without vendor lock-in. Elastic agents are callable peers in any A2A-compliant pipeline.</p>
+      </div>
+      <div class="card pink">
+        <div class="card-icon pink" style="font-size:12px">OTel</div>
+        <h3>OpenTelemetry</h3>
+        <p>Elastic is a founding contributor to OTel. Your traces, metrics, and logs flow into Elasticsearch via open standards — no proprietary agents or SDKs required.</p>
+      </div>
+    </div>
+
+    <div class="sec-title amber" style="margin-bottom:14px">Agent Skills: open-source, portable, composable</div>
+    <div class="arch" style="margin-bottom:24px">
+      <div class="arch-layer"><div class="arch-label">Install via any agent runtime</div><div class="arch-boxes"><div class="arch-box gray" style="font-family:monospace;font-size:11px">npx skills add github.com/elastic/agent-skills</div></div></div>
+      <div style="margin:12px 0;font-size:12px;color:#6B7D99">30+ curated skills across Elasticsearch, Kibana, Observability, Security, and Cloud</div>
+      <div class="arch-boxes" style="flex-wrap:wrap">
+        <div class="arch-box blue">elasticsearch-esql</div><div class="arch-box blue">elasticsearch-ingest</div><div class="arch-box teal">kibana-dashboards</div><div class="arch-box teal">kibana-alerting-rules</div><div class="arch-box pink">security-alert-triage</div><div class="arch-box pink">security-threat-hunting</div><div class="arch-box amber">cloud-create-project</div><div class="arch-box gray">observability-service-health</div>
+      </div>
+    </div>
+
+    <div class="quote-block">
+      <p>"Chatbots talk. Agents act. Come see the difference — built on the search platform you already trust."</p>
+    </div>
+  </div>
+  <div class="slide-nav"><button class="nav-btn" onclick="showSlide(9)">← Governance</button><button class="nav-btn primary" onclick="showSlide(11)">Next: Closing AMA →</button></div>
+</div>
+
+<!-- SLIDE 11: Closing AMA -->
+<div class="slide" id="slide-11">
+  <div style="margin-top:24px">
+    <div class="sec-title blue">Closing · 4:30 PM · Sanjay Deshmukh, Chris Walker, Ravindra Ramnani</div>
+    <div class="sec-heading">Closing AMA: Building Your Agentic Roadmap</div>
+    <div class="sec-sub">One day of sessions, three pillars of agentic AI, and now the most important question: what does your journey look like from here?</div>
+
+    <div class="card-grid">
+      <div class="card blue">
+        <div class="card-icon blue" style="font-size:14px">1</div>
+        <h3>Start with context engineering</h3>
+        <p>Before you build agents, nail your retrieval. Hybrid search + semantic chunking is the foundation everything else stands on.</p>
+      </div>
+      <div class="card teal">
+        <div class="card-icon teal" style="font-size:14px">2</div>
+        <h3>Pick one high-value workflow</h3>
+        <p>Alert triage, RCA, or knowledge copilot — pick the workflow with the clearest ROI and a defined success metric.</p>
+      </div>
+      <div class="card pink">
+        <div class="card-icon pink" style="font-size:14px">3</div>
+        <h3>Govern from day one</h3>
+        <p>Build RBAC, audit logging, and human-in-the-loop into your agent design — not as an afterthought after something goes wrong.</p>
+      </div>
+      <div class="card amber">
+        <div class="card-icon amber" style="font-size:14px">4</div>
+        <h3>Bet on open standards</h3>
+        <p>MCP, A2A, OpenTelemetry. Your automation investments should survive the next model generation — open standards guarantee that.</p>
+      </div>
+    </div>
+
+    <div style="margin:28px 0">
+      <div class="sec-title teal" style="margin-bottom:14px">Who should attend — and why it matters to you</div>
+      <div class="two-col">
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-size:13px;color:#A2B1C9;line-height:1.8">◆ CIOs, CTOs &amp; CISOs<br/>◆ VP / Director of Engineering<br/>◆ Platform &amp; Infrastructure Leads</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-size:13px;color:#A2B1C9;line-height:1.8">◆ SRE &amp; Observability Teams<br/>◆ SOC &amp; Security Operations<br/>◆ AI / ML Engineering Leaders</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-area">
+      <div class="divider"><span style="background:#0B64DD"></span><span style="background:#00BFB3"></span><span style="background:#BC1E70"></span></div>
+      <a class="cta-btn" href="https://events.elastic.co/innovationdaymumbai?utm_source=invite&utm_medium=email&utm_campaign=sales-rm">Reserve Your Seat →</a>
+      <div class="cta-note">Limited seats. By invitation only.</div>
+    </div>
+  </div>
+  <div class="slide-nav"><button class="nav-btn" onclick="showSlide(10)">← Open Standards</button><button class="nav-btn primary" onclick="showSlide(0)">Back to Start →</button></div>
+</div>
+
+</div><!-- /slides -->
+
+<script>
+var currentSlide=0;
+var totalSlides=12;
+function showSlide(n){
+  document.getElementById('slide-'+currentSlide).classList.remove('active');
+  var pills=document.querySelectorAll('.pill');
+  pills[currentSlide].classList.remove('active');
+  currentSlide=n;
+  document.getElementById('slide-'+currentSlide).classList.add('active');
+  pills[currentSlide].classList.add('active');
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
