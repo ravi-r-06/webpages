@@ -3,739 +3,906 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Elastic Agentic Day – Mumbai · PPTX Prompts</title>
+<title>Elastic Agentic Day – Mumbai · Deck Prompts</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',Arial,sans-serif;background:#0B1220;color:#fff;min-height:100vh}
-.top-nav{background:#111C2C;border-bottom:1px solid rgba(255,255,255,0.08);padding:12px 24px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:100}
-.logo{font-size:18px;font-weight:800;letter-spacing:-0.5px}.logo span{color:#36A2EF}
-.nav-tag{font-size:10px;font-weight:700;letter-spacing:1.5px;color:#36A2EF;text-transform:uppercase;border:1px solid rgba(54,162,239,0.35);border-radius:20px;padding:3px 10px}
-.pills{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
-.pill{font-size:10px;padding:4px 9px;border-radius:20px;cursor:pointer;border:1px solid rgba(255,255,255,0.12);color:#A2B1C9;background:transparent;transition:.2s}
-.pill:hover,.pill.active{background:#0B64DD;border-color:#0B64DD;color:#fff}
-.slides{padding:0 28px 48px}
-.slide{display:none}.slide.active{display:block;animation:fadeIn .35s ease}
-@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-.si{margin-top:20px}
-.st{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
-.st.b{color:#36A2EF}.st.t{color:#00BFB3}.st.p{color:#BC1E70}.st.a{color:#F9B110}
-.sh{font-size:26px;font-weight:800;line-height:1.2;margin-bottom:16px}
-.ss{font-size:14px;color:#A2B1C9;line-height:1.7;margin-bottom:20px;max-width:700px}
-.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:20px}
-.cd{border-radius:12px;padding:18px;border:1px solid}
-.cd.b{background:rgba(11,100,221,.07);border-color:rgba(11,100,221,.2)}
-.cd.t{background:rgba(0,191,179,.06);border-color:rgba(0,191,179,.2)}
-.cd.p{background:rgba(188,30,112,.06);border-color:rgba(188,30,112,.2)}
-.cd.a{background:rgba(249,177,16,.06);border-color:rgba(249,177,16,.2)}
-.cd.d{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.08)}
-.cd h3{font-size:14px;font-weight:700;margin-bottom:4px}.cd p{font-size:12px;color:#A2B1C9;line-height:1.5}
-.sr{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
-.sb{flex:1;min-width:120px;background:rgba(11,100,221,.07);border:1px solid rgba(11,100,221,.18);border-radius:10px;padding:14px;text-align:center}
-.sn{font-size:28px;font-weight:900;color:#36A2EF;margin-bottom:2px}.sl{font-size:11px;color:#A2B1C9}
-.nav{display:flex;gap:8px;margin-top:24px;justify-content:flex-end;padding-bottom:20px}
-.nb{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#A2B1C9;font-size:12px;padding:7px 16px;border-radius:8px;cursor:pointer;transition:.2s}
-.nb:hover{background:rgba(11,100,221,.2);border-color:#0B64DD;color:#fff}
+body{font-family:'Inter',Arial,sans-serif;background:#0B1220;color:#fff;min-height:100vh;font-size:14px}
+.tn{background:#111C2C;border-bottom:1px solid rgba(255,255,255,.08);padding:10px 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;flex-wrap:wrap}
+.lo{font-size:16px;font-weight:800}.lo i{color:#36A2EF;font-style:normal}
+.nt{font-size:9px;font-weight:700;letter-spacing:1.5px;color:#36A2EF;text-transform:uppercase;border:1px solid rgba(54,162,239,.3);border-radius:20px;padding:2px 8px}
+.ps{display:flex;gap:5px;flex-wrap:wrap;margin-left:auto}
+.pl{font-size:9px;padding:3px 8px;border-radius:16px;cursor:pointer;border:1px solid rgba(255,255,255,.1);color:#8898AD;background:transparent;transition:.2s}
+.pl:hover,.pl.a{background:#0B64DD;border-color:#0B64DD;color:#fff}
+.sl{padding:0 20px 40px}.sd{display:none}.sd.a{display:block;animation:fi .3s ease}
+@keyframes fi{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.si{margin-top:16px}
+.et{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px}
+.et.b{color:#36A2EF}.et.t{color:#00BFB3}.et.p{color:#BC1E70}.et.am{color:#F9B110}
+.eh{font-size:22px;font-weight:800;line-height:1.2;margin-bottom:10px}
+.es{font-size:13px;color:#A2B1C9;line-height:1.6;margin-bottom:14px;max-width:680px}
+/* Summary card */
+.sum{background:rgba(11,100,221,.05);border:1px solid rgba(11,100,221,.15);border-radius:10px;padding:14px 16px;margin-bottom:16px}
+.sum h5{font-size:11px;font-weight:700;color:#36A2EF;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.sum p{font-size:12px;color:#A2B1C9;line-height:1.6}
+.sum .tg{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.sum .tg span{font-size:9px;padding:2px 7px;border-radius:10px;border:1px solid rgba(255,255,255,.1);color:#6B7D99}
+/* Agenda */
+.ag{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:10px;overflow:hidden;margin-bottom:14px}
+.ar{display:flex;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.04);align-items:flex-start;gap:8px}
+.ar:last-child{border-bottom:none}
+.ar.brk{opacity:.4}
+.at{min-width:60px;font-size:11px;font-weight:600;color:#36A2EF;padding-top:1px}
+.ac h4{font-size:12px;font-weight:600;margin-bottom:1px}.ac p{font-size:10px;color:#6B7D99}
+.bg{font-size:8px;font-weight:700;padding:1px 6px;border-radius:8px;margin-left:5px;vertical-align:middle}
+.bg.k{background:rgba(11,100,221,.18);color:#36A2EF;border:1px solid rgba(11,100,221,.25)}
+.bg.d{background:rgba(0,191,179,.12);color:#00BFB3;border:1px solid rgba(0,191,179,.2)}
+.bg.pn{background:rgba(249,177,16,.1);color:#F9B110;border:1px solid rgba(249,177,16,.2)}
+/* Cards */
+.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:14px}
+.cd{border-radius:10px;padding:14px;border:1px solid;font-size:12px}
+.cd.b{background:rgba(11,100,221,.06);border-color:rgba(11,100,221,.18)}
+.cd.t{background:rgba(0,191,179,.05);border-color:rgba(0,191,179,.18)}
+.cd.p{background:rgba(188,30,112,.05);border-color:rgba(188,30,112,.18)}
+.cd.am{background:rgba(249,177,16,.05);border-color:rgba(249,177,16,.18)}
+.cd h3{font-size:13px;font-weight:700;margin-bottom:3px}.cd p{color:#A2B1C9;line-height:1.5;font-size:11px}
+/* Stats */
+.sr{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.sb{flex:1;min-width:100px;background:rgba(11,100,221,.06);border:1px solid rgba(11,100,221,.15);border-radius:8px;padding:12px;text-align:center}
+.sn{font-size:24px;font-weight:900;color:#36A2EF}.sl2{font-size:10px;color:#A2B1C9}
+/* Nav */
+.nv{display:flex;gap:6px;margin-top:18px;justify-content:flex-end;padding-bottom:16px}
+.nb{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:#8898AD;font-size:11px;padding:6px 14px;border-radius:6px;cursor:pointer;transition:.2s}
+.nb:hover{background:rgba(11,100,221,.18);border-color:#0B64DD;color:#fff}
 .nb.pr{background:#0B64DD;border-color:#0B64DD;color:#fff}
-.pb{margin-top:24px;background:linear-gradient(135deg,rgba(11,100,221,.05),rgba(188,30,112,.03));border:1px solid rgba(11,100,221,.18);border-radius:12px;overflow:hidden}
-.ph{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:rgba(11,100,221,.07);border-bottom:1px solid rgba(11,100,221,.12);cursor:pointer;user-select:none}
-.ph:hover{background:rgba(11,100,221,.1)}
-.ph h4{font-size:12px;font-weight:700;color:#36A2EF;display:flex;align-items:center;gap:8px}
-.badge{font-size:9px;background:rgba(0,191,179,.12);color:#00BFB3;border:1px solid rgba(0,191,179,.2);padding:2px 7px;border-radius:10px;font-weight:600}
-.pt{font-size:16px;color:#36A2EF;transition:transform .3s}.pt.open{transform:rotate(180deg)}
-.pbd{padding:18px;display:none}.pbd.open{display:block}
-.ptx{background:#080E1A;border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:18px;font-family:'JetBrains Mono','Fira Code',monospace;font-size:11.5px;line-height:1.85;color:#C8D6E5;white-space:pre-wrap;word-wrap:break-word;max-height:700px;overflow-y:auto;position:relative}
-.ptx::before{content:'PROMPT → PASTE INTO CLAUDE DESKTOP';position:absolute;top:6px;right:10px;font-size:8px;font-weight:700;letter-spacing:1.5px;color:#2A3548;font-family:'Inter',sans-serif}
-.cb{margin-top:10px;background:#0B64DD;border:none;color:#fff;font-size:11px;font-weight:600;padding:7px 18px;border-radius:7px;cursor:pointer;font-family:'Inter',sans-serif}
+/* Prompt box */
+.pb{margin-top:16px;background:rgba(11,100,221,.03);border:1px solid rgba(11,100,221,.12);border-radius:10px;overflow:hidden}
+.ph{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:rgba(11,100,221,.06);border-bottom:1px solid rgba(11,100,221,.1);cursor:pointer;user-select:none}
+.ph:hover{background:rgba(11,100,221,.09)}
+.ph h4{font-size:11px;font-weight:700;color:#36A2EF;display:flex;align-items:center;gap:6px}
+.badge{font-size:8px;background:rgba(0,191,179,.1);color:#00BFB3;border:1px solid rgba(0,191,179,.18);padding:1px 6px;border-radius:8px;font-weight:600}
+.ptg{font-size:14px;color:#36A2EF;transition:transform .3s}.ptg.o{transform:rotate(180deg)}
+.pbd{padding:14px;display:none}.pbd.o{display:block}
+.ptx{background:#080E1A;border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:14px;font-family:'JetBrains Mono','Fira Code',monospace;font-size:10.5px;line-height:1.8;color:#B8C8DB;white-space:pre-wrap;word-wrap:break-word;max-height:650px;overflow-y:auto}
+.cb{margin-top:8px;background:#0B64DD;border:none;color:#fff;font-size:10px;font-weight:600;padding:5px 14px;border-radius:6px;cursor:pointer;font-family:'Inter',sans-serif}
 .cb:hover{background:#094EB0}.cb.ok{background:#008B87}
-.pm{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
-.pm span{font-size:9px;color:#6B7D99;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);padding:2px 8px;border-radius:6px}
+.pm{display:flex;gap:8px;margin-top:8px}.pm span{font-size:8px;color:#6B7D99;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);padding:2px 6px;border-radius:5px}
 </style>
 </head>
 <body>
 
-<div class="top-nav">
-  <div class="logo">elastic<span>.</span></div>
-  <div class="nav-tag">Agentic Day · Mumbai</div>
-  <div class="pills">
-    <button class="pill active" onclick="go(0)">Welcome</button>
-    <button class="pill" onclick="go(1)">Agenda</button>
-    <button class="pill" onclick="go(2)">Keynote</button>
-    <button class="pill" onclick="go(3)">Agent Builder</button>
-    <button class="pill" onclick="go(4)">Agentic RAG</button>
-    <button class="pill" onclick="go(5)">MCP &amp; A2A</button>
-    <button class="pill" onclick="go(6)">Automated RCA</button>
-    <button class="pill" onclick="go(7)">Customer Panel</button>
-    <button class="pill" onclick="go(8)">Agentic ROI</button>
-    <button class="pill" onclick="go(9)">Governance</button>
-    <button class="pill" onclick="go(10)">Open Standards</button>
-    <button class="pill" onclick="go(11)">Closing AMA</button>
-  </div>
+<div class="tn">
+  <div class="lo">elastic<i>.</i></div>
+  <div class="nt">Agentic Day · Mumbai</div>
+  <div class="ps" id="pills"></div>
 </div>
 
-<div class="slides">
-
-<!-- ===== 0: WELCOME ===== -->
-<div class="slide active" id="s0">
-  <div class="si">
-    <div class="st b">Elastic Agentic Day · Mumbai · 17 April 2026</div>
-    <div class="sh">Your Agents Should Search. Reason. Act.</div>
-    <div class="ss">Most AI agents guess. The best ones are grounded in your data, armed with the right tools, and governed to act — autonomously, reliably, at enterprise scale. Elastic Agent Builder (now GA) turns Elasticsearch into the context engine that makes agentic AI actually work.</div>
-  </div>
-  <div class="pb"><div class="ph" onclick="tp(this)"><h4>🎯 PPTX Prompt <span class="badge">1 Title Slide</span></h4><div class="pt">▼</div></div><div class="pbd"><div class="ptx">Create a .pptx file called "00_elastic_welcome.pptx" with 1 slide. Do not show me code — directly generate and give me the .pptx file for download.
-
-SLIDE SIZE: Widescreen 16:9.
-
-DESIGN SYSTEM (apply to this and ALL future decks in this event series):
-— Slide background: solid dark navy fill (R:11 G:18 B:32) on EVERY slide.
-— Primary accent: Elastic Blue (R:11 G:100 B:221). Text blue: (R:54 G:162 B:239). Teal: (R:0 G:191 B:179). Pink: (R:188 G:30 B:112). Amber: (R:249 G:177 B:16).
-— Body text: (R:162 G:177 B:201). Muted: (R:107 G:125 B:153). White: (R:255 G:255 B:255).
-— Font: Calibri everywhere. Headings: Bold, 44pt, white. Subheadings: 20pt, body color. Eyebrow labels: 11pt Bold ALL CAPS, light blue. Body: 14pt, body color.
-— Cards/Containers: rounded rectangle shapes with dark fill (R:18 G:30 B:55), 1pt border in relevant accent color, 0.15" corner radius.
-— Stat boxes: rounded rect, dark fill, accent border. Large number centered (36pt Bold accent color), label below (11pt muted).
-— Quote blocks: rounded rect dark fill, with a thin tall rectangle shape (3pt wide, accent color) on the left edge as a faux border. Text in 16pt italic white.
-— Diagrams: use grouped rounded rectangles connected by arrow shapes. Layer labels in 10pt Bold uppercase muted text.
-— Code blocks: rounded rect with very dark fill (R:8 G:14 B:26), monospace font Courier New 10pt, light blue text.
-— Tag pills: small rounded rect, fill slightly tinted to accent, 10pt text in accent color, 1pt accent border.
-— No external images anywhere. Only shapes, text boxes, solid fills, and grouped shape diagrams.
-— Place a subtle "elastic." wordmark in 9pt Bold white+blue in the bottom-left corner of every slide.
-— Place a slide counter "1 / N" in 9pt muted in the bottom-right of every slide.
-
-SLIDE 1 — TITLE:
-Top-left: rounded pill shape with "ELASTIC AGENTIC DAY · MUMBAI · 17 APRIL 2026" in 11pt Bold uppercase light blue, thin blue border, dark fill.
-
-Center block:
-— Line 1: "Your Agents Should" in 48pt Bold white.
-— Line 2: "Search." in light blue + "Reason." in teal + "Act." in pink — all 48pt Bold, separated by spaces.
-
-Below headline (20pt body color):
-"Most AI agents guess. The best ones are grounded in your data, armed with the right tools, and governed to act — autonomously, reliably, at enterprise scale."
-
-Below subtitle (14pt muted):
-"Elastic Agent Builder — now generally available — is a complete set of capabilities that helps developers quickly build secure, reliable, context-driven AI agents. Built on Elasticsearch, Agent Builder excels at context engineering by delivering relevance in a unified platform that scales, searches, and analyzes enterprise data."
-
-Bottom row: 4 rounded-rect info boxes side by side, each with a small label (10pt Bold uppercase light blue) and value (13pt Bold white), dark fill, thin blue border:
-— "DATE" → "17 April 2026"
-— "TIME" → "9:00 AM – 5:00 PM IST"
-— "VENUE" → "Mumbai, India"
-— "FORMAT" → "Keynotes · Demos · Panel · AMA"</div><button class="cb" onclick="cp(this)">📋 Copy Prompt</button><div class="pm"><span>Output: .pptx</span><span>Slides: 1</span></div></div></div>
-  <div class="nav"><button class="nb pr" onclick="go(1)">View Agenda →</button></div>
-</div>
-
-<!-- ===== 1: AGENDA ===== -->
-<div class="slide" id="s1">
-  <div class="si">
-    <div class="st a">Full Day Schedule</div>
-    <div class="sh">One day. Three pillars of agentic AI.</div>
-    <div class="ss">Search & RAG · Observability & Security · Governance & Open Standards</div>
-    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden;margin-bottom:20px">
-      <div style="display:flex;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="min-width:75px;font-size:12px;font-weight:600;color:#36A2EF">9:00</span><div><div style="font-size:13px;font-weight:600">Registration &amp; Networking Breakfast</div></div></div>
-      <div style="display:flex;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="min-width:75px;font-size:12px;font-weight:600;color:#36A2EF">9:30</span><div><div style="font-size:13px;font-weight:600">Keynote: The Age of Agentic Enterprise <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;margin-left:6px;background:rgba(11,100,221,.2);color:#36A2EF;border:1px solid rgba(11,100,221,.3)">Keynote</span></div><div style="font-size:11px;color:#6B7D99">Chris Walker</div></div></div>
-      <div style="display:flex;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="min-width:75px;font-size:12px;font-weight:600;color:#36A2EF">10:00</span><div><div style="font-size:13px;font-weight:600">Customer Keynote / Fireside Chat <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;margin-left:6px;background:rgba(249,177,16,.12);color:#F9B110;border:1px solid rgba(249,177,16,.25)">Panel</span></div><div style="font-size:11px;color:#6B7D99">BFSI &amp; Digital Native leaders</div></div></div>
-      <div style="display:flex;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="min-width:75px;font-size:12px;font-weight:600;color:#36A2EF">10:30</span><div><div style="font-size:13px;font-weight:600">Agent Builder Deep Dive <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;margin-left:6px;background:rgba(0,191,179,.15);color:#00BFB3;border:1px solid rgba(0,191,179,.25)">Demo</span></div><div style="font-size:11px;color:#6B7D99">Ashish Tiwari</div></div></div>
-      <div style="display:flex;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="min-width:75px;font-size:12px;font-weight:600;color:#36A2EF">11:15</span><div><div style="font-size:13px;font-weight:600">Agentic RAG: Grounding Agents in Enterprise Knowledge</div><div style="font-size:11px;color:#6B7D99">Abhinav Chauhan, Aish Gunasekar, Ravindra Ramnani</div></div></div>
-      <div style="display:flex;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="min-width:75px;font-size:12px;font-weight:600;color:#36A2EF">11:45</span><div><div style="font-size:13px;font-weight:600">MCP &amp; A2A: Connecting Agents <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;margin-left:6px;background:rgba(0,191,179,.15);color:#00BFB3;border:1px solid rgba(0,191,179,.25)">Demo</span></div><div style="font-size:11px;color:#6B7D99">Ashish Tiwari</div></div></div>
-      <div style="display:flex;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="min-width:75px;font-size:12px;font-weight:600;color:#36A2EF">12:15</span><div><div style="font-size:13px;font-weight:600">Automated RCA &amp; Threat Triage <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;margin-left:6px;background:rgba(0,191,179,.15);color:#00BFB3;border:1px solid rgba(0,191,179,.25)">Live Demo</span></div><div style="font-size:11px;color:#6B7D99">Ramprasad KM</div></div></div>
-      <div style="display:flex;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.06);opacity:.45"><span style="min-width:75px;font-size:12px;font-weight:600;color:#36A2EF">1:15</span><div><div style="font-size:13px;font-weight:600">Networking Lunch</div></div></div>
-      <div style="display:flex;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="min-width:75px;font-size:12px;font-weight:600;color:#36A2EF">2:00</span><div><div style="font-size:13px;font-weight:600">Customer Panel: Operationalizing AI Agents <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;margin-left:6px;background:rgba(249,177,16,.12);color:#F9B110;border:1px solid rgba(249,177,16,.25)">Panel</span></div><div style="font-size:11px;color:#6B7D99">BFSI &amp; Digital Native leaders</div></div></div>
-      <div style="display:flex;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="min-width:75px;font-size:12px;font-weight:600;color:#36A2EF">2:30</span><div><div style="font-size:13px;font-weight:600">Unlocking the Full Potential of Elastic</div><div style="font-size:11px;color:#6B7D99">Amit Vyas</div></div></div>
-      <div style="display:flex;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="min-width:75px;font-size:12px;font-weight:600;color:#36A2EF">3:00</span><div><div style="font-size:13px;font-weight:600">Governing AI Agents: Risk, Trust &amp; Compliance</div><div style="font-size:11px;color:#6B7D99">Bhadriraju Prasanth</div></div></div>
-      <div style="display:flex;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="min-width:75px;font-size:12px;font-weight:600;color:#36A2EF">3:30</span><div><div style="font-size:13px;font-weight:600">The Business Case: Measuring Agentic ROI</div><div style="font-size:11px;color:#6B7D99">Abhijeet Bhaskar</div></div></div>
-      <div style="display:flex;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="min-width:75px;font-size:12px;font-weight:600;color:#36A2EF">4:00</span><div><div style="font-size:13px;font-weight:600">Open Standards, No Lock-in: MCP, A2A &amp; OpenTelemetry</div><div style="font-size:11px;color:#6B7D99">Aashish Mishra</div></div></div>
-      <div style="display:flex;padding:12px 18px"><span style="min-width:75px;font-size:12px;font-weight:600;color:#36A2EF">4:30</span><div><div style="font-size:13px;font-weight:600">Closing AMA: Building Your Agentic Roadmap</div><div style="font-size:11px;color:#6B7D99">Sanjay Deshmukh, Chris Walker, Ravindra Ramnani</div></div></div>
-    </div>
-  </div>
-  <div class="pb"><div class="ph" onclick="tp(this)"><h4>🎯 PPTX Prompt <span class="badge">3 Slides</span></h4><div class="pt">▼</div></div><div class="pbd"><div class="ptx">Create a .pptx file called "01_elastic_agenda.pptx" with 3 slides. Do not show me code — directly generate and give me the .pptx file for download.
-
-SLIDE SIZE: Widescreen 16:9.
-DESIGN: Same Elastic dark theme from the Welcome deck. Dark navy background on all slides, Calibri font, accent colors Blue/Teal/Pink/Amber, rounded rect cards with dark fills and accent borders. Wordmark + slide counter on every slide.
-
-SLIDE 1 — "Morning Sessions" (9:00 AM – 1:15 PM):
-— Eyebrow: "FULL DAY SCHEDULE" in amber.
-— Heading: "One day. Three pillars of agentic AI." (36pt Bold white)
-— Subtitle: "Elastic Agentic Day brings search, observability, and security leaders together to see how Agent Builder turns Elasticsearch into the context engine for agentic AI." (14pt muted)
-— Table (use a PowerPoint table object, 4 columns: Time | Session | Speaker(s) | Type):
-  Cell styling: dark fill (R:14 G:22 B:40), white text for session names, muted text for speakers, light blue text for times. Header row slightly lighter (R:18 G:30 B:55) with Bold white text. 1pt subtle border between rows.
-  Rows:
-  • 9:00 AM | Registration & Networking Breakfast | — | —
-  • 9:30 AM | The Age of the Agentic Enterprise | Chris Walker | KEYNOTE (blue pill)
-  • 10:00 AM | Customer Keynote / Fireside Chat | BFSI & Digital Native leaders | PANEL (amber pill)
-  • 10:30 AM | Agent Builder Deep Dive: Agents, Tools & Workflows | Ashish Tiwari | DEMO (teal pill)
-  • 11:15 AM | Agentic RAG: Grounding Agents in Enterprise Knowledge | Abhinav Chauhan, Aish Gunasekar, Ravindra Ramnani | SESSION
-  • 11:45 AM | MCP & A2A: Connecting Agents to Jira, Slack & Beyond | Ashish Tiwari | DEMO (teal pill)
-  • 12:15 PM | Agents in Action: Automated RCA & Threat Triage | Ramprasad KM | LIVE DEMO (teal pill)
-  • 1:15 PM | Networking Lunch | — | — (entire row at 40% opacity / dimmed text)
-— Type badges: render as small colored rounded rect shapes overlaid in the Type column.
-
-SLIDE 2 — "Afternoon Sessions" (2:00 PM – 4:30 PM):
-— Same table styling. Rows:
-  • 2:00 PM | Customer Panel: Operationalizing AI Agents | BFSI & Digital Native leaders | PANEL (amber pill)
-  • 2:30 PM | Unlocking the Full Potential of Elastic | Amit Vyas | SESSION
-  • 3:00 PM | Governing AI Agents: Risk, Trust & Compliance | Bhadriraju Prasanth | SESSION
-  • 3:30 PM | The Business Case: Measuring Agentic ROI | Abhijeet Bhaskar | SESSION
-  • 4:00 PM | Open Standards, No Lock-in: MCP, A2A & OpenTelemetry | Aashish Mishra | SESSION
-  • 4:30 PM | Closing AMA: Building Your Agentic Roadmap | Sanjay Deshmukh, Chris Walker, Ravindra Ramnani | AMA
-
-SLIDE 3 — "Three Pillars" (visual summary):
-— Heading: "Three Pillars of Agentic AI" (28pt Bold white, centered)
-— 3 large cards side by side, each 3.5" wide × 4" tall:
-  Card 1 (blue accent): Title "Search & RAG". Icon: "S" in blue circle. Content: "Hybrid retrieval (84.3% Recall@10), semantic chunking, ES|QL structured tools, Agent Builder. The context engine that makes agents accurate."
-  Card 2 (teal accent): Title "Observe & Secure". Icon: "O" in teal circle. Content: "Automated RCA, Attack Discovery SOC triage, cross-domain correlation. Agents that act on operational and security data. AHEAD cut triage time by 73%."
-  Card 3 (pink accent): Title "Govern & Scale". Icon: "G" in pink circle. Content: "RBAC + DLS/FLS, full audit trails, human-in-the-loop, MCP & A2A open standards. Enterprise-grade trust and compliance."
-— Bottom center text (14pt muted): "All built on one unified platform: Elasticsearch — used by more than 50% of the Fortune 500."</div><button class="cb" onclick="cp(this)">📋 Copy Prompt</button><div class="pm"><span>Output: .pptx</span><span>Slides: 3</span></div></div></div>
-  <div class="nav"><button class="nb" onclick="go(0)">← Back</button><button class="nb pr" onclick="go(2)">Keynote →</button></div>
-</div>
-
-<!-- ===== 2: KEYNOTE ===== -->
-<div class="slide" id="s2">
-  <div class="si">
-    <div class="st b">Opening Keynote · 9:30 AM · Chris Walker</div>
-    <div class="sh">The Age of the Agentic Enterprise</div>
-    <div class="sr">
-      <div class="sb"><div class="sn">84.3%</div><div class="sl">Recall@10 hybrid</div></div>
-      <div class="sb"><div class="sn">100%</div><div class="sl">ES|QL task success</div></div>
-      <div class="sb"><div class="sn">50%+</div><div class="sl">Fortune 500 use Elastic</div></div>
-    </div>
-  </div>
-  <div class="pb"><div class="ph" onclick="tp(this)"><h4>🎯 PPTX Prompt <span class="badge">10 Slides · ~30 min</span></h4><div class="pt">▼</div></div><div class="pbd"><div class="ptx">Create a .pptx file called "02_elastic_keynote.pptx" with 10 slides. Do not show me code — directly generate and give me the .pptx file for download.
-
-SLIDE SIZE: Widescreen 16:9.
-DESIGN: Same Elastic dark theme. Dark navy bg, Calibri, accents, rounded rect cards, wordmark + counter on every slide. See Welcome deck for full specs.
-
-SLIDE 1 — Title:
-— Eyebrow: "OPENING KEYNOTE · 9:30 AM" (light blue)
-— Headline: "The Age of the Agentic Enterprise" (44pt Bold white)
-— Speaker: "Chris Walker" (20pt white)
-— Subtitle: "AI is no longer a copilot you chat with. It's an operator that plans, reasons, and acts — autonomously, across your entire data estate." (16pt muted)
-— Bottom-right: Elastic wordmark + "The Search AI Company"
-
-SLIDE 2 — "The AI Evolution" (3-era timeline):
-— Heading: "From Search to Agentic AI" (28pt)
-— Vertical timeline with 3 stacked rounded rect cards, connected by downward arrow shapes:
-  Era 1 (dark card): "NLP & Search (2010s)" — "Elasticsearch becomes the engine behind enterprise search. BM25 delivers lexical precision at massive scale. Used by 50%+ of the Fortune 500."
-  Era 2 (dark card): "Generative AI & RAG (2022–24)" — "LLMs respond to prompts. RAG grounds answers in enterprise documents. But the human is still in every loop — asking, reviewing, acting."
-  Era 3 (BLUE accent card, highlighted with brighter fill): "Agentic AI (2025+)" — "Systems that set goals, plan multi-step actions, discover and call tools, and verify outcomes — with minimal human supervision. The loop is closed. Elastic Agent Builder (now GA, Jan 2026) makes this real."
-
-SLIDE 3 — "What Makes an Agent — G-T-C-R":
-— Heading: "The Anatomy of an Agent" (28pt)
-— 2×2 grid of cards, each with a colored circle shape (0.5" diameter) containing a bold letter:
-  G (blue circle): "Goals — Define what outcomes the agent should achieve. Not prompts — objectives."
-  T (teal circle): "Tools — Actions available to the agent: hybrid search, ES|QL queries, workflow triggers, MCP endpoints. Agent Builder provides built-in tools and lets you create custom ones."
-  C (pink circle): "Context — The right data at the right time. System prompts, retrieved RAG content, long-term memory, chat history, available tools. This is context engineering."
-  R (amber circle): "Resources — The data estate the agent reasons over: logs, metrics, traces, documents, security events — all unified in Elasticsearch."
-— Quote block at bottom: "AI agents don't just need lots of data — they need the right data and tools, with relevance, guardrails, and observability built in." — Ken Exner, CPO, Elastic
-
-SLIDE 4 — "Context Engineering: The Real Challenge":
-— Heading: "Context Rot Is Real" (28pt)
-— Left half: large warning callout card (pink border):
-  "At 32K tokens, 11 models drop below 50% of their short-length baselines (NOLIMA, 2025). Stuffing more text into the prompt is the wrong strategy."
-  Below: horizontal bar chart using 4 rounded rect shapes of decreasing width:
-    4K tokens → 95% accuracy (full-width blue bar)
-    16K tokens → 78% (shorter bar, lighter blue)
-    32K tokens → 48% (shorter, pink-tinted)
-    64K tokens → 31% (shortest, pink)
-  Label each bar with the percentage on the right.
-— Right half: solution card (blue border):
-  "The answer isn't more data — it's better retrieval. Elastic is the context engineering platform."
-  Context components shown as 6 small colored pill shapes: System prompt (blue), Retrieved/RAG (teal), Long-term memory (pink), Available tools (amber), User prompt (gray), Chat history (gray).
-  Bottom text: "Elastic delivers every component natively."
-
-SLIDE 5 — "Benchmark Results":
-— Heading: "Elastic Hybrid Retrieval — The Benchmark Leader" (28pt)
-— 3 large stat boxes:
-  "84.3%" (36pt blue) — "Recall@10 with Elastic hybrid retrieval (BM25 + dense vectors + ELSER sparse). Highest across all methods tested. MRR of 0.53 — most relevant document typically in the top 2 positions." (Source: Elastic internal benchmark, Elasticsearch Labs)
-  "100%" (36pt teal) — "Task success rate for structured retrieval with ES|QL in agentic workflows. Structured queries return exactly what the agent needs."
-  "40%" (36pt amber) — "Context window reduction with semantic chunking. 93.3% hit rate. Agents reason faster, cheaper, more accurately."
-— Below stats: explanatory text (12pt muted): "Hybrid retrieval combines three methods: BM25 for lexical precision, dense vectors for semantic understanding, and ELSER (Elastic Learned Sparse Encoder) — a sparse model that outperforms lexical search in 11 of 12 BEIR benchmarks out-of-domain, with no fine-tuning required."
-
-SLIDE 6 — "From Copilot to Operator":
-— Heading: "The Shift" (28pt)
-— Two columns side by side:
-  Left column "Copilot Era" (dimmed text, 50% opacity):
-    1. Human asks a question
-    2. Model generates response
-    3. Human reads and evaluates
-    4. Human decides what to do
-    5. Human takes action manually
-  Right column "Agentic Era" (blue accent, bold, full opacity):
-    1. Goal is defined (outcome-based)
-    2. Agent plans multi-step approach
-    3. Agent retrieves context (hybrid search)
-    4. Agent calls tools (ES|QL, APIs, workflows)
-    5. Agent takes action (Jira ticket, PagerDuty alert, Slack message)
-    6. Agent verifies outcome and iterates
-— Each step as a numbered text item with a small arrow shape between them.
-— Bottom callout: "Agents built with Agent Builder can leverage Workflows to orchestrate internal and external systems — taking actions, gathering and transforming data with precision." — Elastic Blog, Feb 2026
-
-SLIDE 7 — "The Elastic Platform Advantage":
-— Heading: "Why Elastic for Agentic AI" (28pt)
-— 4 horizontal cards arranged vertically, each with a colored left-edge bar and icon:
-  1. (blue bar): "Context Engineering Platform" — "Elasticsearch stores and searches structured and unstructured data. Native data prep, ingestion, retrieval, ranking, and tools — all in one platform."
-  2. (teal bar): "Search That Actually Works" — "Hybrid retrieval outperforms pure-vector and pure-BM25 in every benchmark. ELSER v2 remains top-10 on MTEB Retrieval. Learning to Rank for continuous improvement."
-  3. (pink bar): "Tools Agents Can Call" — "Built-in search tools that auto-select the right index. Custom ES|QL tools for structured queries. Elastic Workflows (YAML-defined) for orchestrated actions. MCP & A2A endpoints for interoperability."
-  4. (amber bar): "Governed by Design" — "Document-level & field-level security. Role-based tool access. Full audit trail of every retrieval and tool call. Human-in-the-loop approval gates for high-risk actions."
-
-SLIDE 8 — "Partner Ecosystem":
-— Heading: "Trusted by the Ecosystem" (28pt)
-— 6 quote cards (small, 2 rows of 3) with company name and a paraphrased quote:
-  Microsoft: "Native MCP and A2A support enables seamless deployments within Microsoft Foundry." — Amanda Silver, CVP, Microsoft CoreAI
-  Arcade.dev: "Elastic Agent Builder gives developers a structured, secure way to take agents from demo to production grade." — Sam Partee, Co-founder
-  LlamaIndex: "Elastic Agent Builder strengthens the critical context layer, helping agents reason more accurately." — Jerry Liu, CEO
-  AWS: "Elastic achieved the AWS Agentic AI Specialization — recognized for production-ready autonomous AI systems."
-  Forrester: "Elastic named a Leader in the Forrester Wave: Security Analytics Platforms, Q2 2025."
-  Fortune 500: "More than 50% of the Fortune 500 run on Elasticsearch."
-
-SLIDE 9 — "Elastic Agent Builder — Now GA":
-— Heading: "Agent Builder: Generally Available" (28pt, with a small teal "GA" badge)
-— Feature grid (2 rows × 3 columns of cards):
-  "Chat With Your Data" — built-in conversational agent for natural language interaction with Elasticsearch data.
-  "Built-in Search Tools" — auto-select index, translate NL to optimized hybrid/semantic/structured queries.
-  "Custom ES|QL Tools" — define fine-grained data tools agents call autonomously. Zero hallucination.
-  "Elastic Workflows" — YAML-defined, composable, event-driven automation. Tech preview.
-  "MCP Server" — expose all tools via secure MCP endpoint. Connect Claude Desktop, Cursor, VS Code, Gemini CLI in minutes.
-  "A2A Protocol" — agents expose A2A interfaces for multi-agent orchestration with LangChain, AutoGen, CrewAI.
-— Bottom: "Model-agnostic. Compatible with AWS, Google Cloud, and Microsoft managed models. Available in Elastic Cloud Serverless and Enterprise Tier."
-
-SLIDE 10 — "What You'll See Today":
-— Heading: "Today's Deep Dives" (28pt)
-— 3 large cards: "Search & RAG" (blue), "Observe & Secure" (teal), "Govern & Scale" (pink). Each with 2-line session list.
-— Bottom: "Let's begin. →" (18pt white, centered)</div><button class="cb" onclick="cp(this)">📋 Copy Prompt</button><div class="pm"><span>Output: .pptx</span><span>Slides: 10</span><span>~30 min</span></div></div></div>
-  <div class="nav"><button class="nb" onclick="go(1)">← Agenda</button><button class="nb pr" onclick="go(3)">Agent Builder →</button></div>
-</div>
-
-<!-- ===== 3–11: Remaining sessions (same enriched pattern) ===== -->
-<!-- For brevity in this artifact, slides 3-11 follow the same enriched structure. Each contains: session summary cards + a detailed PPTX prompt box. Below are the prompt boxes for each. -->
-
-<!-- ===== 3: AGENT BUILDER ===== -->
-<div class="slide" id="s3">
-  <div class="si"><div class="st b">Session · 10:30 AM · Ashish Tiwari</div><div class="sh">Agent Builder Deep Dive: Agents, Tools &amp; Workflows</div><div class="ss">Build custom AI agents in minutes. Now GA — includes built-in search tools, custom ES|QL tools, Elastic Workflows (tech preview), and native MCP/A2A support.</div></div>
-  <div class="pb"><div class="ph" onclick="tp(this)"><h4>🎯 PPTX Prompt <span class="badge">10 Slides · ~30 min</span></h4><div class="pt">▼</div></div><div class="pbd"><div class="ptx">Create a .pptx file called "03_elastic_agent_builder.pptx" with 10 slides. Do not show me code — directly generate and give me the .pptx file for download.
-
-SLIDE SIZE: Widescreen 16:9.
-DESIGN: Same Elastic dark theme. See Welcome/Keynote deck for full specs.
-
-SLIDE 1 — Title: Eyebrow "SESSION · 10:30 AM · ASHISH TIWARI". Headline "Agent Builder Deep Dive: Agents, Tools & Workflows". Subtitle: "Agent Builder — now generally available — dramatically simplifies building context-driven AI agents. It provides native data prep, ingestion, retrieval, ranking, built-in and custom tools, conversational experience, and agent observability." Tags: "Agent Builder GA", "ES|QL Tools", "Elastic Workflows (Tech Preview)", "MCP Server", "A2A Protocol".
-
-SLIDE 2 — "Architecture" (3-layer diagram built from grouped shapes):
-— Title: "Agent Builder Platform Architecture"
-— Top layer "DELIVERING AI EXPERIENCES" (gray-filled rounded rects): Custom Apps | Claude Desktop / Copilot / Cursor | Salesforce | LangChain / LlamaIndex / AutoGen
-— Arrow connectors labeled "MCP" and "A2A"
-— Middle layer "POWERED BY AGENTS & TOOLS" (accent-filled rects): Agent Builder (amber) | Built-in Search Tools (blue) | Custom ES|QL Tools (blue) | Elastic Workflows (teal) | MCP/A2A Endpoints (pink)
-— Arrow connector labeled "Elasticsearch Platform"
-— Bottom layer "BUILT ON ENTERPRISE DATA" (gray rects): Google Drive | GitHub | Salesforce | Confluence | Slack | Jira | SharePoint | Any API (via 400+ connectors)
-— Caption: "Elasticsearch is at the center — functioning as vector store, embeddings engine, and MCP server."
-
-SLIDE 3 — "What Is an Elastic Agent?":
-— Definition card: "An AI-powered assistant created in Kibana that combines any LLM with enterprise-specific tools, knowledge sources, and workflow actions. It reasons over your data and acts on your behalf. Model-agnostic — works with AWS Bedrock, Google Cloud, Microsoft, or local models."
-— 4 capability cards: "Chat Instantly" — built-in conversational agent, query any Elasticsearch data in natural language. "Search Intelligently" — built-in tools auto-select index, understand data structure, translate NL to optimized queries. "Build Custom Tools" — ES|QL tools for fine-grained data control, zero hallucination. "Take Actions" — Workflows orchestrate Jira, Slack, PagerDuty, any REST API.
-
-SLIDE 4 — "Built-in Search Tools":
-— Icon: magnifying glass shape in blue circle
-— Key points: "Agent Builder's built-in search capability selects the right index, understands the structure of that data, translates natural language into optimized semantic, hybrid or structured queries, and returns only the most relevant context to the LLM."
-— Diagram: User question → Agent Builder → [Index Selection → Query Optimization → Hybrid/Semantic/Structured Retrieval → Relevance Ranking] → Most relevant context → LLM → Answer
-— Stat: "84.3% Recall@10 with hybrid retrieval. MRR 0.53 — best document typically in top 2."
-
-SLIDE 5 — "Custom Tools with ES|QL":
-— Icon: teal circle with "ES|QL"
-— Code block (dark rect, Courier New): 
-  POST /api/agent_builder/tools
-  {
-    "id": "find_client_exposure",
-    "type": "esql",
-    "description": "Finds client portfolio exposure to negative news",
-    "configuration": {
-      "query": "FROM news-* | WHERE sentiment < 0 | STATS count(*) BY client_id"
-    }
-  }
-— Callout: "ES|QL is a piped query language. LLMs often confuse it with SQL. Custom tools eliminate this — agents get structured, reliable, zero-hallucination results."
-— Stat: "100% task success rate on structured retrieval tasks."
-
-SLIDE 6 — "Elastic Workflows":
-— Icon: pink circle with "W"
-— Heading: "Reliable Automation for Agent Actions"
-— Key message: "Workflows are YAML-defined, composable, event-driven, and exposable via MCP. They bridge the gap between AI reasoning and rule-based reliability."
-— Diagram: horizontal flow of 6 connected rounded rects:
-  Alert Triggered → Agent Analyzes Context → Workflow Executes → [Jira Ticket Created] → [Slack Summary Posted] → [PagerDuty Incident Opened]
-— Bidirectional note: "Workflows can call agents as intelligent steps. Agents can invoke workflows as tools. Both run on the same platform — no integration gap."
-— Status badge: "TECH PREVIEW"
-
-SLIDE 7 — "MCP & A2A — Open Interoperability":
-— Two-column layout:
-  Left card (blue): "Elastic as MCP Server" — "Agent Builder automatically exposes all tools via a secure MCP endpoint at /api/agent_builder/mcp. Clients: Claude Desktop, Cursor, VS Code, Gemini CLI, Microsoft Foundry. Setup: generate API key → add to client config → connected in minutes."
-  Right card (teal): "Elastic as A2A Peer" — "A2A enables agent-to-agent delegation. Elastic agents publish agent cards describing capabilities. Orchestrators (LangChain, AutoGen, CrewAI) delegate tasks. Clean separation: A2A for coordination, MCP for tool access."
-— Bottom: Microsoft Foundry callout — "Elastic MCP Server is in the Microsoft Foundry Tool Catalog for direct integration."
-
-SLIDE 8 — "Live Demo" title card:
-— Large centered text: "🛠 Live Demo" (36pt Bold white)
-— Subtitle: "Building a service health agent from scratch in Kibana"
-— 5 numbered step cards: 1) Create agent + select LLM model, 2) Add built-in search tool — auto-indexes logs, 3) Add custom ES|QL tool for metric aggregations, 4) Attach Workflow — auto-create Jira ticket on anomaly, 5) Generate MCP key — connect to Claude Desktop.
-— Bottom: "Total time: approximately 5 minutes. Zero code."
-
-SLIDE 9 — "Demo Recap — What We Built":
-— Mini architecture diagram: central "Service Health Agent" rounded rect connected by lines to 5 satellite shapes: Logs index (search tool), Metrics index (ES|QL tool), Jira (workflow), Slack (workflow), Claude Desktop (MCP client).
-— 3 stat boxes: "Build time: ~5 min" | "Tools connected: 5" | "Lines of code: 0"
-— Key insight: "Agent Builder simplifies working with messy enterprise data, giving developers a secure, reliable foundation to build context-driven agents at scale." — Ken Exner, CPO
-
-SLIDE 10 — "Get Started":
-— 3 action cards:
-  "Try Agent Builder" — GA in Elastic Cloud Serverless and Enterprise Tier. Create your first agent today. elastic.co/elasticsearch/agent-builder
-  "Browse Agent Skills" — 30+ open-source skills. github.com/elastic/agent-skills. Skills for ES|QL, Kibana, Security, Observability, Cloud.
-  "Connect via MCP" — Generate API key in Kibana, add to Claude/Cursor/VS Code config. elastic.co/docs/solutions/search/mcp
-— Bottom: "Questions → Closing AMA at 4:30 PM"</div><button class="cb" onclick="cp(this)">📋 Copy Prompt</button><div class="pm"><span>Output: .pptx</span><span>Slides: 10</span><span>~30 min</span></div></div></div>
-  <div class="nav"><button class="nb" onclick="go(2)">← Keynote</button><button class="nb pr" onclick="go(4)">Agentic RAG →</button></div>
-</div>
-
-<!-- ===== 4: AGENTIC RAG ===== -->
-<div class="slide" id="s4">
-  <div class="si"><div class="st t">Session · 11:15 AM</div><div class="sh">Agentic RAG: Grounding Agents in Enterprise Knowledge</div></div>
-  <div class="pb"><div class="ph" onclick="tp(this)"><h4>🎯 PPTX Prompt <span class="badge">9 Slides · ~25 min</span></h4><div class="pt">▼</div></div><div class="pbd"><div class="ptx">Create a .pptx file called "04_elastic_agentic_rag.pptx" with 9 slides. Do not show me code — directly generate and give me the .pptx file for download.
-
-SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme.
-
-SLIDE 1 — Title: Eyebrow "SESSION · 11:15 AM · ABHINAV CHAUHAN, AISH GUNASEKAR, RAVINDRA RAMNANI". Headline "Agentic RAG: Grounding Agents in Enterprise Knowledge". Subtitle: "Context rot is real. An LLM's context is like short-term memory — stuffing it with everything leads to lost focus and derailed reasoning. The answer isn't more data — it's better retrieval."
-
-SLIDE 2 — "Context Rot — The Data":
-— Quote block: "Trying to stuff the context with every potentially relevant piece of information leads to context rot — the model's attention budget gets exhausted, causing it to lose focus and derail its own reasoning." (Source: Elastic Search Labs blog on context engineering)
-— Bar chart (4 horizontal bars): 4K=95%, 16K=78%, 32K=48%, 64K=31%. Bars decrease in width, color transitions from blue to pink.
-— Bottom: "At 32K tokens, 11 models drop below 50% of their short-length baselines (NOLIMA, 2025)."
-
-SLIDE 3 — "Context Engineering — The Full Stack":
-— Heading: "What Makes Up an Agent's Context Window"
-— Diagram: central "LLM" circle surrounded by 6 connected pill shapes: System prompt (blue), Retrieved content via RAG (teal), Long-term memory (pink), Available tools & their descriptions (amber), User prompt (gray), Conversation history (gray).
-— Callout: "Elastic is a complete, differentiated platform for Context Engineering — every component, natively. From data ingestion to retrieval to tool-building."
-
-SLIDE 4 — "Hybrid Retrieval Deep Dive":
-— Heading: "Why Hybrid Wins"
-— 3 method cards side by side with comparative stats:
-  "BM25 (Lexical)" — dark dim card — "Precise keyword matching. Misses semantic similarity. ~65% Recall@10."
-  "Dense Vector" — dark dim card — "Captures meaning. Can miss exact terms. ~72% Recall@10."
-  "Elastic Hybrid (BM25 + Dense + ELSER)" — BLUE highlighted card — "Combines all three. 84.3% Recall@10. MRR 0.53. Each method covers the blind spots of the others."
-— Below: "ELSER (Elastic Learned Sparse Encoder) is an out-of-domain NLP model trained by Elastic. It outperforms lexical search in 11 of 12 BEIR benchmarks. No fine-tuning required — just deploy and search. ELSER v2 remains top-10 on MTEB Retrieval."
-— Diagram: 3 parallel retrieval paths merging via RRF (Reciprocal Rank Fusion) into a single ranked result list.
-
-SLIDE 5 — "Semantic Chunking":
-— Stats: "93.3% hit rate" (teal, 28pt) and "40% context reduction" (amber, 28pt)
-— Two-column comparison:
-  Left "Naive Chunking" (dim card): Fixed 512-token windows. Splits mid-sentence. Irrelevant overlap. Wastes tokens.
-  Right "Semantic Chunking" (teal card): Sentence-boundary aware. Topically coherent passages. Related chunks retrieved together for richer context. Elasticsearch's semantic_text field handles this automatically.
-— Bottom: "In an internal benchmark, retrieving semantically highlighted chunks — instead of full documents — achieved the 93.3% hit rate while cutting the context window by 40%."
-
-SLIDE 6 — "Structured Retrieval with ES|QL":
-— Stat: "100% task success" (28pt blue)
-— Code block example: FROM metrics-* | WHERE service.name == "payments" AND @timestamp > NOW() - 1h | STATS avg(cpu.usage), max(memory.used) BY host.name | SORT avg(cpu.usage) DESC | LIMIT 10
-— Explanation: "ES|QL is a piped query language. When agents use custom ES|QL tools, they return precisely structured data — no hallucination, no extraneous context. Internal experiment: for analytical questions like 'How many support tickets were created in the last 365 days?', ES|QL tools achieved 100% accuracy vs. free-text RAG."
-
-SLIDE 7 — "Agentic Search Patterns":
-— Heading: "Beyond Basic RAG"
-— 3 pattern cards:
-  "Sub-Agent Search" — A coding agent delegates to a search sub-agent to explore a large codebase. Returns concise summary of relevant files, not thousands of lines.
-  "Knowledge Agent" — Researches a topic by sifting through a document store. Discards irrelevant docs, synthesizes key findings. Main agent gets curated highlights.
-  "Fetch Surrounding Chunks" — When a matching chunk is found, retrieve its neighboring chunks for richer context. Chapter + chunk positioning in Elasticsearch enables this.
-
-SLIDE 8 — "Knowledge Tools":
-— 4 cards: Runbooks (teal) — operational playbooks consulted during incidents. Incident History (blue) — past resolutions inform current decisions. Compliance Docs (pink) — regulatory references for audit. Product Specs (amber) — technical docs agents search at runtime.
-— Key message: "Package enterprise knowledge as callable tools, not static prompts. Agent Builder lets you connect organizational knowledge from Jira, GitHub, Google Cloud Storage, and SharePoint."
-
-SLIDE 9 — "Summary":
-— 5 key takeaway items with arrow bullet shapes:
-  1. Hybrid retrieval outperforms every alternative (84.3% Recall@10)
-  2. ELSER: top-10 MTEB, no fine-tuning, out-of-domain excellence
-  3. Semantic chunking: 93.3% hit rate, 40% less tokens
-  4. ES|QL structured tools: 100% task success, zero hallucination
-  5. DLS/FLS ensures agents only see data they're authorized to access
-— Closing: "Better retrieval → better agents. It starts with search."</div><button class="cb" onclick="cp(this)">📋 Copy Prompt</button><div class="pm"><span>Output: .pptx</span><span>Slides: 9</span><span>~25 min</span></div></div></div>
-  <div class="nav"><button class="nb" onclick="go(3)">← Agent Builder</button><button class="nb pr" onclick="go(5)">MCP &amp; A2A →</button></div>
-</div>
-
-<!-- ===== 5: MCP & A2A ===== -->
-<div class="slide" id="s5">
-  <div class="si"><div class="st t">Session · 11:45 AM · Ashish Tiwari</div><div class="sh">MCP &amp; A2A: Connecting Agents to Jira, Slack &amp; Beyond</div></div>
-  <div class="pb"><div class="ph" onclick="tp(this)"><h4>🎯 PPTX Prompt <span class="badge">9 Slides · ~25 min</span></h4><div class="pt">▼</div></div><div class="pbd"><div class="ptx">Create a .pptx file called "05_elastic_mcp_a2a.pptx" with 9 slides. Do not show me code — directly generate and give me the .pptx file for download.
-
-SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme.
-
-SLIDE 1 — Title. Eyebrow, Headline, Subtitle: "Agents are only as powerful as the tools they can reach. MCP and A2A are the open standards that make your Elastic agents callable, composable, and interoperable."
-
-SLIDE 2 — "Two Protocols, One Philosophy":
-— Two large side-by-side cards:
-  MCP (blue): "Model Context Protocol — the open standard for tool-calling. Think of it as USB-C for AI. Any MCP-compatible model calls your Elastic agent as a tool. Supported by: Claude Desktop, Cursor, VS Code, Gemini CLI, Microsoft Foundry, Azure SRE Agent."
-  A2A (teal): "Agent-to-Agent Protocol — Google's open protocol for multi-agent orchestration. Each agent publishes an 'agent card' describing capabilities. Orchestrators delegate tasks. Clean separation: A2A for coordination, MCP for tool access."
-— Bottom quote: "A2A handles agent coordination; MCP provides tool access. Many sophisticated systems benefit from combining both." (Source: A2A documentation)
-
-SLIDE 3 — "Elastic as MCP Server — How It Works":
-— 3-step horizontal flow: "Create tools in Agent Builder" → "API key with feature_agentBuilder.read privilege" → "Add MCP config to client"
-— Config code block: { "mcpServers": { "elastic-agent-builder": { "command": "npx", "args": ["mcp-remote", "${KIBANA_URL}/api/agent_builder/mcp", "--header", "Authorization:${AUTH_HEADER}"] } } }
-— MCP clients listed with small icon shapes: Claude Desktop, Cursor, VS Code, Gemini CLI, Microsoft Foundry, Azure SRE Agent
-— Callout: "Tools execute with the scope of the API key. DLS/FLS access controls are enforced."
-
-SLIDE 4 — "Elastic as A2A Peer":
-— Hub-spoke diagram: Central "Orchestrator (LangChain / AutoGen / CrewAI)" with arrows to 4 agent shapes: "Elastic Search Agent", "Elastic Security Agent", "Elastic Observability Agent", "Third-party Agent". Each has colored border.
-— Key point: "In the A2A model, Elastic agents are callable peers. The Archive Agent uses Elastic's A2A Agent, which in turn uses MCP to access Elasticsearch tools — demonstrating the hybrid architecture." (Source: Elastic Labs newsroom demo)
-
-SLIDE 5 — "Integration Grid — What Agents Can Do":
-— 8 cards (2 rows × 4 columns):
-  Jira — Create, update, comment on tickets. Slack — Post structured incident summaries. PagerDuty — Trigger, acknowledge, resolve incidents. CrowdStrike / Defender — Enrich and respond across endpoints.
-  Salesforce — Surface case context, update records. VirusTotal — Hash lookup, threat enrichment. GitHub — Code search, PR actions. Any REST API — HTTP actions with auth and retry.
-— Bottom: "All exposed via Workflows, callable by agents, accessible through MCP."
-
-SLIDE 6 — "Microsoft Foundry Integration":
-— Card with Microsoft + Elastic logos (text only): "Elastic MCP Server is in the Microsoft Foundry Tool Catalog. Go to Build → Tools → Connect a Tool → search 'Elasticsearch' → provide Kibana endpoint and API key."
-— Quote: "Agent Builder has native MCP and A2A protocol support, enabling seamless deployments within Microsoft Foundry and Microsoft Agent Framework." — Amanda Silver, CVP, Microsoft CoreAI
-
-SLIDE 7 — "Live Demo" title: "🔌 Live Demo — Connecting Agent Builder to Claude Desktop via MCP". 4 step preview cards.
-
-SLIDE 8 — "Hub-Spoke Integration Map":
-— Central "Elastic Agent Builder" (blue border, larger shape). 4 spoke groups:
-  Top: "AI Assistants" → Claude, Copilot, Cursor, Gemini CLI
-  Left: "Orchestration" → LangChain, AutoGen, CrewAI, Arcade.dev
-  Right: "Enterprise SaaS" → Jira, Slack, PagerDuty, Salesforce, ServiceNow
-  Bottom: "Security" → CrowdStrike, Microsoft Defender, VirusTotal
-— Caption: "400+ data connectors. Open standards. No lock-in."
-
-SLIDE 9 — "Key Takeaways": 3 cards + closing quote "Chatbots talk. Agents act."</div><button class="cb" onclick="cp(this)">📋 Copy Prompt</button><div class="pm"><span>Output: .pptx</span><span>Slides: 9</span><span>~25 min</span></div></div></div>
-  <div class="nav"><button class="nb" onclick="go(4)">← RAG</button><button class="nb pr" onclick="go(6)">Automated RCA →</button></div>
-</div>
-
-<!-- ===== 6: AUTOMATED RCA ===== -->
-<div class="slide" id="s6">
-  <div class="si"><div class="st p">Live Demo · 12:15 PM · Ramprasad KM</div><div class="sh">Agents in Action: Automated RCA &amp; Threat Triage</div></div>
-  <div class="pb"><div class="ph" onclick="tp(this)"><h4>🎯 PPTX Prompt <span class="badge">10 Slides · ~30 min</span></h4><div class="pt">▼</div></div><div class="pbd"><div class="ptx">Create a .pptx file called "06_elastic_automated_rca.pptx" with 10 slides. Do not show me code — directly generate and give me the .pptx file for download.
-
-SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme.
-
-SLIDE 1 — Title: "LIVE CROSS-DOMAIN DEMO · 12:15 PM · RAMPRASAD KM". "Agents in Action: Automated RCA & Threat Triage". Subtitle.
-
-SLIDE 2 — "The Alert Overload Problem":
-— Two-column: Observability (teal card) — "Thousands of metrics, logs, traces. Latency spikes buried in noise. Manual correlation across dashboards takes hours."
-  Security (pink card) — "Hundreds of alerts daily. 80%+ of SOC analyst time on Tier-1 triage. Critical threats buried under false positives."
-— Bottom stat: "Human capacity is linear. Data growth is exponential."
-
-SLIDE 3 — "Elastic's Cross-Domain Architecture":
-— Diagram: "Elastic Platform" center, two branches — "Observability Agent" (teal) connected to APM, Logs, Metrics, Traces; "Security Agent" (pink) connected to SIEM, Endpoint, Threat Intel. Both connect upward to "Actions: Jira, Slack, PagerDuty, CrowdStrike" via Workflows.
-— Key: "One data platform. Agents correlate across ALL data types."
-
-SLIDE 4 — "Demo 1: Automated RCA" title card with 4 teal step cards:
-  1. Service latency spike detected in APM
-  2. Agent correlates logs, metrics, traces autonomously
-  3. Root cause identified — upstream DB connection pool exhausted
-  4. PagerDuty incident created + Slack summary posted — before SRE responds
-
-SLIDE 5 — "RCA Agent Flow":
-— Detailed flow diagram: APM Alert → Agent goal: "diagnose latency spike" → Tool calls: [Built-in search: error logs], [ES|QL: avg(duration) BY service], [Trace correlation: span waterfall] → Reasoning: "DB pool exhausted causing upstream timeouts" → Workflow: PagerDuty incident + Slack #incidents channel
-— Callout: "What takes an SRE 30+ minutes of manual cross-referencing, the agent does in seconds."
-
-SLIDE 6 — "Demo 2: Agentic SOC Triage" title card with 4 pink step cards:
-  1. Attack Discovery surfaces high-fidelity alert cluster
-  2. Agent gathers context: entity risk scores, related events, MITRE mapping
-  3. MCP enrichment from CrowdStrike, VirusTotal
-  4. Security case created with all findings. Alert to action in minutes.
-
-SLIDE 7 — "SOC Triage Agent Flow":
-— Flow: Attack Discovery alert cluster → Agent goal: "triage and enrich" → Tools: [SIEM event search], [ES|QL: entity risk score], [MCP: CrowdStrike endpoint data], [MCP: VirusTotal hash lookup] → Reasoning: "Confirmed lateral movement from compromised endpoint" → Workflow: Security case created + analyst notified via Slack
-— Note: "Human-in-the-loop: high-severity actions (host isolation, blocking) require analyst approval."
-— Callout: "Attack Discovery (patent pending) uses LLMs to evaluate alerts considering severity, risk scores, asset criticality. It triages hundreds of alerts down to the few attacks that matter."
-
-SLIDE 8 — "Real-World Impact — AHEAD Case Study":
-— Stat boxes: "73% reduction in triage time" (teal) | "92% of resolutions automated" (blue) | "MTTR under 7 minutes" (amber)
-— Quote: "AHEAD cut triage time by 73% and automated 92% of resolutions with Elastic Security, holding MTTR under seven minutes." (Source: elastic.co/security/ai)
-
-SLIDE 9 — "Before vs After" comparison table (PowerPoint table object):
-  Column headers: "Metric" | "Before Agents" (dim) | "After Agents" (bright)
-  Rows: MTTR: 45+ min → <5 min | Tier-1 triage: Manual → Automated | Correlation: Dashboard hopping → Agent correlates in seconds | Alert-to-ticket: Copy-paste-repeat → Autonomous workflow | Coverage: 8×5 analyst shifts → 24×7 agent monitoring
-
-SLIDE 10 — "Takeaways": 3 cards + "Next: Lunch 🍽 then 2:00 PM"</div><button class="cb" onclick="cp(this)">📋 Copy Prompt</button><div class="pm"><span>Output: .pptx</span><span>Slides: 10</span><span>~30 min</span></div></div></div>
-  <div class="nav"><button class="nb" onclick="go(5)">← MCP</button><button class="nb pr" onclick="go(7)">Panel →</button></div>
-</div>
-
-<!-- ===== 7: CUSTOMER PANEL ===== -->
-<div class="slide" id="s7">
-  <div class="si"><div class="st a">Customer Panel · 2:00 PM</div><div class="sh">Operationalizing AI Agents: Lessons from the Field</div></div>
-  <div class="pb"><div class="ph" onclick="tp(this)"><h4>🎯 PPTX Prompt <span class="badge">6 Slides · ~25 min</span></h4><div class="pt">▼</div></div><div class="pbd"><div class="ptx">Create a .pptx file called "07_elastic_customer_panel.pptx" with 6 slides. Do not show me code — directly generate and give me the .pptx file for download.
-
-SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme.
-
-SLIDE 1 — Title: "CUSTOMER PANEL · 2:00 PM". Headline. Subtitle: "Practitioners from BFSI and Digital Native enterprises share what it takes to move AI agents from prototype to production." Two industry cards: "Financial Services & Banking" (blue), "Digital Native Enterprises" (teal).
-
-SLIDE 2 — "Panelist Profiles": 4 placeholder cards in a row. Each card: circle shape with initials (different accent colors), "Speaker Name" placeholder (16pt white), "Title, Company" placeholder (12pt muted), one-line focus area (12pt body). Note: "Panelists from leading Indian enterprises in BFSI & Digital Native sectors."
-
-SLIDE 3 — "Discussion Framework": 4 topic cards with icons (numbered 1-4):
-  1. "Governance at Scale" — How do you govern what agents are allowed to do? Guardrails, approval workflows, RBAC enforcement, human-in-the-loop patterns.
-  2. "Day-Two Operations" — Monitoring agent behavior, detecting drift, measuring retrieval quality, continuous improvement loops.
-  3. "Building the Business Case" — Which metrics convinced leadership? Time-to-value, MTTR reduction, analyst throughput, token cost savings.
-  4. "Honest Lessons" — What would you do differently? What failed? What surprised you about moving from pilot to production?
-
-SLIDE 4 — "BFSI Use Cases": 3 detailed cards:
-  "Fraud Signal Correlation" — real-time cross-referencing of transaction anomalies, device fingerprints, behavioral patterns. Agents correlate signals across Elasticsearch indices in seconds.
-  "AML Alert Triage" — automated enrichment and risk scoring of anti-money-laundering alerts. Attack Discovery patterns applied to financial compliance.
-  "Customer 360 Agents" — unified customer context from transactional, behavioral, and interaction data. Natural language queries across all customer data.
-
-SLIDE 5 — "Digital Native Use Cases": 3 detailed cards:
-  "Platform Reliability Agents" — SLO monitoring, automated RCA, self-healing infrastructure. Agent correlates APM, logs, metrics autonomously.
-  "Developer Copilots" — code search, documentation Q&A, incident runbook assistance. Powered by Agent Skills + MCP integration with Cursor/VS Code.
-  "Customer Support Automation" — ticket classification, knowledge retrieval, resolution suggestion. Grounded in support docs via semantic search.
-
-SLIDE 6 — "Audience Q&A": Large centered "Your Questions" (36pt). 4 suggested themes as muted cards. Bottom: "Submit via event app or raise your hand."</div><button class="cb" onclick="cp(this)">📋 Copy Prompt</button><div class="pm"><span>Output: .pptx</span><span>Slides: 6</span><span>~25 min</span></div></div></div>
-  <div class="nav"><button class="nb" onclick="go(6)">← RCA</button><button class="nb pr" onclick="go(8)">ROI →</button></div>
-</div>
-
-<!-- ===== 8: ROI ===== -->
-<div class="slide" id="s8">
-  <div class="si"><div class="st a">Session · 3:30 PM · Abhijeet Bhaskar</div><div class="sh">The Business Case: Measuring Agentic ROI</div></div>
-  <div class="pb"><div class="ph" onclick="tp(this)"><h4>🎯 PPTX Prompt <span class="badge">8 Slides · ~25 min</span></h4><div class="pt">▼</div></div><div class="pbd"><div class="ptx">Create a .pptx file called "08_elastic_agentic_roi.pptx" with 8 slides. Do not show me code — directly generate and give me the .pptx file for download.
-
-SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme.
-
-SLIDE 1 — Title. Subtitle: "Data volumes grow exponentially. Human capacity grows linearly. You can't hire your way out of this problem. Agents are the force multiplier."
-
-SLIDE 2 — "The Exponential Gap": Two angled shapes suggesting diverging curves: "Data Volume" (blue, steep) and "Human Capacity" (pink, flat). Supporting text about the widening gap. Stat: "Nearly two-thirds of organizations are already experimenting with AI agents, yet fewer than one in four have deployed them into production." (Source: Elastic Security Labs, Feb 2026)
-
-SLIDE 3 — "Cost of Status Quo": 3 pink-accent problem cards with detailed descriptions: Alert fatigue, Manual toil, Missed signals.
-
-SLIDE 4 — "Value Levers": 3 blue/teal value cards: MTTR reduction, Analyst throughput, Token cost efficiency.
-
-SLIDE 5 — "Proven Impact": 4 stat boxes:
-  "73%" (teal) — "Triage time reduction — AHEAD case study with Elastic Security"
-  "92%" (blue) — "Resolutions automated — AHEAD holding MTTR under 7 minutes"
-  "5x" (amber) — "Analyst throughput increase when routine investigations automated"
-  "40%" (light blue) — "Lower LLM cost per agent task with semantic chunking vs full-document retrieval"
-
-SLIDE 6 — "ROI Framework": 4-quadrant card:
-  "Time Saved" — Hours reclaimed from manual triage, correlation, ticket creation per week.
-  "Risk Reduced" — Fewer missed alerts, faster MTTR, reduced breach exposure window, 24×7 coverage.
-  "Cost Avoided" — Lower LLM token costs, reduced headcount pressure, fewer tool licenses, less context window waste.
-  "Quality Improved" — More consistent investigations, better documentation, institutional knowledge captured, compliance evidence auto-generated.
-
-SLIDE 7 — "Token Economics": Detailed slide on cost efficiency:
-  "Hybrid retrieval + semantic chunking reduces token usage by 40%." Show comparison: Without chunking: 32K tokens per query → $X cost. With semantic chunking: ~19K tokens → 40% savings. Compounding effect: "1000 agent tasks/day × 40% savings = significant monthly cost reduction."
-  "ES|QL tools eliminate unnecessary context entirely — structured queries return exactly what's needed."
-
-SLIDE 8 — "Takeaways": "The status quo is unsustainable. Agents are a force multiplier. Measure from day one. The question isn't whether you can afford agents — it's whether you can afford not to have them."</div><button class="cb" onclick="cp(this)">📋 Copy Prompt</button><div class="pm"><span>Output: .pptx</span><span>Slides: 8</span><span>~25 min</span></div></div></div>
-  <div class="nav"><button class="nb" onclick="go(7)">← Panel</button><button class="nb pr" onclick="go(9)">Governance →</button></div>
-</div>
-
-<!-- ===== 9: GOVERNANCE ===== -->
-<div class="slide" id="s9">
-  <div class="si"><div class="st p">Session · 3:00 PM · Bhadriraju Prasanth</div><div class="sh">Governing AI Agents: Risk, Trust &amp; Compliance</div></div>
-  <div class="pb"><div class="ph" onclick="tp(this)"><h4>🎯 PPTX Prompt <span class="badge">8 Slides · ~25 min</span></h4><div class="pt">▼</div></div><div class="pbd"><div class="ptx">Create a .pptx file called "09_elastic_governance.pptx" with 8 slides. Do not show me code — directly generate and give me the .pptx file for download.
-
-SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme.
-
-SLIDE 1 — Title. Subtitle: "Autonomous agents at enterprise scale require more than good intentions. Governance is what separates a prototype from a production system your CISO will approve."
-
-SLIDE 2 — "Why Governance Now": Large question: "What happens when an autonomous agent makes a mistake at 3 AM?" 3 risk cards: Data leakage (agent accesses unauthorized data), Uncontrolled actions (workflow triggers unintended consequences), Audit gaps (no record of what the agent did or why). Stat: "Agent frameworks are stabilizing, but fewer than 1 in 4 organizations have deployed agents to production. Governance is the primary blocker." (Source: Elastic Security Labs)
-
-SLIDE 3 — "Pillar 1: Access Control": Blue icon. DLS — agents only retrieve documents matching role permissions. FLS — sensitive fields masked even within accessible documents. Role-based tool access — each agent only uses assigned tools. API key scoping — "Tools execute with the scope assigned to the API key. Make sure your API key has only the permissions needed." (Source: Elastic docs)
-
-SLIDE 4 — "Pillar 2: Audit Trail": Teal icon. Every retrieval, tool call, workflow execution, and reasoning step logged to Elasticsearch. Properties: immutable, queryable, available for compliance reporting. "All queries, responses, and token usage are fully logged and trackable." (Source: Elastic AI SOC Engine announcement). Use case card: "Show me every action Agent-X took on PCI-scoped data in the last 30 days."
-
-SLIDE 5 — "Pillar 3: Human-in-the-Loop": Pink icon. Flow diagram: Agent Recommends → Approval Gate (Workflow step) → Human Reviews → Approved/Rejected → Continue/Halt. Key: "For maximum effectiveness, all steps can run automatically as an Agentic Alert Triage workflow. The human analyst gets a consolidated case with all findings in a single pane of glass." "Start with tight approval gates. Loosen them as trust is earned."
-
-SLIDE 6 — "Pillar 4: Guardrails & Transparency": Amber icon. Agent Builder constraints: define exactly which tools, data sources, and actions each agent can access. LLM agnostic — pick your preferred model, including locally running models for privacy/regulatory reasons. "AI Assistant responses are cited, so you know what data was used." Transparent decisions with evidence.
-
-SLIDE 7 — "Compliance Use Cases": Two cards:
-  "PCI DSS 4.0.1" — Agent skills run automated compliance checks, surface gaps, generate evidence, reduce audit prep time.
-  "Data Residency" — Elastic Cloud on AWS, Azure, GCP across 50+ regions. Data and agents stay where policies require. "Model-agnostic: use any model provider, even on-premises."
-
-SLIDE 8 — "Governance Maturity Model": 3 connected horizontal stage shapes:
-  Stage 1 "Foundation" (blue): RBAC + DLS/FLS, audit logging, manual approval gates, API key scoping.
-  Stage 2 "Calibrated Trust" (teal): Risk-based approval thresholds, anomaly detection on agent behavior, automated compliance checks, token usage monitoring.
-  Stage 3 "Autonomous Governance" (pink): Self-monitoring agents, continuous policy enforcement, real-time drift detection, automated evidence generation.
-  Bottom: "Governance is a journey, not a checkbox."</div><button class="cb" onclick="cp(this)">📋 Copy Prompt</button><div class="pm"><span>Output: .pptx</span><span>Slides: 8</span><span>~25 min</span></div></div></div>
-  <div class="nav"><button class="nb" onclick="go(8)">← ROI</button><button class="nb pr" onclick="go(10)">Standards →</button></div>
-</div>
-
-<!-- ===== 10: OPEN STANDARDS ===== -->
-<div class="slide" id="s10">
-  <div class="si"><div class="st t">Session · 4:00 PM · Aashish Mishra</div><div class="sh">Open Standards, No Lock-in: MCP, A2A &amp; OpenTelemetry</div></div>
-  <div class="pb"><div class="ph" onclick="tp(this)"><h4>🎯 PPTX Prompt <span class="badge">8 Slides · ~25 min</span></h4><div class="pt">▼</div></div><div class="pbd"><div class="ptx">Create a .pptx file called "10_elastic_open_standards.pptx" with 8 slides. Do not show me code — directly generate and give me the .pptx file for download.
-
-SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme.
-
-SLIDE 1 — Title. Subtitle: "The agentic ecosystem changes every 6 months. The only durable investment is in open interfaces. Elastic bets on open standards."
-
-SLIDE 2 — "The Lock-in Risk": 3 dim problem cards: Vendor lock-in (proprietary tool-calling), Integration tax (custom adapters for every new AI tool), Stranded automation (workflows break when you switch models). Counter: "Open standards eliminate all three."
-
-SLIDE 3 — "MCP — Universal Tool Interface":
-  What: open standard for tool-calling any AI model can implement.
-  Who supports it: Claude Desktop, Cursor, VS Code, Gemini CLI, Microsoft Foundry, Azure SRE Agent.
-  How Elastic uses it: Agent Builder exposes all tools at /api/agent_builder/mcp. Two MCP server options: Agent Builder MCP (recommended for Elastic 9.2+) and elastic/mcp-server-elasticsearch (for earlier versions).
-  Analogy: "MCP is USB-C for AI."
-  Growing: "MCP server expansion coming — more tools beyond search, ES|QL, and index operations."
-
-SLIDE 4 — "A2A — Multi-Agent Orchestration":
-  Google's protocol. Agents publish "agent cards." Orchestrators delegate. Elastic agents are callable peers.
-  Architecture diagram: "A2A handles coordination. MCP provides tool access. Elastic's A2A Agent uses MCP internally to access Elasticsearch tools." (Source: Elastic Labs newsroom demo)
-  Compatible with: LangChain, AutoGen, CrewAI, Arcade.dev, Amazon Bedrock AgentCore, Strands.
-
-SLIDE 5 — "OpenTelemetry":
-  Elastic as a founding contributor to OTel. Second most active CNCF project after Kubernetes.
-  Benefits: instrument once, observe everywhere. Switch backends without re-instrumenting. No proprietary agents or SDKs.
-  "Agent observability is built into Agent Builder — monitor your agents with the same platform."
-
-SLIDE 6 — "Agent Skills — Open Source & Portable":
-  Heading: "Give your AI coding agent Elastic expertise"
-  Code block: npx skills add github.com/elastic/agent-skills
-  Skills grid (colored pills): elasticsearch-esql, elasticsearch-ingest, kibana-dashboards, kibana-alerting-rules, security-alert-triage, security-threat-hunting, cloud-create-project, observability-service-health.
-  "Agent Skills solve the 'correction tax' — deprecated APIs sit alongside current ones in training data. Skills provide current, validated guidance." (Source: Elastic Labs blog)
-  "Support for skills is coming soon to Agent Builder itself."
-
-SLIDE 7 — "Elastic's Open Ecosystem Map":
-  Hub-spoke: Elastic center. Spokes to: MCP Clients (Claude, Cursor, VS Code, Gemini CLI, Foundry), A2A Partners (LangChain, AutoGen, CrewAI, Arcade.dev), Cloud Providers (AWS Bedrock, Google Cloud, Microsoft Azure), Framework Partners (LlamaIndex, Strands, Amazon Bedrock AgentCore). "AWS Agentic AI Specialization achieved."
-
-SLIDE 8 — "The Promise": 3 cards: No lock-in, Composability, Future-proof. Quote: "Chatbots talk. Agents act. Come see the difference — built on the search platform you already trust."</div><button class="cb" onclick="cp(this)">📋 Copy Prompt</button><div class="pm"><span>Output: .pptx</span><span>Slides: 8</span><span>~25 min</span></div></div></div>
-  <div class="nav"><button class="nb" onclick="go(9)">← Governance</button><button class="nb pr" onclick="go(11)">Closing →</button></div>
-</div>
-
-<!-- ===== 11: CLOSING AMA ===== -->
-<div class="slide" id="s11">
-  <div class="si"><div class="st b">Closing · 4:30 PM</div><div class="sh">Building Your Agentic Roadmap</div></div>
-  <div class="pb"><div class="ph" onclick="tp(this)"><h4>🎯 PPTX Prompt <span class="badge">7 Slides · ~25 min</span></h4><div class="pt">▼</div></div><div class="pbd"><div class="ptx">Create a .pptx file called "11_elastic_closing_ama.pptx" with 7 slides. Do not show me code — directly generate and give me the .pptx file for download.
-
-SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme.
-
-SLIDE 1 — Title: "CLOSING · 4:30 PM · SANJAY DESHMUKH, CHRIS WALKER, RAVINDRA RAMNANI". "Building Your Agentic Roadmap". Subtitle.
-
-SLIDE 2 — "Day Recap": 3 pillar summary cards (blue/teal/pink). Each lists 3 key takeaways from the day's sessions. Bottom: "All on Elasticsearch — the Search AI Platform."
-
-SLIDE 3 — "4-Step Roadmap": 2×2 grid:
-  1 (blue): "Context Engineering First" — Nail hybrid retrieval + semantic chunking before building agents. Agent Builder makes this easy with built-in search tools.
-  2 (teal): "One High-Value Workflow" — Alert triage, RCA, or knowledge copilot. Pick the workflow with the clearest ROI.
-  3 (pink): "Govern From Day One" — RBAC, DLS/FLS, audit logging, human-in-the-loop. Not as an afterthought.
-  4 (amber): "Bet on Open Standards" — MCP, A2A, OpenTelemetry. Your automation investments survive the next model generation.
-
-SLIDE 4 — "Getting Started — Concrete Steps":
-  3 action cards with detail:
-  "Start Free Trial" — elastic.co/cloud — Agent Builder available in Serverless and Enterprise Tier.
-  "Build Your First Agent" — Step-by-step: Create agent in Kibana → Add search tool → Add ES|QL tool → Connect via MCP. ~5 minutes.
-  "Install Agent Skills" — npx skills add github.com/elastic/agent-skills — give Cursor/Claude Code validated Elastic expertise.
-
-SLIDE 5 — "Target Roles": Two-column:
-  Executive: CIOs, CTOs, CISOs — sponsor the platform investment.
-  Practitioner: SRE & Observability, SOC & Security Ops, Platform Engineering, AI/ML Leaders — build and operate the agents.
-  "Agentic AI is not a side project. It needs executive sponsorship, platform team ownership, and cross-functional alignment."
-
-SLIDE 6 — "AMA": Large "AMA" (48pt). Speaker names. 5 topic cards: Getting started, Retrieval quality, Governance concerns, Integration roadmap, Pricing & licensing.
-
-SLIDE 7 — "Thank You":
-  "Thank You for Joining Elastic Agentic Day"
-  3 resource cards: elastic.co/elasticsearch/agent-builder | github.com/elastic/agent-skills | elastic.co/docs/solutions/search/mcp
-  Elastic divider (3 thin colored bars: blue, teal, pink).
-  "Mumbai · 17 April 2026"
-  "The Search AI Company"</div><button class="cb" onclick="cp(this)">📋 Copy Prompt</button><div class="pm"><span>Output: .pptx</span><span>Slides: 7</span><span>~25 min</span></div></div></div>
-  <div class="nav"><button class="nb" onclick="go(10)">← Standards</button><button class="nb pr" onclick="go(0)">Back to Start →</button></div>
-</div>
-
-</div>
+<div class="sl" id="slides"></div>
 
 <script>
+var defined_by_code = true;
+var S=[
+// ===== 0: WELCOME =====
+{
+  nav:"Welcome",
+  et:"b", etxt:"Elastic Agentic Day · Mumbai · 17 April 2026",
+  h:"Your Agents Should Search. Reason. Act.",
+  sub:"Agent Builder (now GA) turns Elasticsearch into the context engine that makes agentic AI work at enterprise scale.",
+  summary:{
+    title:"Deck Summary",
+    text:"A single title card establishing the visual identity and core thesis of Elastic Agentic Day. Introduces the Search→Reason→Act framework and positions Agent Builder as the GA platform for building context-driven AI agents. Sets the tone for a full day of keynotes, demos, and panels.",
+    tags:["1 slide","Title card","Elastic branding"]
+  },
+  prompt:`Create a .pptx file called "00_elastic_welcome.pptx" with 1 slide. Do not show me code — directly generate and give me the .pptx file for download.
+
+SLIDE SIZE: Widescreen 16:9.
+
+DESIGN SYSTEM (apply to this and ALL future decks):
+— Background: solid dark navy (R:11 G:18 B:32) on EVERY slide.
+— Accent colors: Blue (R:11 G:100 B:221), text-blue (R:54 G:162 B:239), Teal (R:0 G:191 B:179), Pink (R:188 G:30 B:112), Amber (R:249 G:177 B:16).
+— Text: body (R:162 G:177 B:201), muted (R:107 G:125 B:153), white (R:255 G:255 B:255).
+— Font: Calibri. Headings Bold 44pt white. Subheads 20pt body. Eyebrow 11pt Bold uppercase text-blue. Body 14pt.
+— Cards: rounded rect, fill (R:18 G:30 B:55), 1pt accent border, 0.15" corner radius.
+— Stat boxes: rounded rect, dark fill, accent border, 36pt Bold accent number, 11pt muted label.
+— Quote blocks: rounded rect dark fill + thin tall rectangle (3pt accent color) as left faux-border. 16pt italic white.
+— Code blocks: rounded rect, very dark fill (R:8 G:14 B:26), Courier New 10pt, text-blue.
+— No external images. Shapes + text only.
+— "elastic." wordmark 9pt bottom-left. Slide counter 9pt bottom-right.
+
+SLIDE 1 — TITLE:
+— Top-left pill: "ELASTIC AGENTIC DAY · MUMBAI · 17 APRIL 2026"
+— Center: "Your Agents Should" (48pt Bold white), then "Search." (text-blue) "Reason." (teal) "Act." (pink) — all 48pt Bold.
+— Subtitle (18pt body): "Most AI agents guess. The best ones are grounded in your data, armed with the right tools, and governed to act — autonomously, reliably, at enterprise scale."
+— Below (14pt muted): "Elastic Agent Builder — now generally available — helps developers quickly build secure, reliable, context-driven AI agents. Built on Elasticsearch, Agent Builder excels at context engineering."
+— Bottom: 4 info boxes: DATE 17 April 2026 | TIME 9 AM – 5 PM IST | VENUE Mumbai | FORMAT Keynotes · Demos · Panel · AMA`,
+  slides:"1", time:""
+},
+
+// ===== 1: AGENDA =====
+{
+  nav:"Agenda",
+  et:"am", etxt:"Full Day Schedule",
+  h:"One day. Three pillars of agentic AI.",
+  sub:"",
+  agenda:true,
+  summary:{
+    title:"Deck Summary",
+    text:"A 3-slide visual schedule covering morning sessions (9 AM–1:15 PM), afternoon sessions (2–4:30 PM), and a 'Three Pillars' overview card. Includes color-coded session type badges (Keynote, Demo, Panel) and a summary of the Search & RAG, Observe & Secure, and Govern & Scale pillars.",
+    tags:["3 slides","Agenda","Visual schedule"]
+  },
+  prompt:`Create a .pptx file called "01_elastic_agenda.pptx" with 3 slides. Do not show me code — directly generate and give me the .pptx file for download.
+
+SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme (see Welcome deck for full specs).
+
+SLIDE 1 — "Morning Sessions" (9:00 AM – 1:15 PM):
+— Eyebrow: "FULL DAY SCHEDULE" (amber). Heading: "One day. Three pillars of agentic AI."
+— PowerPoint Table (4 columns: Time | Session | Speaker | Type). Dark cells, white titles, muted speakers, blue times.
+  9:00 Registration | 9:30 Keynote: Age of Agentic Enterprise — Chris Walker [KEYNOTE blue badge] | 10:00 Customer Fireside [PANEL amber] | 10:30 Agent Builder Deep Dive — Ashish Tiwari [DEMO teal] | 11:15 Agentic RAG — Abhinav Chauhan, Aish Gunasekar, Ravindra Ramnani | 11:45 MCP & A2A — Ashish Tiwari [DEMO teal] | 12:15 Automated RCA — Ramprasad KM [LIVE DEMO teal] | 1:15 Lunch (dimmed)
+
+SLIDE 2 — "Afternoon Sessions" (2:00 PM – 4:30 PM):
+— Same table. 2:00 Customer Panel (Jio × NSE) [PANEL] | 2:30 Unlocking Elastic — Amit Vyas | 3:00 Governance — Bhadriraju Prasanth | 3:30 ROI — Abhijeet Bhaskar | 4:00 Open Standards — Aashish Mishra | 4:30 Closing AMA — Sanjay Deshmukh, Chris Walker, Ravindra Ramnani
+
+SLIDE 3 — "Three Pillars":
+— 3 large side-by-side cards:
+  "Search & RAG" (blue): Hybrid retrieval 84.3% Recall@10, semantic chunking, ES|QL tools, Agent Builder GA.
+  "Observe & Secure" (teal): Automated RCA, Attack Discovery SOC triage, AHEAD: 73% triage reduction.
+  "Govern & Scale" (pink): RBAC+DLS/FLS, audit trails, human-in-the-loop, MCP/A2A open standards.
+— Bottom: "All built on Elasticsearch — used by 50%+ of the Fortune 500."`,
+  slides:"3", time:""
+},
+
+// ===== 2: KEYNOTE =====
+{
+  nav:"Keynote",
+  et:"b", etxt:"Opening Keynote · 9:30 AM · Chris Walker",
+  h:"The Age of the Agentic Enterprise",
+  sub:"AI is no longer a copilot. It's an operator that plans, reasons, and acts autonomously.",
+  stats:[{n:"84.3%",l:"Recall@10"},{n:"100%",l:"ES|QL success"},{n:"50%+",l:"Fortune 500"}],
+  summary:{
+    title:"Deck Summary · 10 Slides · ~30 min",
+    text:"A narrative keynote arc: Hook ('Your Copilot Just Got Promoted') → AI evolution timeline → G-T-C-R agent framework → Context rot tension (NOLIMA data) → Benchmark resolution (84.3% / 100% / 40%) → Copilot vs Operator shift → Elastic platform advantage → Partner ecosystem proof (Microsoft, AWS, Forrester) → Agent Builder GA product slide → CTA with memorable one-liner. Designed for senior IT executives with a mix of strategic vision and concrete data.",
+    tags:["10 slides","~30 min","Keynote","Narrative arc"]
+  },
+  prompt:`Create a .pptx file called "02_elastic_keynote.pptx" with 10 slides. Do not show me code — directly generate and give me the .pptx file for download.
+
+SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme.
+
+This is a 30-minute opening keynote by Chris Walker for senior IT executives. The deck follows a storytelling arc: Hook → Context → Framework → Tension → Resolution → Shift → Platform → Proof → Product → CTA.
+
+SLIDE 1 — HOOK: "Your Copilot Just Got Promoted"
+Headline: "Your Copilot Just Got Promoted" (44pt Bold white)
+Bullets (16pt body): • 2024: You asked AI questions. It answered. You decided. You acted. • 2025: AI sets goals, plans steps, calls tools, takes action, verifies outcomes. • The human is no longer in every loop — the agent is.
+Visual: Bold text on dark gradient with blue radial glow top-right.
+Speaker Note: "Start with provocation. Pause after 'the agent is.' This isn't incremental — it's architectural."
+
+SLIDE 2 — "Three Eras of AI"
+Headline: "From Search to Agentic — A 15-Year Arc" (28pt)
+3 stacked rounded rect cards forming a vertical timeline with arrow shapes between them:
+  Era 1 (dark card): "NLP & Search (2010s)" — "Elasticsearch powers relevance at scale. 50%+ of Fortune 500."
+  Era 2 (dark card): "GenAI & RAG (2022–24)" — "LLMs + RAG. Grounded answers. Human still in every loop."
+  Era 3 (BLUE accent card, brighter fill): "Agentic AI (2025+)" — "Agents plan, act, verify. Agent Builder (GA Jan 2026) makes this native to Elasticsearch."
+Speaker Note: "Each era built on the last. Agentic isn't a pivot — it's the natural next step for a search company."
+
+SLIDE 3 — "The Anatomy of an Agent"
+Headline: "G-T-C-R: What Makes an Agent" (28pt)
+2×2 grid of cards with colored circle shapes (0.5" diameter, bold letter):
+  G (blue): "Goals — Define outcomes, not prompts."
+  T (teal): "Tools — Search, ES|QL, workflows, MCP. Built-in + custom."
+  C (pink): "Context — The right data at the right time. Context engineering."
+  R (amber): "Resources — Logs, metrics, traces, docs, security events — unified in Elasticsearch."
+Bottom quote block: "AI agents don't just need lots of data — they need the right data and tools, with relevance, guardrails, and observability." — Ken Exner, CPO, Elastic
+Speaker Note: "This is the mental model. Elastic provides all four natively."
+
+SLIDE 4 — "Context Rot Is Real"
+Headline: "More Tokens ≠ Better Answers" (28pt)
+Left half — warning card (pink border): "At 32K tokens, 11 models drop below 50% of short-context baselines (NOLIMA 2025)."
+Below: horizontal bar chart (4 rounded rects decreasing in width): 4K→95% (blue), 16K→78%, 32K→48% (pink-ish), 64K→31% (pink). Label % on right of each bar.
+Right half — solution card (blue border): "The answer isn't more data — it's better retrieval."
+6 small colored pill shapes: System prompt (blue), RAG (teal), Memory (pink), Tools (amber), User prompt (gray), History (gray). Caption: "Elastic delivers every component natively."
+Speaker Note: "Tension slide. Let the degradation numbers sink in. Then: 'We solve this with search.'"
+
+SLIDE 5 — "The Numbers"
+Headline: "Elastic Hybrid Retrieval — The Benchmark Leader" (28pt)
+3 large stat boxes:
+  "84.3%" (36pt blue) — "Recall@10 with hybrid (BM25 + dense + ELSER). MRR 0.53 — best doc in top 2."
+  "100%" (36pt teal) — "Task success with ES|QL structured retrieval. Zero hallucination."
+  "40%" (36pt amber) — "Context reduction with semantic chunking. 93.3% hit rate."
+Below (12pt muted): "ELSER outperforms lexical search in 11 of 12 BEIR benchmarks out-of-domain, no fine-tuning."
+Speaker Note: "Three numbers. Memorize them. They're your proof points for every conversation today."
+
+SLIDE 6 — "The Shift"
+Headline: "The Loop Closes" (28pt)
+Two columns:
+  Left "Copilot Era" (muted, 50% opacity): 1. Human asks → 2. Model responds → 3. Human acts.
+  Right "Agentic Era" (white/blue, bold): 1. Goal set → 2. Agent plans → 3. Retrieves context → 4. Calls tools → 5. Takes action → 6. Verifies outcome.
+Bottom callout: "Workflows enable agents to trigger Jira, PagerDuty, Slack — autonomously."
+Speaker Note: "Make the visual contrast stark. The copilot side should feel dated."
+
+SLIDE 7 — "Why Elastic"
+Headline: "The Platform Advantage" (28pt)
+4 stacked horizontal cards with colored left-edge bars:
+  (blue): "Context Engineering Platform" — native data prep, ingestion, retrieval, ranking, tools.
+  (teal): "Search That Works" — hybrid retrieval, ELSER top-10 MTEB, Learning to Rank.
+  (pink): "Tools Agents Call" — built-in search, ES|QL custom tools, Workflows, MCP/A2A.
+  (amber): "Governed by Design" — DLS/FLS, RBAC, audit trail, human-in-the-loop.
+Speaker Note: "Don't name competitors. Stack Elastic's breadth. Emphasize 'one platform.'"
+
+SLIDE 8 — "Trusted by the Ecosystem"
+Headline: "Not Just Us Saying It" (28pt)
+6 small quote cards (2 rows × 3):
+  Microsoft: "Native MCP/A2A support for seamless Foundry deployments." — Amanda Silver, CVP
+  AWS: "Elastic achieved the AWS Agentic AI Specialization."
+  Forrester: "Leader in Security Analytics Platforms, Q2 2025."
+  LlamaIndex: "Strengthens the critical context layer." — Jerry Liu, CEO
+  Arcade.dev: "From demo to production grade." — Sam Partee, Co-founder
+  Fortune 500: "50%+ run on Elasticsearch."
+Speaker Note: "Social proof. Read the Microsoft quote verbatim."
+
+SLIDE 9 — "Agent Builder GA"
+Headline: "Agent Builder: Generally Available" (28pt, teal "GA" badge)
+2×3 feature grid:
+  "Chat Instantly" | "Built-in Search Tools" | "Custom ES|QL Tools"
+  "Elastic Workflows (tech preview)" | "MCP Server" | "A2A Protocol"
+Bottom: "Model-agnostic. AWS, Google Cloud, Microsoft. Elastic Cloud Serverless + Enterprise Tier."
+Speaker Note: "Is it real? Yes. Available? Yes. Can you use it Monday? Yes."
+
+SLIDE 10 — CTA CLOSE: "Today"
+Headline: "Today: From Concepts to Working Demos" (28pt)
+3 pillar cards: "Search & RAG" (blue), "Observe & Secure" (teal), "Govern & Scale" (pink). Each with one-line session teaser.
+3 TAKEAWAYS (14pt, numbered):
+  1. Agentic AI is here — agents plan, act, verify autonomously.
+  2. Context engineering is the difference between agents that work and agents that hallucinate.
+  3. Agent Builder is GA — build your first agent in 5 minutes.
+ONE-LINER (20pt Bold white, centered): "Chatbots talk. Agents act. Today you'll see the difference."
+Speaker Note: "Deliver the one-liner slowly. It's what they'll repeat at lunch."`,
+  slides:"10", time:"~30 min"
+},
+
+// ===== 3: AGENT BUILDER =====
+{
+  nav:"Agent Builder",
+  et:"b", etxt:"Session · 10:30 AM · Ashish Tiwari",
+  h:"Agent Builder Deep Dive: Agents, Tools & Workflows",
+  sub:"Build custom AI agents in minutes — now GA with built-in search tools, custom ES|QL, Workflows, and native MCP/A2A.",
+  summary:{
+    title:"Deck Summary · 10 Slides · ~30 min",
+    text:"A build-up-to-demo narrative: Hook ('What if building an agent was as easy as a search query?') → 3-layer architecture diagram → 4 capability deep-dives (chat, search tools, ES|QL, Workflows) → MCP/A2A interop → Live demo climax (5 min build in Kibana) → Recap (5 min, 5 tools, zero code) → Get Started CTA. Includes actual API call examples and the real MCP config JSON.",
+    tags:["10 slides","~30 min","Demo session","Technical"]
+  },
+  prompt:`Create a .pptx file called "03_elastic_agent_builder.pptx" with 10 slides. Do not show me code — directly generate and give me the .pptx file for download.
+
+SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme.
+
+30-minute session with live demo. Storytelling arc: Hook → Architecture → Capabilities (4 slides) → Interop → Demo (climax) → Recap → CTA.
+
+SLIDE 1 — HOOK: "What If Building an Agent Was as Easy as Writing a Search Query?"
+Bullets: • Most agent frameworks need weeks of integration and custom code. • Agent Builder: create a production-ready agent in 5 minutes. Zero code. • This session: we'll prove it live.
+Tags at bottom (pill shapes): "Agent Builder GA" "ES|QL Tools" "Workflows (Tech Preview)" "MCP Server" "A2A"
+Speaker Note: "Set the bar. Promise a live demo. The audience will hold you to it."
+
+SLIDE 2 — "Architecture" (3-layer diagram with grouped shapes):
+Title: "Agent Builder Platform Architecture"
+Top layer "AI EXPERIENCES" (gray rects): Custom Apps | Claude/Copilot/Cursor | Salesforce | LangChain/LlamaIndex
+Arrow connectors "MCP" and "A2A"
+Middle layer "AGENTS & TOOLS" (accent rects): Agent Builder (amber) | Search Tools (blue) | ES|QL Tools (blue) | Workflows (teal) | MCP/A2A (pink)
+Arrow connector "Elasticsearch Platform"
+Bottom layer "ENTERPRISE DATA" (gray rects): Google Drive | GitHub | Salesforce | Confluence | Slack | Jira | SharePoint | 400+ connectors
+Speaker Note: "One platform. No duct tape."
+
+SLIDE 3 — "Chat With Your Data"
+Headline: "Instant Conversational AI on Your Data"
+Bullets: • Built-in agent — query any Elasticsearch data in natural language, no config. • Turns your data into an active, conversational partner — out of the box. • Starting point for every Agent Builder journey.
+Visual: Rounded rect showing a mock chat interface with a user question and agent response.
+Speaker Note: "Before you build anything custom, you can already talk to your data."
+
+SLIDE 4 — "Built-in Search Tools"
+Headline: "Search Intelligence, Built In"
+Bullets: • Auto-selects the right index, understands data structure. • Translates natural language to optimized hybrid/semantic/structured queries. • Returns only the most relevant context to the LLM. 84.3% Recall@10.
+Visual: Flow diagram: User Question → [Index Selection → Query Optimization → Hybrid Retrieval → Ranking] → Best Context → LLM → Answer
+Speaker Note: "This is what separates Elastic from 'just connect an LLM to a database.'"
+
+SLIDE 5 — "Custom ES|QL Tools"
+Headline: "100% Task Success. Zero Hallucination."
+Bullets: • One API call to create a custom tool. ES|QL piped queries — not SQL. • Agents get structured, reliable, precise results. No extraneous context. • Internal test: analytical questions = 100% accuracy with ES|QL tools.
+Visual: Code block (dark rect, Courier New): POST /api/agent_builder/tools { "id":"find_exposure", "type":"esql", "description":"Finds client exposure to negative news", "configuration":{"query":"FROM news-* | WHERE sentiment < 0 | STATS count(*) BY client_id"} }
+Speaker Note: "One POST request. That's the 'wow.' Not a framework, one API call."
+
+SLIDE 6 — "Elastic Workflows"
+Headline: "Agents Don't Just Think — They Act"
+Bullets: • YAML-defined, composable, event-driven. Exposable via MCP. Tech preview. • Bidirectional: workflows call agents as intelligent steps; agents invoke workflows as tools. • Actions: Jira tickets, PagerDuty alerts, Slack messages, any REST API.
+Visual: Horizontal flow of 6 connected rounded rects: Alert → Agent Analyzes → Workflow Executes → Jira Ticket → Slack Summary → PagerDuty Incident
+Speaker Note: "Workflows close the loop. The agent reasons AND acts."
+
+SLIDE 7 — "MCP & A2A"
+Headline: "Open From Day One"
+Two-column cards:
+  Left (blue): "MCP Server" — all tools exposed at /api/agent_builder/mcp. Clients: Claude Desktop, Cursor, VS Code, Gemini CLI, Microsoft Foundry. 5-minute setup.
+  Right (teal): "A2A Peer" — orchestration with LangChain, AutoGen, CrewAI, Bedrock AgentCore. Agent cards, multi-agent pipelines, no lock-in.
+Speaker Note: "Your agent isn't trapped in Kibana. It's callable from anywhere."
+
+SLIDE 8 — DEMO TITLE: "🛠 Live Demo"
+Headline centered (36pt): "Building a Service Health Agent in Kibana"
+5 numbered step cards: 1) Create agent + select LLM 2) Add built-in search tool (auto-indexes logs) 3) Add custom ES|QL tool (metric aggregations) 4) Attach Workflow (auto-create Jira on anomaly) 5) Generate MCP key (connect Claude Desktop)
+Bottom: "Total time: ~5 minutes. Zero code."
+Speaker Note: "Everything before was theory. Now it's real."
+
+SLIDE 9 — "What We Built"
+Mini architecture: central "Service Health Agent" connected to: Logs (search), Metrics (ES|QL), Jira (workflow), Slack (workflow), Claude Desktop (MCP).
+3 stat boxes: "Build: ~5 min" | "Tools: 5" | "Code: 0 lines"
+Quote: "Agent Builder simplifies messy enterprise data, giving developers a secure, reliable foundation." — Ken Exner
+Speaker Note: "Land the message: production-ready agent, 5 minutes, no code."
+
+SLIDE 10 — CTA CLOSE
+3 action cards:
+  "Try Agent Builder" — GA. elastic.co/elasticsearch/agent-builder
+  "Browse Agent Skills" — 30+ open source. github.com/elastic/agent-skills
+  "Connect via MCP" — elastic.co/docs/solutions/search/mcp
+3 TAKEAWAYS: 1) Agent Builder is GA and model-agnostic. 2) Built-in + custom tools + workflows = complete agents. 3) MCP/A2A = open interop from day one.
+ONE-LINER: "5 minutes from zero to a production-ready agent. What are you waiting for?"`,
+  slides:"10", time:"~30 min"
+},
+
+// ===== 4: AGENTIC RAG =====
+{
+  nav:"Agentic RAG",
+  et:"t", etxt:"Session · 11:15 AM · Abhinav Chauhan, Aish Gunasekar, Ravindra Ramnani",
+  h:"Agentic RAG: Grounding Agents in Enterprise Knowledge",
+  sub:"Context rot is real. The answer isn't more data — it's better retrieval.",
+  summary:{
+    title:"Deck Summary · 10 Slides · ~25 min",
+    text:"Tension-resolution arc: Hook ('The #1 reason agents fail is retrieval') → Context rot data (NOLIMA degradation chart) → Context engineering framework (6 components) → Triple-resolution cascade: hybrid retrieval (84.3%), semantic chunking (93.3% hit rate), ES|QL (100% success) → Advanced patterns (sub-agents, surrounding chunks) → Knowledge tools → Elasticsearch differentiation → CTA. Heavy on benchmarks and practical takeaways.",
+    tags:["10 slides","~25 min","Technical","Benchmarks"]
+  },
+  prompt:`Create a .pptx file called "04_elastic_agentic_rag.pptx" with 10 slides. Do not show me code — directly generate and give me the .pptx file for download.
+
+SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme.
+
+25-min session. Arc: Hook → Tension (context rot) → Framework → Resolution cascade (hybrid → chunking → ES|QL) → Patterns → Assets → Differentiation → CTA.
+
+SLIDE 1 — HOOK: "The #1 Reason Agents Fail Isn't the Model — It's the Retrieval"
+Bullets: • GPT-5, Claude Opus, Gemini Ultra — doesn't matter if context is wrong. • 90% of failed tasks trace to irrelevant, incomplete, or bloated retrieval. • This session: how to fix retrieval so agents actually work.
+Speaker Note: "Contrarian opening. Flip the assumption that the model matters most."
+
+SLIDE 2 — "Context Rot"
+Headline: "More Tokens ≠ Better Answers"
+Bar chart: 4 horizontal bars — 4K→95%, 16K→78%, 32K→48%, 64K→31%. Blue→pink gradient.
+Quote block: "The LLM's context is like short-term memory — overflow it and reasoning collapses."
+Speaker Note: "Let the degradation numbers sink in."
+
+SLIDE 3 — "Context Engineering"
+Headline: "6 Components of an Agent's Context"
+Central LLM circle + 6 connected pill shapes: System prompt (blue), RAG content (teal), Long-term memory (pink), Tools (amber), User prompt (gray), History (gray).
+Bottom: "Elastic delivers every component natively."
+
+SLIDE 4 — "Hybrid Retrieval"
+3 comparison cards: BM25 ~65% (dim) | Dense ~72% (dim) | Elastic Hybrid 84.3% (BLUE highlight).
+Below: "ELSER outperforms lexical in 11/12 BEIR benchmarks. No fine-tuning. V2 top-10 MTEB."
+Diagram: 3 parallel paths merging via RRF into one ranked list.
+Speaker Note: "Three methods covering each other's blind spots."
+
+SLIDE 5 — "Semantic Chunking"
+Stats: "93.3% hit rate" (teal 28pt) + "40% reduction" (amber 28pt)
+Two columns: Left "Naive" (dim): fixed windows, mid-sentence splits, wasted tokens. Right "Semantic" (teal): boundary-aware, coherent, auto via semantic_text field.
+Speaker Note: "40% savings × 1000 tasks/day = real money."
+
+SLIDE 6 — "ES|QL Structured Retrieval"
+Stat: "100% task success" (blue 28pt)
+Code block: FROM metrics-* | WHERE service.name == "payments" | STATS avg(cpu.usage), max(memory.used) BY host.name | LIMIT 10
+Speaker Note: "When agents use ES|QL tools, they don't hallucinate on your data. Full stop."
+
+SLIDE 7 — "Agentic Search Patterns"
+3 cards: "Sub-Agent Search" (delegates, returns summary), "Knowledge Agent" (sifts, discards, synthesizes), "Fetch Surrounding Chunks" (match→retrieve neighbors).
+Speaker Note: "This is where RAG becomes agentic."
+
+SLIDE 8 — "Knowledge Tools"
+4 cards: Runbooks (teal), Incident History (blue), Compliance Docs (pink), Product Specs (amber). Connect org knowledge from Jira, GitHub, GCS, SharePoint.
+Speaker Note: "Package knowledge as callable tools, not static prompts."
+
+SLIDE 9 — "Why Elasticsearch Wins"
+5 stacked items with arrow bullets: Hybrid outperforms all | ELSER v2 top-10 MTEB | Learning to Rank | DLS/FLS security | One platform end-to-end.
+
+SLIDE 10 — CTA CLOSE
+3 TAKEAWAYS: 1) Fix retrieval before you fix the model. 2) Hybrid + chunking + ES|QL = the stack. 3) Elastic is the complete context engineering platform.
+ONE-LINER: "The best agents don't guess. They search."`,
+  slides:"10", time:"~25 min"
+},
+
+// ===== 5: MCP & A2A =====
+{
+  nav:"MCP & A2A",
+  et:"t", etxt:"Session · 11:45 AM · Ashish Tiwari",
+  h:"MCP & A2A: Connecting Agents to Jira, Slack & Beyond",
+  sub:"Open standards make agents callable, composable, and interoperable.",
+  summary:{
+    title:"Deck Summary · 10 Slides · ~25 min",
+    text:"Hook ('agents are only as powerful as their tools') → Two protocols explained (MCP = USB-C for AI, A2A = agent coordination) → Step-by-step MCP setup with actual config JSON → A2A multi-agent diagram → Integration grid (8 tools) → Microsoft Foundry validation → Live MCP demo → Hub-spoke ecosystem map → Security assurance → CTA. Includes real Elastic docs config snippets.",
+    tags:["10 slides","~25 min","Demo","Integrations"]
+  },
+  prompt:`Create a .pptx file called "05_elastic_mcp_a2a.pptx" with 10 slides. Do not show me code — directly generate and give me the .pptx file for download.
+
+SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme.
+
+25-min session with demo. Arc: Hook → Standards → MCP how-to → A2A how-to → Integrations → Partner proof → Demo → Ecosystem → Security → CTA.
+
+SLIDE 1 — HOOK: "Your Agent Is Only as Powerful as the Tools It Can Reach"
+Speaker Note: "An agent that reasons but can't act is a chatbot with extra steps."
+
+SLIDE 2 — "Two Protocols"
+Two large cards: MCP (blue) — "USB-C for AI. 97M+ monthly SDK downloads. Claude, Cursor, VS Code, Gemini CLI, Microsoft Foundry." A2A (teal) — "Agent coordination. Agent cards. LangChain, AutoGen, CrewAI, Bedrock AgentCore. Linux Foundation AAIF governance."
+Quote: "A2A handles coordination; MCP provides tool access. Combine both."
+
+SLIDE 3 — "MCP Server: 3 Steps"
+Flow diagram: "Create Tools in Agent Builder" → "Generate API Key (feature_agentBuilder.read)" → "Add Config to Client"
+Code block: {"mcpServers":{"elastic":{"command":"npx","args":["mcp-remote","$KIBANA_URL/api/agent_builder/mcp","--header","Authorization:$AUTH"]}}}
+Below: client logos/names: Claude Desktop, Cursor, VS Code, Gemini CLI, Microsoft Foundry, Azure SRE Agent
+Speaker Note: "Three steps. Five minutes. That's the wow."
+
+SLIDE 4 — "A2A Peer"
+Hub-spoke: "Orchestrator" center → Elastic Search Agent, Elastic Security Agent, Elastic Observability Agent, Third-party Agent.
+Key: "Elastic's A2A Agent uses MCP internally to access Elasticsearch tools — hybrid architecture."
+
+SLIDE 5 — "Integration Grid"
+8 cards (2×4): Jira, Slack, PagerDuty, CrowdStrike/Defender, Salesforce, VirusTotal, GitHub, Any REST API.
+
+SLIDE 6 — "Microsoft Foundry"
+Quote: "Native MCP/A2A support enables seamless deployments within Microsoft Foundry." — Amanda Silver, CVP
+Steps: Build → Tools → Connect → search "Elasticsearch" → provide endpoint + API key.
+
+SLIDE 7 — DEMO: "🔌 Connecting Agent Builder to Claude Desktop via MCP"
+4 step preview cards.
+
+SLIDE 8 — "Integration Landscape"
+Hub: "Elastic Agent Builder" center. Spokes: AI Assistants (Claude, Copilot, Cursor, Gemini) | Orchestration (LangChain, AutoGen, CrewAI, Arcade.dev) | Enterprise SaaS (Jira, Slack, PagerDuty, Salesforce) | Security (CrowdStrike, Defender, VirusTotal). "400+ connectors."
+
+SLIDE 9 — "Open ≠ Compromised"
+Key: API key scoping, DLS/FLS enforced through MCP, tools execute with assigned permissions.
+Speaker Note: "Pre-empt the security objection."
+
+SLIDE 10 — CTA CLOSE
+TAKEAWAYS: 1) MCP = callable. 2) A2A = composable. 3) Open = durable.
+ONE-LINER: "Lock-in is a tax on your future. Open standards are the refund."`,
+  slides:"10", time:"~25 min"
+},
+
+// ===== 6: AUTOMATED RCA =====
+{
+  nav:"Automated RCA",
+  et:"p", etxt:"Live Demo · 12:15 PM · Ramprasad KM",
+  h:"Agents in Action: Automated RCA & Threat Triage",
+  sub:"Cross-domain demo: observability RCA + security SOC triage on one platform.",
+  summary:{
+    title:"Deck Summary · 10 Slides · ~30 min",
+    text:"Narrative hook ('Your SOC got a Slack at 2 AM — the agent already triaged it') → Alert overload problem → Cross-domain architecture → Twin demo climaxes: Demo 1 (observability RCA with tool-chain flow) and Demo 2 (SOC triage with Attack Discovery + MCP enrichment) → AHEAD customer proof (73% triage reduction, 92% automated, MTTR <7 min) → Before/After comparison table → CTA.",
+    tags:["10 slides","~30 min","Live demo","Cross-domain"]
+  },
+  prompt:`Create a .pptx file called "06_elastic_rca.pptx" with 10 slides. Do not show me code — directly generate and give me the .pptx file for download.
+
+SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme.
+
+30-min cross-domain live demo. Arc: Story hook → Problem → Architecture → Demo 1 (RCA) → Technical flow → Demo 2 (SOC) → Technical flow → Customer proof → Before/After → CTA.
+
+SLIDE 1 — HOOK: "Your SOC Got a Slack at 2 AM. The Agent Had Already Triaged It."
+Speaker Note: "Read slowly. It's a story. Let the audience picture their own SOC."
+
+SLIDE 2 — "Alert Overload"
+Two columns: Observability (teal card) — metrics/logs buried in noise. Security (pink card) — 80%+ SOC time on Tier-1.
+Bottom: "Human capacity is linear. Data growth is exponential."
+
+SLIDE 3 — "One Platform"
+Diagram: Elastic Platform center. Observability Agent (teal) ↔ APM/Logs/Metrics. Security Agent (pink) ↔ SIEM/Endpoint/Threat Intel. Both → Actions (Jira, Slack, PagerDuty).
+
+SLIDE 4 — DEMO 1: "🔍 Automated RCA"
+4 teal step cards: Detect latency spike → Correlate logs+metrics+traces → Root cause: DB pool exhausted → PagerDuty + Slack before SRE responds.
+
+SLIDE 5 — "RCA Agent Flow"
+Detailed flow: APM Alert → Agent goal → Tools: [Search error logs, ES|QL avg(duration), Trace correlation] → Reasoning: "DB pool exhausted" → Workflow: PagerDuty + Slack.
+Callout: "What takes an SRE 30+ minutes, the agent does in seconds."
+
+SLIDE 6 — DEMO 2: "🛡 Agentic SOC Triage"
+4 pink step cards: Attack Discovery clusters alerts → Gather context + risk scores → MCP: CrowdStrike + VirusTotal → Case created with findings.
+
+SLIDE 7 — "SOC Agent Flow"
+Flow: Attack Discovery → Agent → [SIEM search, ES|QL risk score, MCP CrowdStrike, MCP VirusTotal] → "Confirmed lateral movement" → Case + notification.
+Note: "Human-in-the-loop for high-severity (isolation, blocking)."
+Callout: "Attack Discovery (patent pending) triages hundreds of alerts to the few attacks that matter."
+
+SLIDE 8 — "AHEAD Case Study"
+Stat boxes: "73%" (teal) triage reduction | "92%" (blue) automated | "MTTR <7 min" (amber).
+Speaker Note: "Real customer, real numbers."
+
+SLIDE 9 — "Before vs After"
+Table: MTTR 45→5 min | Tier-1 manual→auto | Correlation dashboard-hopping→seconds | Coverage 8×5→24×7 | Alert-to-ticket copy-paste→autonomous.
+
+SLIDE 10 — CTA CLOSE
+TAKEAWAYS: 1) Cross-domain agents on one platform. 2) Correlation in seconds. 3) Actions, not dashboards.
+ONE-LINER: "Agents don't replace analysts. They give analysts back the hours they lost to noise."`,
+  slides:"10", time:"~30 min"
+},
+
+// ===== 7: CUSTOMER PANEL =====
+{
+  nav:"Customer Panel",
+  et:"am", etxt:"Customer Panel · 2:00 PM · Jio × NSE",
+  h:"Operationalizing AI Agents: Lessons from the Field",
+  sub:"Two very different worlds — consumer scale at Jio, regulated infrastructure at NSE.",
+  summary:{
+    title:"Deck Summary · 10 Slides · ~30 min Panel",
+    text:"Panel support deck for Jio × NSE discussion. Opens with show-of-hands audience poll, provides India AI context (EY: 47% live use cases, 64.5% governance concerns), displays 5 core discussion questions, industry-specific use case slides for NSE (market surveillance, compliance) and Jio (network RCA, support automation), mid-panel audience poll on blockers, and key themes summary. Designed as visual backdrop, not a standalone presentation.",
+    tags:["10 slides","~30 min","Panel","Jio × NSE"]
+  },
+  prompt:`Create a .pptx file called "07_elastic_panel.pptx" with 10 slides. Do not show me code — directly generate and give me the .pptx file for download.
+
+SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme.
+
+Panel support slides for Jio × NSE discussion. Not a narrative deck — visual backdrop for moderated conversation.
+
+SLIDE 1 — Title: "Operationalizing AI Agents: Lessons from the Field"
+Subtitle: "Jio × NSE — Two enterprises, two very different contexts, one shared challenge."
+Two industry cards: "Jio — India's largest digital platform, 450M+ subscribers" (teal) and "NSE — World's largest derivatives exchange, SEBI-regulated" (blue).
+
+SLIDE 2 — "Panelists"
+2 large profile cards with circle shape for initials, name placeholder, title, company, and one-line focus area. Jio card (teal border), NSE card (blue border).
+
+SLIDE 3 — "India AI Landscape"
+3 stat boxes: "47%" — enterprises with multiple GenAI use cases live (EY 2026). "64.5%" — rate data governance as 'very severe' (EY). "24%" — actively deploying Agentic AI (EY).
+Below: "Only 1 in 5 companies has mature AI agent governance." — Deloitte 2026
+
+SLIDE 4 — "Show of Hands"
+Large text: "Quick Show of Hands"
+3 lines: "How many have an agent in production? ... Piloting? ... Still figuring out where to start?"
+Speaker Note: "Do this before Q1. Read the room. Reference the result throughout."
+
+SLIDE 5 — "Discussion Questions" (displayed for audience)
+5 numbered cards:
+  1. "Where are you on the journey — and what was the trigger?"
+  2. "Biggest blocker: data, governance, buy-in, or something else?"
+  3. "If you had to pick one workflow for an agent — what and why?"
+  4. "How are you handling the trust question — leadership AND teams?"
+  5. "What do you wish someone had told you before you started?"
+
+SLIDE 6 — "NSE Lens" (blue accent)
+3 use case cards: Market Surveillance (anomaly detection in trading patterns), Compliance Automation (SEBI reporting, audit evidence), Incident Response (exchange infrastructure RCA under zero-downtime requirements).
+
+SLIDE 7 — "Jio Lens" (teal accent)
+3 use case cards: Network RCA (automated root cause across 450M+ subscriber infrastructure), Customer Support (ticket classification, knowledge retrieval at massive scale), Fraud Detection (real-time cross-referencing of behavioral patterns).
+
+SLIDE 8 — "Audience Poll"
+Large: "What's Your #1 Blocker?"
+4 options as cards: "Data Readiness" | "Governance" | "Budget / Buy-in" | "Don't Know Where to Start"
+Speaker Note: "Mid-panel energy reset. Hands up, re-engage, panelists react."
+
+SLIDE 9 — "Key Themes" (populated live or left as template)
+4 blank theme cards with placeholder text: "Theme 1", "Theme 2", "Theme 3", "Theme 4"
+Note: "Moderator fills based on discussion."
+
+SLIDE 10 — Transition
+"Thank you to our panelists from Jio and NSE."
+"Next: The Business Case — Measuring Agentic ROI"`,
+  slides:"10", time:"~30 min"
+},
+
+// ===== 8: ROI =====
+{
+  nav:"Agentic ROI",
+  et:"am", etxt:"Session · 3:30 PM · Abhijeet Bhaskar",
+  h:"The Business Case: Measuring Agentic ROI",
+  sub:"You can't hire your way out of exponential data growth.",
+  summary:{
+    title:"Deck Summary · 10 Slides · ~25 min",
+    text:"Problem-solution-proof arc: Hook ('can't hire your way out') → Exponential gap visualization → Cost of status quo (alert fatigue, manual toil, missed signals) → Value levers (MTTR, throughput, token efficiency) → Proven impact (AHEAD: 73%/92%/MTTR<7 min) → ROI framework (time/risk/cost/quality) → Token economics deep-dive → India context (EY/Deloitte data) → Objection handling ('just hire more') → CTA.",
+    tags:["10 slides","~25 min","Business case","ROI framework"]
+  },
+  prompt:`Create a .pptx file called "08_elastic_roi.pptx" with 10 slides. Do not show me code — directly generate and give me the .pptx file for download.
+
+SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme.
+
+25-min session. Arc: Hook → Gap → Pain → Gain → Proof → Framework → Economics → India context → Objection → CTA.
+
+SLIDE 1 — HOOK: "You Can't Hire Your Way Out of Exponential Data Growth"
+Speaker Note: "Simple math. Data doubles every 18 months. Your team doesn't."
+
+SLIDE 2 — "The Gap"
+Visual: two diverging angled shapes — "Data Volume" (blue, steep) + "Human Capacity" (pink, flat).
+Stat: "Nearly 2/3 experimenting with agents, fewer than 1 in 4 in production."
+
+SLIDE 3 — "Cost of Status Quo"
+3 pink cards: Alert Fatigue, Manual Toil, Missed Signals. Each with description.
+
+SLIDE 4 — "Value Levers"
+3 blue/teal cards: MTTR Reduction (seconds not hours), Analyst Throughput (5x with automation), Token Efficiency (40% less with chunking).
+
+SLIDE 5 — "Proven Impact"
+4 stat boxes: "73%" triage reduction (AHEAD) | "92%" automated | "5x" throughput | "40%" lower LLM cost.
+
+SLIDE 6 — "ROI Framework"
+4-quadrant card: Time Saved (hours/week), Risk Reduced (fewer missed alerts, faster MTTR), Cost Avoided (tokens, headcount, licenses), Quality Improved (consistency, documentation, compliance evidence).
+Bottom: "Start measuring from day one."
+
+SLIDE 7 — "Token Economics"
+Comparison: Without chunking: 32K tokens/query. With semantic chunking: ~19K. ×1000 tasks/day = 40% savings.
+"ES|QL eliminates unnecessary context entirely."
+
+SLIDE 8 — "India Context"
+Stats: 47% live use cases (EY). Indian AI market $8B by 2026 at 40% CAGR. "AI isn't failing on capability — it's stalling on readiness."
+
+SLIDE 9 — "The Objection"
+Headline: "But We Could Just Hire More People"
+Rebuttal cards: Data grows exponentially, hiring is linear | Institutional knowledge walks out the door | Agents scale to 24×7 | Cost per investigation drops 70%+.
+
+SLIDE 10 — CTA CLOSE
+TAKEAWAYS: 1) Status quo is unsustainable. 2) Agents are multipliers, not replacements. 3) Measure from day one.
+ONE-LINER: "The question isn't whether you can afford agents. It's whether you can afford not to."`,
+  slides:"10", time:"~25 min"
+},
+
+// ===== 9: GOVERNANCE =====
+{
+  nav:"Governance",
+  et:"p", etxt:"Session · 3:00 PM · Bhadriraju Prasanth",
+  h:"Governing AI Agents: Risk, Trust & Compliance",
+  sub:"Governance separates prototypes from production systems your CISO will approve.",
+  summary:{
+    title:"Deck Summary · 10 Slides · ~25 min",
+    text:"Fear-to-framework arc: Hook ('What happens at 3 AM?') → Stakes (only 1 in 5 have mature governance, regulators moving) → Four governance pillars (Access Control, Audit Trail, Human-in-the-Loop, Guardrails) each with Elastic-specific implementation → Compliance use cases (PCI DSS, data residency) → 3-stage maturity model (Foundation → Calibrated Trust → Autonomous) → India regulatory context (SEBI, RBI, DPDP Act) → CTA.",
+    tags:["10 slides","~25 min","Governance","Compliance"]
+  },
+  prompt:`Create a .pptx file called "09_elastic_governance.pptx" with 10 slides. Do not show me code — directly generate and give me the .pptx file for download.
+
+SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme.
+
+25-min session. Arc: Hook (fear) → Stakes → 4 Pillars (solutions) → Compliance → Maturity model → India context → CTA.
+
+SLIDE 1 — HOOK: "What Happens When an Autonomous Agent Makes a Mistake at 3 AM?"
+Speaker Note: "Let the question hang. The audience fills in their worst fears."
+
+SLIDE 2 — "Why Now"
+Stats: Only 1 in 5 has mature governance (Deloitte). EU AI Act high-risk provisions active. SEBI/RBI evolving.
+3 risk cards: Data Leakage, Uncontrolled Actions, Audit Gaps.
+
+SLIDE 3 — "Pillar 1: Access Control"
+Blue icon "AC". DLS (document-level), FLS (field-level), RBAC, API key scoping. "Tools execute with API key scope."
+Speaker Note: "Least-privilege is the foundation."
+
+SLIDE 4 — "Pillar 2: Audit Trail"
+Teal icon "AU". Every retrieval, tool call, workflow logged. Immutable, queryable. "All queries, responses, token usage tracked."
+Use case: "Show me every action Agent-X took on PCI data in 30 days."
+
+SLIDE 5 — "Pillar 3: Human-in-the-Loop"
+Pink icon "HL". Flow diagram: Agent Recommends → Approval Gate → Human Reviews → Continue/Halt.
+"Start tight. Loosen as trust is earned."
+
+SLIDE 6 — "Pillar 4: Guardrails"
+Amber icon "GR". Define tools/data/actions per agent. LLM-agnostic (local models for privacy). Cited responses. Transparency.
+
+SLIDE 7 — "Compliance"
+Two cards: PCI DSS 4.0.1 (automated checks, evidence, audit prep) | Data Residency (50+ regions, AWS/Azure/GCP).
+
+SLIDE 8 — "Maturity Model"
+3 connected horizontal stage shapes: Foundation (blue) → Calibrated Trust (teal) → Autonomous Governance (pink).
+Each with 3-4 capabilities listed below.
+
+SLIDE 9 — "India Context"
+64.5% governance severe (EY). 78% integration struggles. RBI FREE-AI framework. DPDP Act. SEBI.
+Speaker Note: "These are YOUR regulatory environment."
+
+SLIDE 10 — CTA CLOSE
+TAKEAWAYS: 1) Governance enables scale. 2) Start at Stage 1 (RBAC + audit + HITL). 3) Build trust incrementally.
+ONE-LINER: "Governance is a journey, not a checkbox. The journey starts today."`,
+  slides:"10", time:"~25 min"
+},
+
+// ===== 10: OPEN STANDARDS =====
+{
+  nav:"Open Standards",
+  et:"t", etxt:"Session · 4:00 PM · Aashish Mishra",
+  h:"Open Standards, No Lock-in: MCP, A2A & OpenTelemetry",
+  sub:"The only durable investment in a landscape that changes every 6 months.",
+  summary:{
+    title:"Deck Summary · 10 Slides · ~25 min",
+    text:"Hook ('AI changes every 6 months') → Lock-in risks → Deep dives on MCP (97M+ SDK downloads, MCP v2.1), A2A (agent cards, AAIF governance), and OpenTelemetry (EDOT, 2nd most active CNCF) → Agent Skills (30+ open-source, solve correction tax) → Ecosystem map → Linux Foundation AAIF governance → Forward-looking roadmap → CTA.",
+    tags:["10 slides","~25 min","Standards","Architecture"]
+  },
+  prompt:`Create a .pptx file called "10_elastic_standards.pptx" with 10 slides. Do not show me code — directly generate and give me the .pptx file for download.
+
+SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme.
+
+25-min session. Arc: Hook → Risk → MCP → A2A → OTel → Skills → Ecosystem → Governance → Future → CTA.
+
+SLIDE 1 — HOOK: "The AI Landscape Changes Every 6 Months. Open Standards Are the Only Durable Investment."
+
+SLIDE 2 — "Lock-in Risks"
+3 dim cards: Proprietary Protocols, Integration Tax, Stranded Automation.
+"Open standards eliminate all three."
+
+SLIDE 3 — "MCP Deep Dive"
+"USB-C for AI." 97M+ monthly SDK downloads. Supported by Anthropic, OpenAI, Google, Microsoft, AWS. MCP v2.1 with Server Cards. Claude Desktop, Cursor, VS Code, Gemini CLI all ship full support.
+Speaker Note: "MCP has crossed the adoption threshold. It's infrastructure."
+
+SLIDE 4 — "A2A Deep Dive"
+Agent cards, orchestration, Elastic as callable peer. LangChain, AutoGen, CrewAI, Arcade.dev, Bedrock AgentCore, Strands.
+"A2A handles coordination. MCP handles tools. Combine both."
+
+SLIDE 5 — "OpenTelemetry"
+Elastic founding contributor. 2nd most active CNCF project. EDOT stable across all SDKs. Managed OTLP endpoint GA.
+"Instrument once. Observe everywhere."
+
+SLIDE 6 — "Agent Skills"
+Code block: npx skills add github.com/elastic/agent-skills
+Skill pills: elasticsearch-esql, kibana-dashboards, security-alert-triage, observability-service-health, cloud-create-project.
+"Skills solve the correction tax — LLMs confuse deprecated APIs with current ones."
+
+SLIDE 7 — "Ecosystem Map"
+Hub: Elastic. Spokes: MCP Clients | A2A Partners | Cloud Providers (AWS, GCP, Azure) | Frameworks (LlamaIndex, Strands).
+"AWS Agentic AI Specialization achieved."
+
+SLIDE 8 — "Standards Governance"
+Linux Foundation AAIF — co-founded by OpenAI, Anthropic, Google, Microsoft, AWS, Block. MCP + A2A under permanent governance.
+"This isn't one company's protocol. It's industry infrastructure."
+
+SLIDE 9 — "What's Coming"
+MCP Server expansion in Agent Builder. More tools beyond search/ES|QL. A2A deepening. Agent Skills coming to Agent Builder.
+
+SLIDE 10 — CTA CLOSE
+TAKEAWAYS: 1) MCP = callable. 2) A2A = composable. 3) OTel = observable.
+ONE-LINER: "Open standards = no lock-in, composable, future-proof. Your investments survive the next model generation."`,
+  slides:"10", time:"~25 min"
+},
+
+// ===== 11: CLOSING AMA =====
+{
+  nav:"Closing AMA",
+  et:"b", etxt:"Closing · 4:30 PM · Sanjay Deshmukh, Chris Walker, Ravindra Ramnani",
+  h:"Building Your Agentic Roadmap",
+  sub:"One day. Three pillars. Now: what does your journey look like?",
+  summary:{
+    title:"Deck Summary · 8 Slides · ~25 min",
+    text:"Day recap (3 pillars + key stats) → 4-step roadmap (context engineering, one workflow, govern day one, open standards) → Concrete getting-started actions (trial, first agent, Agent Skills) → Role alignment (executive + practitioner) → AMA with topic cards → Resources (URLs) → Thank You with Elastic divider and memorable closer.",
+    tags:["8 slides","~25 min","AMA","Roadmap"]
+  },
+  prompt:`Create a .pptx file called "11_elastic_closing.pptx" with 8 slides. Do not show me code — directly generate and give me the .pptx file for download.
+
+SLIDE SIZE: Widescreen 16:9. DESIGN: Same Elastic dark theme.
+
+25-min closing AMA. Arc: Recap → Roadmap → Actions → Roles → AMA → Resources → Close.
+
+SLIDE 1 — Title: "Building Your Agentic Roadmap"
+Speakers: Sanjay Deshmukh, Chris Walker, Ravindra Ramnani.
+
+SLIDE 2 — "Day Recap"
+3 pillar cards:
+  "Search & RAG" (blue): 84.3% Recall@10, Agent Builder GA, ES|QL 100% success.
+  "Observe & Secure" (teal): Automated RCA, Attack Discovery, AHEAD 73% triage reduction.
+  "Govern & Scale" (pink): RBAC+DLS/FLS, audit trails, MCP/A2A open standards.
+Bottom: "All on Elasticsearch — the Search AI Platform."
+
+SLIDE 3 — "4-Step Roadmap"
+2×2 grid of large numbered cards:
+  1 (blue): "Context Engineering First" — nail retrieval before building agents.
+  2 (teal): "One High-Value Workflow" — pick the clearest ROI.
+  3 (pink): "Govern From Day One" — RBAC, audit, HITL built in.
+  4 (amber): "Bet on Open Standards" — MCP, A2A, OTel.
+
+SLIDE 4 — "Getting Started Monday"
+3 action cards:
+  "Start Free Trial" — elastic.co/cloud
+  "Build First Agent" — Create in Kibana → search tool → ES|QL tool → MCP. ~5 min.
+  "Install Agent Skills" — npx skills add github.com/elastic/agent-skills
+
+SLIDE 5 — "Who Should Lead This"
+Two columns: Executive (CIO/CTO/CISO) — sponsor. Practitioner (SRE, SOC, Platform, AI/ML) — build.
+"Not a side project. Needs exec sponsorship + platform ownership + cross-functional alignment."
+
+SLIDE 6 — "AMA"
+Large "AMA" (48pt). Speaker names. 5 topic cards: Getting started | Retrieval quality | Governance | Integration roadmap | Pricing.
+
+SLIDE 7 — "Resources"
+3 large linked cards: elastic.co/elasticsearch/agent-builder | github.com/elastic/agent-skills | elastic.co/docs/solutions/search/mcp
+
+SLIDE 8 — "Thank You"
+"Thank You for Joining Elastic Agentic Day"
+Elastic divider (3 thin colored bars: blue, teal, pink).
+"Mumbai · 17 April 2026 · The Search AI Company"
+ONE-LINER: "Chatbots talk. Agents act. You've now seen the difference."`,
+  slides:"8", time:"~25 min"
+}
+];
+
+// === BUILD UI ===
+var pillsEl = document.getElementById('pills');
+var slidesEl = document.getElementById('slides');
+
+S.forEach(function(s,i){
+  // Pill
+  var p = document.createElement('button');
+  p.className = 'pl' + (i===0?' a':'');
+  p.textContent = s.nav;
+  p.onclick = function(){go(i)};
+  pillsEl.appendChild(p);
+
+  // Slide
+  var d = document.createElement('div');
+  d.className = 'sd' + (i===0?' a':'');
+  d.id = 's'+i;
+
+  var html = '<div class="si">';
+  html += '<div class="et '+s.et+'">'+s.etxt+'</div>';
+  html += '<div class="eh">'+s.h+'</div>';
+  if(s.sub) html += '<div class="es">'+s.sub+'</div>';
+
+  // Agenda
+  if(s.agenda){
+    var rows = [
+      ['9:00','Registration & Networking Breakfast','',''],
+      ['9:30','Keynote: The Age of Agentic Enterprise','Chris Walker','k'],
+      ['10:00','Customer Keynote / Fireside Chat','BFSI & Digital Native leaders','pn'],
+      ['10:30','Agent Builder Deep Dive','Ashish Tiwari','d'],
+      ['11:15','Agentic RAG','Abhinav Chauhan, Aish Gunasekar, Ravindra Ramnani',''],
+      ['11:45','MCP & A2A: Connecting Agents','Ashish Tiwari','d'],
+      ['12:15','Automated RCA & Threat Triage','Ramprasad KM','d'],
+      ['1:15','Networking Lunch','','brk'],
+      ['2:00','Customer Panel: Jio × NSE','BFSI & Digital Native leaders','pn'],
+      ['2:30','Unlocking the Full Potential of Elastic','Amit Vyas',''],
+      ['3:00','Governing AI Agents','Bhadriraju Prasanth',''],
+      ['3:30','Measuring Agentic ROI','Abhijeet Bhaskar',''],
+      ['4:00','Open Standards, No Lock-in','Aashish Mishra',''],
+      ['4:30','Closing AMA: Agentic Roadmap','Sanjay Deshmukh, Chris Walker, Ravindra Ramnani','']
+    ];
+    html += '<div class="ag">';
+    rows.forEach(function(r){
+      var cls = r[3]==='brk'?' brk':'';
+      var badge = '';
+      if(r[3]==='k') badge='<span class="bg k">Keynote</span>';
+      if(r[3]==='d') badge='<span class="bg d">Demo</span>';
+      if(r[3]==='pn') badge='<span class="bg pn">Panel</span>';
+      html += '<div class="ar'+cls+'"><div class="at">'+r[0]+'</div><div class="ac"><h4>'+r[1]+badge+'</h4>'+(r[2]?'<p>'+r[2]+'</p>':'')+'</div></div>';
+    });
+    html += '</div>';
+  }
+
+  // Stats
+  if(s.stats){
+    html += '<div class="sr">';
+    s.stats.forEach(function(st){
+      html += '<div class="sb"><div class="sn">'+st.n+'</div><div class="sl2">'+st.l+'</div></div>';
+    });
+    html += '</div>';
+  }
+
+  html += '</div>'; // close .si
+
+  // Summary card
+  if(s.summary){
+    html += '<div class="sum"><h5>'+s.summary.title+'</h5><p>'+s.summary.text+'</p><div class="tg">';
+    s.summary.tags.forEach(function(t){ html += '<span>'+t+'</span>'; });
+    html += '</div></div>';
+  }
+
+  // Prompt box
+  html += '<div class="pb"><div class="ph" onclick="tp(this)"><h4>🎯 PPTX Prompt for Claude Desktop <span class="badge">'+s.slides+' slides'+(s.time?' · '+s.time:'')+'</span></h4><div class="ptg">▼</div></div>';
+  html += '<div class="pbd"><div class="ptx">'+s.prompt.replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</div>';
+  html += '<button class="cb" onclick="cp(this)">📋 Copy Prompt</button>';
+  html += '<div class="pm"><span>Output: .pptx</span><span>Slides: '+s.slides+'</span>'+(s.time?'<span>'+s.time+'</span>':'')+'</div>';
+  html += '</div></div>';
+
+  // Nav
+  html += '<div class="nv">';
+  if(i>0) html += '<button class="nb" onclick="go('+(i-1)+')">← '+S[i-1].nav+'</button>';
+  if(i<S.length-1) html += '<button class="nb pr" onclick="go('+(i+1)+')">'+S[i+1].nav+' →</button>';
+  else html += '<button class="nb pr" onclick="go(0)">Back to Start →</button>';
+  html += '</div>';
+
+  d.innerHTML = html;
+  slidesEl.appendChild(d);
+});
+
 function go(n){
-  document.querySelectorAll('.slide').forEach(s=>s.classList.remove('active'));
-  document.querySelectorAll('.pill').forEach(p=>p.classList.remove('active'));
-  document.getElementById('s'+n).classList.add('active');
-  document.querySelectorAll('.pill')[n].classList.add('active');
+  document.querySelectorAll('.sd').forEach(function(s){s.classList.remove('a')});
+  document.querySelectorAll('.pl').forEach(function(p){p.classList.remove('a')});
+  document.getElementById('s'+n).classList.add('a');
+  document.querySelectorAll('.pl')[n].classList.add('a');
   window.scrollTo(0,0);
 }
-function tp(h){h.querySelector('.pt').classList.toggle('open');h.nextElementSibling.classList.toggle('open')}
-function cp(b){navigator.clipboard.writeText(b.previousElementSibling.textContent).then(()=>{b.textContent='✅ Copied!';b.classList.add('ok');setTimeout(()=>{b.textContent='📋 Copy Prompt';b.classList.remove('ok')},2000)})}
+function tp(h){h.querySelector('.ptg').classList.toggle('o');h.nextElementSibling.classList.toggle('o')}
+function cp(b){navigator.clipboard.writeText(b.previousElementSibling.textContent).then(function(){b.textContent='✅ Copied!';b.classList.add('ok');setTimeout(function(){b.textContent='📋 Copy Prompt';b.classList.remove('ok')},2000)})}
 </script>
 </body>
 </html>
